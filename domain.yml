@@ -1,0 +1,126 @@
+intents:
+- elterngeld_topic
+- choose_elterngeld_precise
+- choose_elterngeld_general
+- choose_elterngeld_prerequisites
+- choose_elterngeld_application
+- choose_elterngeld_amount
+- choose_elterngeld_duration
+- out_of_scope
+- affirm
+- deny
+- greet
+- goodbye
+
+entities:
+- elterngeld_situation
+- elterngeld_care
+- elterngeld_samehousehold
+- elterngeld_workparttime
+- elterngeld_livegermany
+
+slots:
+  elterngeld_situation:
+    type: unfeaturized
+  elterngeld_care:
+    type: unfeaturized
+  elterngeld_samehousehold:
+    type: unfeaturized
+  elterngeld_workparttime:
+    type: unfeaturized
+  elterngeld_livegermany:
+    type: unfeaturized
+
+responses:
+  utter_slots_values:
+  - text: "Sie haben folgende Angaben gemacht: \n
+           - care: {elterngeld_care}\n
+           - samehousehold: {elterngeld_samehousehold}\n
+           - workparttime: {elterngeld_workparttime}\n
+           - livegermany: {elterngeld_livegermany}"
+  utter_welcomeback:
+  - text: Hallo, schön, wieder von Dir zu hören.
+  - text: Schön, dass Du wieder da bist.
+  - text: Willkommen zurück.
+  utter_elterngeld_precise_general:
+  - text: Hast Du eine konkrete Frage zum Elterngeld? Oder soll ich Dir erstmal ein
+      paar allgemeine Infos dazu geben?
+    buttons:
+    - payload: /choose_elterngeld_precise
+      title: Konkrete Frage
+    - payload: /choose_elterngeld_general
+      title: Allgemeine Infos
+  utter_ask_elterngeld_precisequestion:
+  - text: Dann stelle jetzt Deine Frage.
+  utter_elterngeld_reply_outofscope:
+  - text: Das kann ich Dir leider noch nicht beantworten. Mehr Infos zu Elterngeld
+      findest Du auf dem [Familienportal](https://familienportal.de/familienportal/familienleistungen/elterngeld/faq).
+  utter_elterngeld_inform:
+  - text: Elterngeld ist eine Leistung, die Du vom Staat als Unterstützung erhalten
+      kannst, wenn Du nach der Geburt Deines Kindes gar nicht oder weniger arbeitest.
+  utter_ask_elterngeld_subtopic:
+  - text: Ich kann Dir jetzt mehr zu den Voraussetzungen, der Beantragung, der Höhe
+      oder der Bezugsdauer des Elterngeldes erzählen. Möchtest Du zu einem dieser
+      Themen mehr wissen?
+    buttons:
+    - payload: /choose_elterngeld_prerequisites
+      title: Voraussetzungen
+    - payload: /choose_elterngeld_application
+      title: Beantragung
+    - payload: /choose_elterngeld_amount
+      title: Höhe
+    - payload: /choose_elterngeld_duration
+      title: Bezugsdauer
+  utter_ask_elterngeld_situation:
+  - text: Lass uns herausfinden, ob Du die Voraussetzungen erfüllst. Kann ich Dir
+      dafür ein paar Fragen zu Deiner Situation stellen?
+    buttons:
+    - payload: '/affirm{"elterngeld_situation": "ja"}'
+      title: Ja
+    - payload: '/deny{"elterngeld_situation": "nein"}'
+      title: Nein
+  utter_ask_elterngeld_care:
+  - text: Ok, erste Frage. Wirst Du Dein Kind selbst betreuen?
+    buttons:
+    - payload: '/affirm{"elterngeld_care": "ja"}'
+      title: Ja
+    - payload: '/deny{"elterngeld_care": "nein"}'
+      title: Nein
+  utter_ask_elterngeld_samehousehold:
+  - text: Ok, wirst Du mit Deinem Kind in einem Haushalt leben?
+    buttons:
+    - payload: '/affirm{"elterngeld_samehousehold": "ja"}'
+      title: Ja
+    - payload: '/deny{"elterngeld_samehousehold": "nein"}'
+      title: Nein
+  utter_ask_elterngeld_workparttime:
+  - text: Wirst Du nach der Geburt weniger als 30 Stunden in der Woche arbeiten?
+    buttons:
+    - payload: '/affirm{"elterngeld_workparttime": "ja"}'
+      title: Ja
+    - payload: '/deny{"elterngeld_workparttime": "nein"}'
+      title: Nein
+  utter_ask_elterngeld_livegermany:
+  - text: 'Zum Schluss: Lebst Du in Deutschland? Und wenn ja, in welchem Bundesland?'
+    buttons:
+    - payload: '/affirm{"elterngeld_livegermany": "ja"}'
+      title: Ja
+    - payload: '/deny{"elterngeld_livegermany": "nein"}'
+      title: Nein
+  utter_elterngeld_affirm_prerequisites:
+  - text: Ok, Du erfüllst die Voraussetzungen für das Elterngeld!
+  utter_ask_elterngeld_furthertopic:
+  - text: Soll ich Dir noch etwas zu Beantragung, Höhe oder Bezugsdauer erklären?
+  utter_elterngeld_inform_prerequisites:
+  - text: Du musst die folgenden Voraussetzungen erfüllen, um Elterngeld beziehen
+      zu können. - Du lebst in Deutschland. - Du wohnst mit Deinem Kind zusammen.
+      - Du betreust Dein Kind selbst. - Du arbeitest höchstens 30 Stunden pro Woche.
+  utter_goodbye:
+  - text: Ok, dann bis zum nächsten Mal!
+
+forms:
+  - elterngeldprerequisites_form
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
