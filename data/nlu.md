@@ -18,6 +18,7 @@
 - Elterngeld
 - Geld für Eltern
 - Elterngeld Hilfe
+- hilf mir bitte bei Elterngeld
 
 <!--
 ## intent:choose_elterngeld_precise
