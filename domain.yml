@@ -13,15 +13,12 @@ intents:
 - goodbye
 
 entities:
-- elterngeld_situation
 - elterngeld_care
 - elterngeld_samehousehold
 - elterngeld_workparttime
 - elterngeld_livegermany
 
 slots:
-  elterngeld_situation:
-    type: unfeaturized
   elterngeld_care:
     type: unfeaturized
   elterngeld_samehousehold:
@@ -75,9 +72,9 @@ responses:
   - text: Lass uns herausfinden, ob Du die Voraussetzungen erfüllst. Kann ich Dir
       dafür ein paar Fragen zu Deiner Situation stellen?
     buttons:
-    - payload: '/affirm{"elterngeld_situation": "ja"}'
+    - payload: /affirm
       title: Ja
-    - payload: '/deny{"elterngeld_situation": "nein"}'
+    - payload: /deny
       title: Nein
   utter_ask_elterngeld_care:
   - text: Ok, erste Frage. Wirst Du Dein Kind selbst betreuen?
@@ -111,12 +108,21 @@ responses:
   - text: Ok, Du erfüllst die Voraussetzungen für das Elterngeld!
   utter_ask_elterngeld_furthertopic:
   - text: Soll ich Dir noch etwas zu Beantragung, Höhe oder Bezugsdauer erklären?
+    buttons:
+    - payload: /choose_elterngeld_application
+      title: Beantragung
+    - payload: /choose_elterngeld_amount
+      title: Höhe
+    - payload: /choose_elterngeld_duration
+      title: Bezugsdauer
   utter_elterngeld_inform_prerequisites:
   - text: Du musst die folgenden Voraussetzungen erfüllen, um Elterngeld beziehen
       zu können. - Du lebst in Deutschland. - Du wohnst mit Deinem Kind zusammen.
       - Du betreust Dein Kind selbst. - Du arbeitest höchstens 30 Stunden pro Woche.
   utter_goodbye:
   - text: Ok, dann bis zum nächsten Mal!
+  utter_ask_continue:
+  - text: Tut mir leid, ich kann Dir gerade nicht ganz folgen. Möchtest Du weitermachen?
 
 forms:
   - elterngeldprerequisites_form

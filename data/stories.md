@@ -21,13 +21,58 @@
 ## elterngeld+prerequisites
 > elterngeld_subtopics
 * choose_elterngeld_prerequisites
-  <!-- - utter_ask_elterngeld_situation -->
+  - utter_ask_elterngeld_situation
+* affirm
   - elterngeldprerequisites_form
   - form{"name": "elterngeldprerequisites_form"}
   - form{"name": null}
   - utter_slots_values
 
-<!-- further topic: application, amount, time frame-->
+## elterngeld+prerequisites+denied+nofurtherquestion
+> elterngeld_subtopics
+* choose_elterngeld_prerequisites
+  - utter_ask_elterngeld_situation
+* deny
+  - utter_ask_elterngeld_furthertopic
+* deny
+  - utter_goodbye
+
+## elterngeld+prerequisites+denied+furtherquestion
+> elterngeld_subtopics
+* choose_elterngeld_prerequisites
+  - utter_ask_elterngeld_situation
+* deny
+  - utter_ask_elterngeld_furthertopic
+
+## elterngeld+prerequisites+stop
+> elterngeld_subtopics
+* choose_elterngeld_prerequisites
+  - utter_ask_elterngeld_situation
+* affirm
+  - elterngeldprerequisites_form
+  - form{"name": "elterngeldprerequisites_form"}
+* out_of_scope
+  - utter_ask_continue
+* deny
+  - action_deactivate_form
+  - form{"name":null}
+  - utter_goodbye
+
+## elterngeld+prerequisites+stop
+> elterngeld_subtopics
+* choose_elterngeld_prerequisites
+  - utter_ask_elterngeld_situation
+* affirm
+  - elterngeldprerequisites_form
+  - form{"name": "elterngeldprerequisites_form"}
+* out_of_scope
+  - utter_ask_continue
+* affirm
+  - elterngeldprerequisites_form
+  - form{"name":null}
+  - utter_slots_values
+
+<!-- further topic: application, amount, duration -->
 
 ## elterngeld application
 > elterngeld_subtopics
@@ -56,4 +101,3 @@
 ## say goodbye
 * goodbye
   - utter_goodbye
-

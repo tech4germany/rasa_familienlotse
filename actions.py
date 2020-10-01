@@ -34,15 +34,11 @@ class ElterngeldPrerequisitesForm(FormAction):
 
     @staticmethod
     def required_slots(tracker):
-        return ["elterngeld_situation", "elterngeld_care", "elterngeld_samehousehold", "elterngeld_workparttime", "elterngeld_livegermany"]
+        return ["elterngeld_care", "elterngeld_samehousehold", "elterngeld_workparttime", "elterngeld_livegermany"]
 
     def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
         
         return {
-            "elterngeld_situation": [
-                self.from_intent(intent="affirm", value=True),
-                self.from_intent(intent="deny", value=False),
-            ],
             "elterngeld_care": [
                 self.from_intent(intent="affirm", value=True),
                 self.from_intent(intent="deny", value=False),
