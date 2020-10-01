@@ -1,6 +1,7 @@
 intents:
 # elterngeld
 - elterngeld_topic
+- choose_elterngeld_residence
 - choose_elterngeld_precise
 - choose_elterngeld_general
 - choose_elterngeld_prerequisites
@@ -24,7 +25,7 @@ entities:
 - elterngeld_care
 - elterngeld_samehousehold
 - elterngeld_workparttime
-- elterngeld_livegermany
+- elterngeld_residence
 
 slots:
   elterngeld_care:
@@ -33,7 +34,7 @@ slots:
     type: unfeaturized
   elterngeld_workparttime:
     type: unfeaturized
-  elterngeld_livegermany:
+  elterngeld_residence:
     type: unfeaturized
 
 responses:
@@ -46,13 +47,14 @@ responses:
   - text: Ok, dann bis zum nächsten Mal!
   utter_ask_continue:
   - text: Tut mir leid, ich kann Dir gerade nicht ganz folgen. Möchtest Du weitermachen?
+  
   # elterngeld
-  #utter_slots_values:
-  #- text: "Sie haben folgende Angaben gemacht: \n
-  #          - care: {elterngeld_care}\n
-  #          - samehousehold: {elterngeld_samehousehold}\n
-  #          - workparttime: {elterngeld_workparttime}\n
-  #          - livegermany: {elterngeld_livegermany}"
+  utter_elterngeld_slots:
+  - text: "Sie haben folgende Angaben gemacht: \n
+           - care: {elterngeld_care}\n
+           - samehousehold: {elterngeld_samehousehold}\n
+           - workparttime: {elterngeld_workparttime}\n
+           - livegermany: {elterngeld_residence}"
   utter_elterngeld_precise_general:
   - text: Hast Du eine konkrete Frage zum Elterngeld? Oder soll ich Dir erstmal ein
       paar allgemeine Infos dazu geben?
@@ -111,15 +113,10 @@ responses:
       title: Ja
     - payload: '/deny{"elterngeld_workparttime": "nein"}'
       title: Nein
-  utter_ask_elterngeld_livegermany:
-  - text: 'Zum Schluss: Lebst Du in Deutschland? Und wenn ja, in welchem Bundesland?'
-    buttons:
-    - payload: '/affirm{"elterngeld_livegermany": "ja"}'
-      title: Ja
-    - payload: '/deny{"elterngeld_livegermany": "nein"}'
-      title: Nein
+  utter_ask_elterngeld_residence:
+  - text: 'Letzte Frage: In welchem Bundesland lebst Du? Solltest Du außerhalb von Deutschland leben, antworte mit **Ausland**.'
   utter_elterngeld_affirm_prerequisites:
-  - text: Ok, Du erfüllst die Voraussetzungen für das Elterngeld!
+  - text: Super, Du erfüllst die Voraussetzungen für das Elterngeld!
   utter_ask_elterngeld_furthertopic:
   - text: Soll ich Dir noch etwas zu Beantragung, Höhe oder Bezugsdauer erklären?
     buttons:

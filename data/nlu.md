@@ -4,13 +4,19 @@
 - hi
 - Guten Morgen
 - Guten Abend
+- Guten Tag
 - Hallo
+- Servus
 
 ## intent:goodbye
 - tschüss
 - bis dann
 - bis zum nächsten Mal
 - ciao
+- cu
+- Bye
+- Byebye
+- machs gut
 
 ## intent:elterngeld_topic
 - Hey, kannst Du mir beim Thema Elterngeld helfen?
@@ -19,6 +25,30 @@
 - Geld für Eltern
 - Elterngeld Hilfe
 - hilf mir bitte bei Elterngeld
+
+## intent:choose_elterngeld_residence
+- [Berlin](bundesland)
+- [Bremen](bundesland)
+- [Hamburg](bundesland)
+- [Rheinland-Pfalz](bundesland)
+- [Sachsen](bundesland)
+- [Thüringen](bundesland)
+
+- [Brandenburg](bundesland)
+- [Mecklenburg-Vorpommern](bundesland)
+- [Niedersachsen](bundesland)
+- [Nordrhein-Westfalen](bundesland)
+- [Sachsen-Anhalt](bundesland)
+- [Schleswig-Holstein](bundesland)
+
+- [Baden-Württemberg](bundesland)
+- [Bayern](bundesland)
+- [Hessen](bundesland)
+- [Saarland](bundesland)
+
+- [ausland](bundesland)
+
+
 
 <!--
 ## intent:choose_elterngeld_precise
