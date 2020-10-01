@@ -26,7 +26,6 @@
   - elterngeldprerequisites_form
   - form{"name": "elterngeldprerequisites_form"}
   - form{"name": null}
-  - utter_slots_values
 
 ## elterngeld+prerequisites+denied+nofurtherquestion
 > elterngeld_subtopics
@@ -70,7 +69,6 @@
 * affirm
   - elterngeldprerequisites_form
   - form{"name":null}
-  - utter_slots_values
 
 <!-- further topic: application, amount, duration -->
 

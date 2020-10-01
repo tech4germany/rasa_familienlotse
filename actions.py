@@ -65,5 +65,5 @@ class ElterngeldPrerequisitesForm(FormAction):
         domain: Dict[Text, Any],
     ) -> List[Dict]:
 
-        dispatcher.utter_message("Thanks, great job!")
+        # dispatcher.utter_message("Thanks, great job!")
         return []

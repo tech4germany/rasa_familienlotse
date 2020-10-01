@@ -38,6 +38,8 @@
 - jap
 - yep
 - jaaaa
+- Ja
+- ok
 
 ## intent:deny
 - ne
@@ -45,6 +47,8 @@
 - nö
 - nicht
 - nee
+- Nein
+- neeeee
 
 ## intent:out_of_scope
 - Krankenschutz bei Elterngeld
@@ -52,3 +56,24 @@
 - ich arbeite im Ausland, lebe in Deutschland. kann ich Elterngeld beantragen?
 - Wie bin ich versichert bei Elterngeld?
 - kann ich Elterngeld auch beantragen, wenn Kind nicht bei mir wohnt?
+
+## intent:ask_mutterschutz_difference_mutterschutzfrist
+- Was ist der Unterschied zwischen Mutterschutz und Mutterschutzfrist?
+- Wie unterscheidet sich Mutterschutz und Mutterschutzfrist?
+- Mutterschutz versus Mutterschutzfrist
+- Was ist Mutterschutz im Vergleich zu Mutterschutzfrist
+- Ich weiß nicht, was der Unterschied zwischen Mutterschutz und Mutterschutzfrist ist
+- Mutterschutz Mutterschutzfrist
+
+## intent:ask_mutterschutz_timeframe
+- Wie lange ist der Mutterschutzfrist-Zeitraum?
+- Wie lange gilt die Mutterschutzfrist?
+- Wann beginnt die Mutterschutzfrist?
+- Wann endet die Mutterschutzfrist?
+
+## intent:greet_mutterschutz
+- hi mutterschutz
+- frage mutterschutz
+- wieso mutterschutz
+- hello mutterschutz
+- hallo mutterschutz

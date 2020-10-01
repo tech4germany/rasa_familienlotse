@@ -1,4 +1,5 @@
 intents:
+# elterngeld
 - elterngeld_topic
 - choose_elterngeld_precise
 - choose_elterngeld_general
@@ -6,6 +7,13 @@ intents:
 - choose_elterngeld_application
 - choose_elterngeld_amount
 - choose_elterngeld_duration
+
+# mutterschutz
+- greet_mutterschutz
+- ask_mutterschutz_difference_mutterschutzfrist
+- ask_mutterschutz_timeframe
+
+# default
 - out_of_scope
 - affirm
 - deny
@@ -29,16 +37,22 @@ slots:
     type: unfeaturized
 
 responses:
-  utter_slots_values:
-  - text: "Sie haben folgende Angaben gemacht: \n
-           - care: {elterngeld_care}\n
-           - samehousehold: {elterngeld_samehousehold}\n
-           - workparttime: {elterngeld_workparttime}\n
-           - livegermany: {elterngeld_livegermany}"
+  # default
   utter_welcomeback:
   - text: Hallo, schön, wieder von Dir zu hören.
   - text: Schön, dass Du wieder da bist.
   - text: Willkommen zurück.
+  utter_goodbye:
+  - text: Ok, dann bis zum nächsten Mal!
+  utter_ask_continue:
+  - text: Tut mir leid, ich kann Dir gerade nicht ganz folgen. Möchtest Du weitermachen?
+  # elterngeld
+  #utter_slots_values:
+  #- text: "Sie haben folgende Angaben gemacht: \n
+  #          - care: {elterngeld_care}\n
+  #          - samehousehold: {elterngeld_samehousehold}\n
+  #          - workparttime: {elterngeld_workparttime}\n
+  #          - livegermany: {elterngeld_livegermany}"
   utter_elterngeld_precise_general:
   - text: Hast Du eine konkrete Frage zum Elterngeld? Oder soll ich Dir erstmal ein
       paar allgemeine Infos dazu geben?
@@ -119,10 +133,36 @@ responses:
   - text: Du musst die folgenden Voraussetzungen erfüllen, um Elterngeld beziehen
       zu können. - Du lebst in Deutschland. - Du wohnst mit Deinem Kind zusammen.
       - Du betreust Dein Kind selbst. - Du arbeitest höchstens 30 Stunden pro Woche.
-  utter_goodbye:
-  - text: Ok, dann bis zum nächsten Mal!
-  utter_ask_continue:
-  - text: Tut mir leid, ich kann Dir gerade nicht ganz folgen. Möchtest Du weitermachen?
+  
+  # mutterschutz
+  utter_intro:
+  - text: "Hallo, ich bin Sonne! 🌞 \n
+      Ich kann Dich hier oder langfristig auf WhatsApp über Themen rund um Familienleistungen informieren und beraten."
+  utter_ask_mutterschutz_question:
+  - text: "Es sieht aus, als hast Du Dich gerade mit dem Thema **Mutterschutz** beschäftigt. \n
+      Wähle eine Beispielfrage aus oder schreib mir direkt Deine Frage."
+    buttons:
+    - payload: /choose_mutterschutz_general
+      title: "Was ist Mutterschutz?"
+    - payload: /choose_whatsapp
+      title: "WhatsApp"
+  utter_mutterschutz_differencereply:
+  - text: "Der **Mutterschutz** ist ein besonderer Schutz für schwangere oder stillende Arbeitnehmerinnen. \n 
+  Die **Mutterschutzfrist** hingegen ist einen Zeitraum vor und nach der Geburt, in dem die Arbeitnehmerin nicht arbeiten darf."
+  utter_ask_knowmore:
+  - text: "Willst Du mehr darüber wissen?"
+  - text: "Hast Du noch eine weitere Frage?"
+  utter_mutterschutz_timeframereply:
+  - text: "Der Zeitraum beginnt **6 Wochen vor** dem errechneten Geburtstermin und endet üblicherweise **8 Wochen nach** der Geburt."
+  utter_hope_help:
+  - text: "Alles klar. Ich hoffe, ich konnte Dir helfen 🌞"
+  utter_whatsapp_offer:
+  - text: "Übrigens - Du kannst mich gerne auch auf WhatsApp hinzufügen. Dann kann ich Dich im passenden Moment über weitere Familienleistungen und Fristen informieren."
+    buttons:
+    - payload: /choose_whatsapp
+      title: "Zu WhatsApp hinzufügen"
+
+  
 
 forms:
   - elterngeldprerequisites_form
