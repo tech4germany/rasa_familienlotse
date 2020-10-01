@@ -25,7 +25,7 @@ entities:
 - elterngeld_care
 - elterngeld_samehousehold
 - elterngeld_workparttime
-- elterngeld_residence
+- bundesland
 
 slots:
   elterngeld_care:

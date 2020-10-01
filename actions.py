@@ -34,6 +34,7 @@ class ElterngeldPrerequisitesForm(FormAction):
 
     @staticmethod
     def required_slots(tracker):
+        # TODO: wenn ein slot mit nein, dann zu Ende
         return ["elterngeld_care", "elterngeld_samehousehold", "elterngeld_workparttime", "elterngeld_residence"]
 
     def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:

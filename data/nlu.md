@@ -27,25 +27,26 @@
 - hilf mir bitte bei Elterngeld
 
 ## intent:choose_elterngeld_residence
+<!-- elterngeld_digital-->
 - [Berlin](bundesland)
 - [Bremen](bundesland)
 - [Hamburg](bundesland)
 - [Rheinland-Pfalz](bundesland)
 - [Sachsen](bundesland)
 - [Thüringen](bundesland)
-
+<!-- elterngeld__not_digital-->
 - [Brandenburg](bundesland)
 - [Mecklenburg-Vorpommern](bundesland)
 - [Niedersachsen](bundesland)
 - [Nordrhein-Westfalen](bundesland)
 - [Sachsen-Anhalt](bundesland)
 - [Schleswig-Holstein](bundesland)
-
+<!-- elterngeld_own_solution_digital-->
 - [Baden-Württemberg](bundesland)
 - [Bayern](bundesland)
 - [Hessen](bundesland)
 - [Saarland](bundesland)
-
+<!-- elterngeld_residence_fallback-->
 - [ausland](bundesland)
 
 
