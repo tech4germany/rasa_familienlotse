@@ -57,7 +57,7 @@
   - form{"name":null}
   - utter_goodbye
 
-## elterngeld+prerequisites+stop
+## elterngeld+prerequisites+continue
 > elterngeld_subtopics
 * choose_elterngeld_prerequisites
   - utter_ask_elterngeld_situation

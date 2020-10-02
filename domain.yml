@@ -11,7 +11,7 @@ intents:
 # mutterschutz
 - greet_mutterschutz
 - ask_mutterschutz_difference_mutterschutzfrist
-- ask_mutterschutz_timeframe
+- ask_mutterschutz_period
 
 # default
 - out_of_scope
@@ -46,6 +46,8 @@ responses:
   - text: Ok, dann bis zum nächsten Mal!
   utter_ask_continue:
   - text: Tut mir leid, ich kann Dir gerade nicht ganz folgen. Möchtest Du weitermachen?
+  utter_im_here_4_u:
+  - text: "Das war es vorerst von mir. Wenn Du noch Fragen hast, bin ich hier für Dich. Ansonsten lese ich mir ein paar Informationen zu weiteren Themen durch."
   # elterngeld
   #utter_slots_values:
   #- text: "Sie haben folgende Angaben gemacht: \n
@@ -54,7 +56,7 @@ responses:
   #          - workparttime: {elterngeld_workparttime}\n
   #          - livegermany: {elterngeld_livegermany}"
   utter_elterngeld_precise_general:
-  - text: Hast Du eine konkrete Frage zum Elterngeld? Oder soll ich Dir erstmal ein
+  - text: Hast Du eine konkrete Frage zum **Elterngeld**? Oder soll ich Dir erstmal ein
       paar allgemeine Infos dazu geben?
     buttons:
     - payload: /choose_elterngeld_precise
@@ -64,7 +66,7 @@ responses:
   utter_ask_elterngeld_precisequestion:
   - text: Dann stelle jetzt Deine Frage.
   utter_elterngeld_reply_outofscope:
-  - text: Das kann ich Dir leider noch nicht beantworten. Mehr Infos zu Elterngeld
+  - text: Das kann ich Dir leider noch nicht beantworten. Mehr Infos zu **Elterngeld**
       findest Du auf dem [Familienportal](https://familienportal.de/familienportal/familienleistungen/elterngeld/faq).
   utter_elterngeld_inform:
   - text: Elterngeld ist eine Leistung, die Du vom Staat als Unterstützung erhalten
@@ -83,7 +85,7 @@ responses:
     - payload: /choose_elterngeld_duration
       title: Bezugsdauer
   utter_ask_elterngeld_situation:
-  - text: Lass uns herausfinden, ob Du die Voraussetzungen erfüllst. Kann ich Dir
+  - text: Lass uns herausfinden, ob Du die **Voraussetzungen** erfüllst. Kann ich Dir
       dafür ein paar Fragen zu Deiner Situation stellen?
     buttons:
     - payload: /affirm
@@ -121,7 +123,7 @@ responses:
   utter_elterngeld_affirm_prerequisites:
   - text: Ok, Du erfüllst die Voraussetzungen für das Elterngeld!
   utter_ask_elterngeld_furthertopic:
-  - text: Soll ich Dir noch etwas zu Beantragung, Höhe oder Bezugsdauer erklären?
+  - text: Soll ich Dir sonst noch etwas zu **Beantragung**, **Höhe** oder **Bezugsdauer** von Elterngeld erklären?
     buttons:
     - payload: /choose_elterngeld_application
       title: Beantragung
@@ -136,11 +138,11 @@ responses:
   
   # mutterschutz
   utter_intro:
-  - text: "Hallo, ich bin Sonne! 🌞 \n
-      Ich kann Dich hier oder langfristig auf WhatsApp über Themen rund um Familienleistungen informieren und beraten."
+  - text: "Hallo, ich bin **Sonne**! 🌞 \n
+      Ich kann Dich hier oder langfristig auf WhatsApp über Themen rund um **Familienleistungen** informieren und beraten."
   utter_ask_mutterschutz_question:
   - text: "Es sieht aus, als hast Du Dich gerade mit dem Thema **Mutterschutz** beschäftigt. \n
-      Wähle eine Beispielfrage aus oder schreib mir direkt Deine Frage."
+      Wähle eine Beispielfrage aus oder schreib' mir direkt Deine Frage."
     buttons:
     - payload: /choose_mutterschutz_general
       title: "Was ist Mutterschutz?"
@@ -148,19 +150,21 @@ responses:
       title: "WhatsApp"
   utter_mutterschutz_differencereply:
   - text: "Der **Mutterschutz** ist ein besonderer Schutz für schwangere oder stillende Arbeitnehmerinnen. \n 
-  Die **Mutterschutzfrist** hingegen ist einen Zeitraum vor und nach der Geburt, in dem die Arbeitnehmerin nicht arbeiten darf."
+  Die **Mutterschutzfrist** hingegen ist ein Zeitraum vor und nach der Geburt, in dem die Arbeitnehmerin nicht arbeiten darf."
   utter_ask_knowmore:
-  - text: "Willst Du mehr darüber wissen?"
   - text: "Hast Du noch eine weitere Frage?"
-  utter_mutterschutz_timeframereply:
+  utter_mutterschutz_periodreply:
   - text: "Der Zeitraum beginnt **6 Wochen vor** dem errechneten Geburtstermin und endet üblicherweise **8 Wochen nach** der Geburt."
   utter_hope_help:
   - text: "Alles klar. Ich hoffe, ich konnte Dir helfen 🌞"
   utter_whatsapp_offer:
   - text: "Übrigens - Du kannst mich gerne auch auf WhatsApp hinzufügen. Dann kann ich Dich im passenden Moment über weitere Familienleistungen und Fristen informieren."
     buttons:
-    - payload: /choose_whatsapp
+    - payload: /affirm
       title: "Zu WhatsApp hinzufügen"
+  utter_whatsapp_contact:
+  - text: "Gerne können wir über WhatsApp Kontakt halten - das ist ja auch etwas bequemer als nur über die Website. Bitte füge mich unter +49176... zu Deinen Kontakten hinzu. Außerdem akzeptierst Du durch das Hinzufügen die [WhatsApp-AGBs](https://www.whatsapp.com/legal/?lang=de&eea=0)."
+
 
   
 

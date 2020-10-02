@@ -6,12 +6,15 @@
 * ask_mutterschutz_difference_mutterschutzfrist
   - utter_mutterschutz_differencereply
   - utter_ask_knowmore
-* ask_mutterschutz_timeframe
-  - utter_mutterschutz_timeframereply
+* ask_mutterschutz_period
+  - utter_mutterschutz_periodreply
   - utter_ask_knowmore
 * deny
   - utter_hope_help
   - utter_whatsapp_offer
+* affirm
+  - utter_whatsapp_contact
+  - utter_im_here_4_u
 
 <!-- TODO: what if user wants to stay in FPO and not switch to WA -->
 
