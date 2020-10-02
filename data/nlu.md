@@ -4,13 +4,19 @@
 - hi
 - Guten Morgen
 - Guten Abend
+- Guten Tag
 - Hallo
+- Servus
 
 ## intent:goodbye
 - tschüss
 - bis dann
 - bis zum nächsten Mal
 - ciao
+- cu
+- Bye
+- Byebye
+- machs gut
 
 ## intent:elterngeld_topic
 - Hey, kannst Du mir beim Thema Elterngeld helfen?
@@ -19,6 +25,40 @@
 - Geld für Eltern
 - Elterngeld Hilfe
 - hilf mir bitte bei Elterngeld
+
+## intent:choose_elterngeld_residence
+<!-- elterngeld_digital-->
+- [Berlin](bundesland)
+- [BER](bundesland)
+- [Bremen](bundesland)
+- [Hamburg](bundesland)
+- [Rheinland-Pfalz](bundesland)
+- [rlp](bundesland)
+- [Sachsen](bundesland)
+- [Thüringen](bundesland)
+<!-- elterngeld__not_digital-->
+- [Brandenburg](bundesland)
+- [Mecklenburg-Vorpommern](bundesland)
+- [meckpomm](bundesland)
+- [Niedersachsen](bundesland)
+- [Nordrhein-Westfalen](bundesland)
+- [NRW](bundesland)
+- [Sachsen-Anhalt](bundesland)
+- [Schleswig-Holstein](bundesland)
+- [SH](bundesland)
+<!-- elterngeld_own_solution_digital-->
+- [Baden-Württemberg](bundesland)
+- [bawü](bundesland)
+- [Bayern](bundesland)
+- [bay](bundesland)
+- [BY](bundesland)
+- [Hessen](bundesland)
+- [Saarland](bundesland)
+- [sl](bundesland)
+<!-- elterngeld_residence_fallback-->
+- [ausland](bundesland)
+
+
 
 <!--
 ## intent:choose_elterngeld_precise
