@@ -80,6 +80,7 @@
 - jaaaa
 - Ja
 - ok
+- ja bitte
 
 ## intent:deny
 - ne
@@ -89,6 +90,7 @@
 - nee
 - Nein
 - neeeee
+- nein danke
 
 ## intent:out_of_scope
 - Krankenschutz bei Elterngeld
