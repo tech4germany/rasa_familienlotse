@@ -18,3 +18,18 @@
 
 <!-- TODO: what if user wants to stay in FPO and not switch to WA -->
 
+## mutterschutz+difference+whatsapp
+* greet_mutterschutz   
+  - utter_intro
+  - utter_ask_mutterschutz_question
+* choose_whatsapp
+  - utter_whatsapp_offer
+
+## mutterschutz+difference+mutterschutz_general
+* greet_mutterschutz   
+  - utter_intro
+  - utter_ask_mutterschutz_question
+* choose_mutterschutz_general
+  - utter_mutterschutz_reply_outofscope
+
+

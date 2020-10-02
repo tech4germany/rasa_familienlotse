@@ -4,7 +4,7 @@ intents:
 - choose_elterngeld_residence
 - choose_elterngeld_precise
 - choose_elterngeld_general
-- choose_elterngeld_prerequisites
+- choose_elterngeld_requirements
 - choose_elterngeld_application
 - choose_elterngeld_amount
 - choose_elterngeld_duration
@@ -13,6 +13,9 @@ intents:
 - greet_mutterschutz
 - ask_mutterschutz_difference_mutterschutzfrist
 - ask_mutterschutz_period
+- choose_mutterschutz_general
+
+
 
 # default
 - out_of_scope
@@ -20,6 +23,7 @@ intents:
 - deny
 - greet
 - goodbye
+- choose_whatsapp
 
 entities:
 - elterngeld_care
@@ -39,6 +43,9 @@ slots:
 
 responses:
   # default
+  utter_intro:
+    - text: "Hallo, ich bin **Sonne**! 🌞 \n
+        Ich kann Dich hier oder langfristig auf WhatsApp über Themen rund um **Familienleistungen** informieren und beraten."  
   utter_welcomeback:
   - text: Hallo, schön, wieder von Dir zu hören.
   - text: Schön, dass Du wieder da bist.
@@ -49,6 +56,19 @@ responses:
   - text: Tut mir leid, ich kann Dir gerade nicht ganz folgen. Möchtest Du weitermachen?
   utter_im_here_4_u:
   - text: "Das war es vorerst von mir. Wenn Du noch Fragen hast, bin ich hier für Dich. Ansonsten lese ich mir ein paar Informationen zu weiteren Themen durch."
+  utter_hope_help:
+  - text: "Alles klar. Ich hoffe, ich konnte Dir helfen 🌞"
+  utter_whatsapp_offer:
+  - text: "Übrigens - Du kannst mich gerne auch auf WhatsApp hinzufügen. Dann kann ich Dich im passenden Moment über weitere Familienleistungen und Fristen informieren."
+    buttons:
+    - payload: /affirm
+      title: "Zu WhatsApp hinzufügen"
+  utter_whatsapp_contact:
+  - text: "Gerne können wir über WhatsApp Kontakt halten - das ist ja auch etwas bequemer als nur über die Website. Bitte füge mich unter +49176... zu Deinen Kontakten hinzu. Außerdem akzeptierst Du durch das Hinzufügen die [WhatsApp-AGBs](https://www.whatsapp.com/legal/?lang=de&eea=0)."
+  utter_ask_knowmore:
+    - text: "Hast Du noch eine weitere Frage?"
+  
+  
   # elterngeld
   utter_elterngeld_slots:
   - text: "Sie haben folgende Angaben gemacht: \n
@@ -77,7 +97,7 @@ responses:
       oder der Bezugsdauer des Elterngeldes erzählen. Möchtest Du zu einem dieser
       Themen mehr wissen?
     buttons:
-    - payload: /choose_elterngeld_prerequisites
+    - payload: /choose_elterngeld_requirements
       title: Voraussetzungen
     - payload: /choose_elterngeld_application
       title: Beantragung
@@ -133,9 +153,6 @@ responses:
       - Du betreust Dein Kind selbst. - Du arbeitest höchstens 30 Stunden pro Woche.
   
   # mutterschutz
-  utter_intro:
-  - text: "Hallo, ich bin **Sonne**! 🌞 \n
-      Ich kann Dich hier oder langfristig auf WhatsApp über Themen rund um **Familienleistungen** informieren und beraten."
   utter_ask_mutterschutz_question:
   - text: "Es sieht aus, als hast Du Dich gerade mit dem Thema **Mutterschutz** beschäftigt. \n
       Wähle eine Beispielfrage aus oder schreib' mir direkt Deine Frage."
@@ -147,25 +164,15 @@ responses:
   utter_mutterschutz_differencereply:
   - text: "Der **Mutterschutz** ist ein besonderer Schutz für schwangere oder stillende Arbeitnehmerinnen. \n 
   Die **Mutterschutzfrist** hingegen ist ein Zeitraum vor und nach der Geburt, in dem die Arbeitnehmerin nicht arbeiten darf."
-  utter_ask_knowmore:
-  - text: "Hast Du noch eine weitere Frage?"
   utter_mutterschutz_periodreply:
   - text: "Der Zeitraum beginnt **6 Wochen vor** dem errechneten Geburtstermin und endet üblicherweise **8 Wochen nach** der Geburt."
-  utter_hope_help:
-  - text: "Alles klar. Ich hoffe, ich konnte Dir helfen 🌞"
-  utter_whatsapp_offer:
-  - text: "Übrigens - Du kannst mich gerne auch auf WhatsApp hinzufügen. Dann kann ich Dich im passenden Moment über weitere Familienleistungen und Fristen informieren."
-    buttons:
-    - payload: /affirm
-      title: "Zu WhatsApp hinzufügen"
-  utter_whatsapp_contact:
-  - text: "Gerne können wir über WhatsApp Kontakt halten - das ist ja auch etwas bequemer als nur über die Website. Bitte füge mich unter +49176... zu Deinen Kontakten hinzu. Außerdem akzeptierst Du durch das Hinzufügen die [WhatsApp-AGBs](https://www.whatsapp.com/legal/?lang=de&eea=0)."
+  utter_mutterschutz_reply_outofscope:
+    - text: Das kann ich Dir leider noch nicht beantworten. Mehr Infos zu **Mutterschutz**
+        findest Du auf dem [Familienportal](https://familienportal.de/familienportal/familienleistungen/mutterschutz).
 
-
-  
 
 forms:
-  - elterngeldprerequisites_form
+  - elterngeldrequirements_form
 
 session_config:
   session_expiration_time: 60

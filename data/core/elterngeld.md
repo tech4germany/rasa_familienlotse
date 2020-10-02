@@ -20,17 +20,17 @@
 <!-- Subtopics: prerequisites, application, amount, timeframe -->
 ## elterngeld+prerequisites
 > elterngeld_subtopics
-* choose_elterngeld_prerequisites
+* choose_elterngeld_requirements
   - utter_ask_elterngeld_situation
 * affirm
-  - elterngeldprerequisites_form
-  - form{"name": "elterngeldprerequisites_form"}
+  - elterngeldrequirements_form
+  - form{"name": "elterngeldrequirements_form"}
   - form{"name": null}
   - utter_elterngeld_slots
 
 ## elterngeld+prerequisites+denied+nofurtherquestion
 > elterngeld_subtopics
-* choose_elterngeld_prerequisites
+* choose_elterngeld_requirements
   - utter_ask_elterngeld_situation
 * deny
   - utter_ask_elterngeld_furthertopic
@@ -39,18 +39,18 @@
 
 ## elterngeld+prerequisites+denied+furtherquestion
 > elterngeld_subtopics
-* choose_elterngeld_prerequisites
+* choose_elterngeld_requirements
   - utter_ask_elterngeld_situation
 * deny
   - utter_ask_elterngeld_furthertopic
 
 ## elterngeld+prerequisites+stop
 > elterngeld_subtopics
-* choose_elterngeld_prerequisites
+* choose_elterngeld_requirements
   - utter_ask_elterngeld_situation
 * affirm
-  - elterngeldprerequisites_form
-  - form{"name": "elterngeldprerequisites_form"}
+  - elterngeldrequirements_form
+  - form{"name": "elterngeldrequirements_form"}
 * out_of_scope
   - utter_ask_continue
 * deny
@@ -60,15 +60,15 @@
 
 ## elterngeld+prerequisites+continue
 > elterngeld_subtopics
-* choose_elterngeld_prerequisites
+* choose_elterngeld_requirements
   - utter_ask_elterngeld_situation
 * affirm
-  - elterngeldprerequisites_form
-  - form{"name": "elterngeldprerequisites_form"}
+  - elterngeldrequirements_form
+  - form{"name": "elterngeldrequirements_form"}
 * out_of_scope
   - utter_ask_continue
 * affirm
-  - elterngeldprerequisites_form
+  - elterngeldrequirements_form
   - form{"name":null}
 
 <!-- further topic: application, amount, duration -->
@@ -90,13 +90,3 @@
 * choose_elterngeld_duration
   - utter_elterngeld_reply_outofscope
   - utter_goodbye 
-  
-<!-- chitchat & co -->
-
-## say hello
-* greet
-  - utter_welcomeback
-
-## say goodbye
-* goodbye
-  - utter_goodbye
