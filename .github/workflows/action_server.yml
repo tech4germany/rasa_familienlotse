@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Login to DockerHub Registry 🔢
-        run: docker login -u ${{ env.DOCKER_HUB_LOGIN }} --password-stdin || true
+        run: docker login -u ${{ env.DOCKER_HUB_LOGIN }} --password ${{ secrets.DOCKER_HUB_PASSWORD }}
 
 
   action_server_job:
