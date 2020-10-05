@@ -7,6 +7,14 @@ on:
     # - 'actions/**'
 
 jobs:
+  docker:
+    name: Build Action Server Docker Image
+    runs-on: ubuntu-latest
+    steps:
+      - name: Login to DockerHub Registry 🔢
+        run: echo "${{ secrets.DOCKER_HUB_PASSWORD }}" | docker login -u ${{ env.DOCKER_HUB_LOGIN }} --password-stdin || true
+
+
   action_server_job:
     runs-on: ubuntu-latest
     name: Build Rasa Action Server image and upgrade Rasa X deployment
@@ -14,8 +22,8 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Login to DockerHub Registry 🔢
-      run: echo "${{ secrets.DOCKER_HUB_PASSWORD }}" | docker login -u ${{ env.DOCKER_HUB_LOGIN }} --password-stdin || true
+    # - name: Login to DockerHub Registry 🔢
+    #   run: echo "${{ secrets.DOCKER_HUB_PASSWORD }}" | docker login -u ${{ env.DOCKER_HUB_LOGIN }} --password-stdin || true
 
     - name: My action server image
       uses: RasaHQ/action-server-gha@master
