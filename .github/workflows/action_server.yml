@@ -7,30 +7,27 @@ on:
     # - 'actions/**'
 
 jobs:
-  docker:
-    name: Build Action Server Docker Image
-    runs-on: ubuntu-latest
-    steps:
-      - name: Login to DockerHub Registry 🔢
-        run: docker login -u ${{ secrets.DOCKER_HUB_LOGIN }} --password ${{ secrets.DOCKER_HUB_PASSWORD }}
-
-
   action_server_job:
     runs-on: ubuntu-latest
     name: Build Rasa Action Server image and upgrade Rasa X deployment
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-
-    # - name: Login to DockerHub Registry 🔢
-    #   run: echo "${{ secrets.DOCKER_HUB_PASSWORD }}" | docker login -u ${{ env.DOCKER_HUB_LOGIN }} --password-stdin || true
-
     - name: My action server image
       uses: RasaHQ/action-server-gha@master
       with: 
+        rasa_sdk_version: '1.10.3'
         docker_image_name: 't4grasafamilienlotse1/rasa_familienlotse_action_server'
         actions_directory: 'actions'
         docker_registry_login: ${{ secrets.DOCKER_HUB_LOGIN }}
         docker_registry_password: ${{ secrets.DOCKER_HUB_PASSWORD }}
         docker_image_tag: ${{ github.sha}}
-  
+    - name: My action server image2
+      uses: RasaHQ/action-server-gha@master
+      with: 
+        rasa_sdk_version: '1.10.3'
+        docker_image_name: 't4grasafamilienlotse1/rasa_familienlotse_action_server'
+        actions_directory: 'actions'
+        docker_registry_login: ${{ secrets.DOCKER_HUB_LOGIN }}
+        docker_registry_password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+        docker_image_tag: latest
