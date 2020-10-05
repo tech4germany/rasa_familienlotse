@@ -33,7 +33,7 @@
   - utter_mutterschutz_reply_outofscope
 
 ## whatsapp+familydescription+elterngeldstart
-* greet_mutterschutz
+* greet_whatsapp
   - utter_welcomeback
   - utter_moreinfo
   - utter_ask_permission_familydescription
@@ -51,7 +51,7 @@
   - utter_ask_elterngeld_subtopic
 
 ## whatsapp+familydescription+elterngeldrelated
-* greet_mutterschutz
+* greet_whatsapp
   - utter_welcomeback
   - utter_moreinfo
   - utter_ask_permission_familydescription
@@ -69,3 +69,4 @@
 * out_of_scope
   - utter_outofscope
   - utter_elterngeld_reply_outofscope
+

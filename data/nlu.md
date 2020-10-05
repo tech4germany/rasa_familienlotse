@@ -184,8 +184,24 @@
 
 ## intent:describe_family
 <!-- TODO: extract entity from two inputs -->
-- Hi, ich bin im [3. Monat](pregnancy_month) schwanger.
-- Hi, meine Freundin ist im [6. Monat](pregnancy_month) schwanger.
-- Hi, ich bin [Mutter](parent).
-- Hi, ich werde in [5. Monaten](pregnancy_month) [Mutter](parent)
-- Ich werde in [1 Monat](pregnancy_month) [Vater](parent)
+- Hi, ich bin im [3. Monat](familydescription_pregnancy_month) schwanger
+- Hi, ich bin [Mutter](familydescription_parent).
+- Hi, ich werde in [5 Monaten](familydescription_pregnancy_month) [Mutter](familydescription_parent)
+- In [4 Monaten](familydescription_pregnancy_month) werde ich [Mama](familydescription_parent) 
+- Hi, meine Freundin ist im [6. Monat](familydescription_pregnancy_month) schwanger.
+- Hi, meine Frau ist im [7. Monat](familydescription_pregnancy_month) schwanger.
+- Ich werde in [1 Monat](familydescription_pregnancy_month) [Vater](familydescription_parent)
+- Ich werde in [2 Monaten](familydescription_pregnancy_month) [Papa](familydescription_parent)
+
+## intent:greet_whatsapp
+- hi whatsapp
+- hello whatsapp
+- huhu whatsapp
+- hallo whatsapp
+- hey whatsapp 
+
+## intent:familydescription_parent
+- [Mutter](familydescription_parent)
+- [Mama](familydescription_parent)
+- [Vater](familydescription_parent)
+- [Papa](familydescription_parent)

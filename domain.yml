@@ -15,7 +15,7 @@ intents:
 - ask_mutterschutz_period
 - choose_mutterschutz_general
 - describe_family
-
+- familydescription_parent
 
 
 # default
@@ -25,14 +25,15 @@ intents:
 - greet
 - goodbye
 - choose_whatsapp
+- greet_whatsapp
 
 entities:
 - elterngeld_care
 - elterngeld_samehousehold
 - elterngeld_workparttime
 - bundesland
-- pregnancy_month
-- parent
+- familydescription_pregnancy_month
+- familydescription_parent
 
 slots:
   elterngeld_care:
@@ -43,9 +44,9 @@ slots:
     type: unfeaturized
   elterngeld_residence:
     type: unfeaturized
-  parent:
+  familydescription_pregnancy_month:
     type: unfeaturized
-  pregnancy_month:
+  familydescription_parent:
     type: unfeaturized
 
 responses:
@@ -195,7 +196,7 @@ responses:
     - text: "Bist Du schwanger? Wenn ja, in welchem Monat?"
     # TODO: Buttons zur Benutzersteuerung?
   utter_recommend_elterngeld:
-    - text: "Super, danke! Als werdende Mutter könnte auch Elterngeld für Dich interessant sein."
+    - text: "Super, danke! Als werdende(r) {familydescription_parent} könnte auch Elterngeld für Dich interessant sein."
   utter_ask_elterngeld_priorknowledge:
     - text: "Hast Du Dich damit schon beschäftigt?"
 
@@ -205,5 +206,5 @@ forms:
 
 session_config:
   session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  carry_over_slots_to_new_session: false
     
