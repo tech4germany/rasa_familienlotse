@@ -32,4 +32,34 @@
 * choose_mutterschutz_general
   - utter_mutterschutz_reply_outofscope
 
+## whatsapp+familydescription+elterngeldstart
+* greet
+  - utter_welcomeback
+  - utter_moreinfo
+  - utter_ask_permission_familydescription
+* affirm
+  - utter_ask_familydescription
+<!-- fill family form -->
+* describe_family
+  - utter_recommend_elterngeld
+  - utter_ask_elterngeld_priorknowledge
+* deny
+  - utter_elterngeld_inform
+  - utter_ask_elterngeld_subtopic
 
+## whatsapp+familydescription+elterngeldrelated
+* greet
+  - utter_welcomeback
+  - utter_moreinfo
+  - utter_ask_permission_familydescription
+* affirm
+  - utter_ask_familydescription
+<!-- fill family form -->
+* describe_family
+  - utter_recommend_elterngeld
+  - utter_ask_elterngeld_priorknowledge
+* affirm
+  - utter_hope_help
+* out_of_scope
+  - utter_outofscope
+  - utter_elterngeld_replyoutofscope

@@ -12,20 +12,6 @@ from typing import Any, Text, Dict, List, Union
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
-#
-#
-# class ActionHelloWorld(Action):
-#
-#     def name(self) -> Text:
-#         return "action_hello_world"
-#
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#
-#         dispatcher.utter_message(text="Hello World!")
-#
-#         return []
 
 class ElterngeldRequirementsForm(FormAction):
 
@@ -67,3 +53,36 @@ class ElterngeldRequirementsForm(FormAction):
 
         # dispatcher.utter_message("Thanks, great job!")
         return []
+
+class FamilyDescriptionForm(FormAction):
+
+    def name(self):
+        return "familydescription_form"
+
+    @staticmethod
+    def required_slots(tracker):
+        # TODO: wenn ein slot mit nein, dann zu Ende
+        return ["parent", "pregnancy_month"]
+
+    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
+        
+        return {
+            "parent": [
+                self.from_entity(entity="parent", intent=["describe_family"]),
+            ],
+            "pregnancy_month": [
+                self.from_entity(entity="pregnancy_month", intent=["describe_family"]),
+            ],
+
+        }
+
+    def submit(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict]:
+
+        # dispatcher.utter_message("Thanks, great job!")
+        return []
+

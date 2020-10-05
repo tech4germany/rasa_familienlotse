@@ -30,6 +30,8 @@ entities:
 - elterngeld_samehousehold
 - elterngeld_workparttime
 - bundesland
+- pregnancy_month
+- parent
 
 slots:
   elterngeld_care:
@@ -55,6 +57,7 @@ responses:
   utter_ask_continue:
   - text: Tut mir leid, ich kann Dir gerade nicht ganz folgen. Möchtest Du weitermachen?
   utter_im_here_4_u:
+  - text: "Melde Dich gerne bei mir, wenn Du noch etwas brauchst 🌞"
   - text: "Das war es vorerst von mir. Wenn Du noch Fragen hast, bin ich hier für Dich. Ansonsten lese ich mir ein paar Informationen zu weiteren Themen durch."
   utter_hope_help:
   - text: "Alles klar. Ich hoffe, ich konnte Dir helfen 🌞"
@@ -63,12 +66,17 @@ responses:
     buttons:
     - payload: /affirm
       title: "Zu WhatsApp hinzufügen"
+  # TODO: transform to button w/ WhatsApp Link
   utter_whatsapp_contact:
-  - text: "Gerne können wir über WhatsApp Kontakt halten - das ist ja auch etwas bequemer als nur über die Website. Bitte füge mich unter +49176... zu Deinen Kontakten hinzu. Außerdem akzeptierst Du durch das Hinzufügen die [WhatsApp-AGBs](https://www.whatsapp.com/legal/?lang=de&eea=0)."
+  - text: "Gerne können wir über WhatsApp Kontakt halten - das ist ja auch etwas bequemer als nur über die Website. Bitte füge mich unter [+49176...](https://wa.me/+4915228512776?text=hallo%20mutterschutz) zu Deinen Kontakten hinzu. Außerdem akzeptierst Du durch das Hinzufügen die [WhatsApp-AGBs](https://www.whatsapp.com/legal/?lang=de&eea=0)."
   utter_ask_knowmore:
-    - text: "Hast Du noch eine weitere Frage?"
-  
-  
+    - text: "Hast Du noch eine weitere Frage? Schreib sie mir gerne."
+    - text: "Willst Du mehr darüber wissen? Du kannst mich auch etwas anderes fragen."
+  utter_outofscope:
+    - text: "Sorry, das kann ich Dir leider noch nicht beantworten. Ich habe auch noch einiges zu lernen 🤓📚 "
+    - text: "Das kann ich Dir leider noch nicht beantworten."
+  utter_more_info:
+    - text: "Du hast Dich zuletzt nach Mutterschutz erkundigt. Es gibt noch viele weitere Familienleistungen, die für Dich relevant sein könnten."
   # elterngeld
   utter_elterngeld_slots:
   - text: "Sie haben folgende Angaben gemacht: \n
@@ -87,8 +95,9 @@ responses:
   utter_ask_elterngeld_precisequestion:
   - text: Dann stelle jetzt Deine Frage.
   utter_elterngeld_reply_outofscope:
-  - text: Das kann ich Dir leider noch nicht beantworten. Mehr Infos zu **Elterngeld**
-      findest Du auf dem [Familienportal](https://familienportal.de/familienportal/familienleistungen/elterngeld/faq).
+  - text: "Mehr Infos zu **Elterngeld**
+      findest Du auf dem [Familienportal](https://familienportal.de/familienportal/familienleistungen/elterngeld/faq)."
+  - text: "In der Zwischenzeit findest Du mehr Infos zum Elterngeld auf dem [🔗 Familienportal](https://familienportal.de/familienportal/familienleistungen/elterngeld/faq)."
   utter_elterngeld_inform:
   - text: Elterngeld ist eine Leistung, die Du vom Staat als Unterstützung erhalten
       kannst, wenn Du nach der Geburt Deines Kindes gar nicht oder weniger arbeitest.
@@ -163,13 +172,25 @@ responses:
       title: "WhatsApp"
   utter_mutterschutz_differencereply:
   - text: "Der **Mutterschutz** ist ein besonderer Schutz für schwangere oder stillende Arbeitnehmerinnen. \n 
-  Die **Mutterschutzfrist** hingegen ist ein Zeitraum vor und nach der Geburt, in dem die Arbeitnehmerin nicht arbeiten darf."
+  Die **Mutterschutzfrist** hingegen ist ein Zeitraum vor und nach der Geburt, in dem die Arbeitnehmerin nicht arbeiten darf 🤓"
   utter_mutterschutz_periodreply:
-  - text: "Der Zeitraum beginnt **6 Wochen vor** dem errechneten Geburtstermin und endet üblicherweise **8 Wochen nach** der Geburt."
+  - text: "Der Zeitraum beginnt **6 Wochen vor** dem errechneten Geburtstermin und endet üblicherweise **8 Wochen nach** der Geburt 📅"
   utter_mutterschutz_reply_outofscope:
     - text: Das kann ich Dir leider noch nicht beantworten. Mehr Infos zu **Mutterschutz**
         findest Du auf dem [Familienportal](https://familienportal.de/familienportal/familienleistungen/mutterschutz).
-
+  utter_ask_permission_familydescription:
+    - text: "Am besten kann ich Dich dazu beraten, wenn Du mir etwas  über Dich erzählst. Einverstanden? 🤓"
+  utter_ask_familydescription:
+    - text: "Ok! Bitte beschreibe mir kurz Deine Familiensituation."
+  utter_ask_familydescription_parent:
+    - text: "Spreche ich mit der Mutter oder dem Vater?"
+  utter_ask_familydescription_pregnancy_month:
+    - text: "Bist Du schwanger? Wenn ja, in welchem Monat?"
+    # TODO: Buttons zur Benutzersteuerung?
+  utter_recommend_elterngeld:
+    - text: "Super, danke! Als werdende Mutter könnte auch Elterngeld für Dich interessant sein."
+  utter_ask_elterngeld_priorknowledge:
+    - text: "Hast Du Dich damit schon beschäftigt?"
 
 forms:
   - elterngeldrequirements_form

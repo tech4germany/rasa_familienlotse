@@ -179,3 +179,12 @@
 - ich arbeite im Ausland, lebe in Deutschland. kann ich Elterngeld beantragen?
 - Wie bin ich versichert bei Elterngeld?
 - kann ich Elterngeld auch beantragen, wenn Kind nicht bei mir wohnt?
+- Wie hängt Kindergeld mit Elterngeld zusammen?
+
+## intent:describe_family
+<!-- TODO: extract entity from two inputs -->
+- Hi, ich bin im [3. Monat](pregnancy_month) schwanger.
+- Hi, meine Freundin ist im [6. Monat](pregnancy_month) schwanger.
+- Hi, ich bin [Mutter](parent).
+- Hi, ich werde in [5. Monaten](pregnancy_month) [Mutter](parent)
+- Ich werde in [1 Monat](pregnancy_month) [Vater](parent)
