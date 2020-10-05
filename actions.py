@@ -27,10 +27,10 @@ from rasa_sdk.forms import FormAction
 #
 #         return []
 
-class ElterngeldPrerequisitesForm(FormAction):
+class ElterngeldRequirementsForm(FormAction):
 
     def name(self):
-        return "elterngeldprerequisites_form"
+        return "elterngeldrequirements_form"
 
     @staticmethod
     def required_slots(tracker):
