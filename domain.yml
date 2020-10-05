@@ -14,6 +14,7 @@ intents:
 - ask_mutterschutz_difference_mutterschutzfrist
 - ask_mutterschutz_period
 - choose_mutterschutz_general
+- describe_family
 
 
 
@@ -41,6 +42,10 @@ slots:
   elterngeld_workparttime:
     type: unfeaturized
   elterngeld_residence:
+    type: unfeaturized
+  parent:
+    type: unfeaturized
+  pregnancy_month:
     type: unfeaturized
 
 responses:
@@ -178,6 +183,8 @@ responses:
   utter_mutterschutz_reply_outofscope:
     - text: Das kann ich Dir leider noch nicht beantworten. Mehr Infos zu **Mutterschutz**
         findest Du auf dem [Familienportal](https://familienportal.de/familienportal/familienleistungen/mutterschutz).
+  utter_moreinfo:
+    - text: "Du hast Dich zuletzt nach Mutterschutz erkundigt. Es gibt noch viele weitere Familienleistungen, die für Dich relevant sein könnten."
   utter_ask_permission_familydescription:
     - text: "Am besten kann ich Dich dazu beraten, wenn Du mir etwas  über Dich erzählst. Einverstanden? 🤓"
   utter_ask_familydescription:
@@ -194,6 +201,7 @@ responses:
 
 forms:
   - elterngeldrequirements_form
+  - familydescription_form
 
 session_config:
   session_expiration_time: 60
