@@ -1,28 +1,19 @@
+name: Continuous Integration for action server
 on:
   push:
     branches:
-      - master
+    - master
     paths:
     - 'actions/**'
 
 jobs:
-  build_and_deploy:
-    runs-on: ubuntu-latest
-    name: Build Action Server image and upgrade Rasa X deployment
+  action_server_job:
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-
-    - id: action_server
-      name: Build an action server with a custom actions
-      uses: tech4germany/rasa_familienlotse@master
-      # Full list of parameters: https://github.com/RasaHQ/action-server-gha/tree/master#input-arguments
-      with:
-        docker_image_name: 't4grasafamilienlotse1/rasa_familienlotse_action_server'
-        docker_registry_login: ${{ secrets.DOCKER_HUB_LOGIN }}
-        docker_registry_password: ${{ secrets.DOCKER_HUB_PASSWORD }}
-        # More details about github context:
-        # https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#github-context
-        #
-        # github.sha - The commit SHA that triggered the workflow run
-        docker_image_tag: ${{ github.sha }}
+      - name: My action server image
+        uses: RasaHQ/action-server-gha@master
+        with: 
+    docker_image_name: 'tech4germany/rasa_familienlotse/action_server'
+    actions_directory: 'actions'
+    docker_registry_login: ${{ secrets.DOCKER_HUB_LOGIN }}
+    docker_registry_password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+    docker_image_tag: ${{ github.sha}}
