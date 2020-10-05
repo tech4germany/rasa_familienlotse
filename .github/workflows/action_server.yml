@@ -3,8 +3,8 @@ on:
   push:
     branches:
     - master
-    paths:
-    - 'actions/**'
+    # paths:
+    # - 'actions/**'
 
 jobs:
   action_server_job:
