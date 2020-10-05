@@ -203,5 +203,33 @@
 ## intent:familydescription_parent
 - [Mutter](familydescription_parent)
 - [Mama](familydescription_parent)
+- [Mum](familydescription_parent)
 - [Vater](familydescription_parent)
 - [Papa](familydescription_parent)
+- [Dad](familydescription_parent)
+
+## intent:greet_elternzeit
+- Hi Elternzeit
+- Hallo Elternzeit
+- hey elternezit
+- huhu elternzeit
+- halllooo elternzeit
+
+## intent:elternzeit_timepartner
+- kann ich auch Elternzeit nehmen?
+- kann meine Frau auch Elternzeit nehmen?
+- kann ich als Mutter auch Elternzeit beantragen
+- kann ich Elternzeit anmelden?
+
+## intent:choose_elternzeit_notification
+- anmeldung
+- anmelden
+- Elternzeit anmelden
+- Elternzeit nehmen
+- elternzeit haben
+
+<!-- NEED TO MERGE WITH ELTERNGELD USING SLOT
+## intent:choose_elternzeit_requirements
+
+## intent_choose_elternzeit_duration
+-->

@@ -17,6 +17,12 @@ intents:
 - describe_family
 - familydescription_parent
 
+# elternzeit
+- greet_elternzeit
+- elternzeit_timepartner
+- choose_elternzeit_notification
+- choose_elternzeit_requirements
+- choose_elternzeit_duration
 
 # default
 - out_of_scope
@@ -58,6 +64,8 @@ responses:
   - text: Hallo, schön, wieder von Dir zu hören.
   - text: Schön, dass Du wieder da bist.
   - text: Willkommen zurück.
+  utter_welcomeback_time:
+  - text: "Hey, nur noch **9** Wochen bis zum großen Tag! ✨"
   utter_goodbye:
   - text: Ok, dann bis zum nächsten Mal!
   utter_ask_continue:
@@ -81,6 +89,7 @@ responses:
   utter_outofscope:
     - text: "Sorry, das kann ich Dir leider noch nicht beantworten. Ich habe auch noch einiges zu lernen 🤓📚 "
     - text: "Das kann ich Dir leider noch nicht beantworten."
+    - text: "Die Details dazu kenne ich leider noch nicht 🙈"  
   utter_more_info:
     - text: "Du hast Dich zuletzt nach Mutterschutz erkundigt. Es gibt noch viele weitere Familienleistungen, die für Dich relevant sein könnten."
   # elterngeld
@@ -199,6 +208,29 @@ responses:
     - text: "Super, danke! Als werdende(r) {familydescription_parent} könnte auch Elterngeld für Dich interessant sein."
   utter_ask_elterngeld_priorknowledge:
     - text: "Hast Du Dich damit schon beschäftigt?"
+
+  # elternzeit
+  utter_elternzeit_inform_deadline:
+    - text: "Falls Dein Partner direkt ab der Geburt **Elternzeit** nehmen möchte, müsst Ihr das in den nächsten 2 Wochen anmelden."
+  utter_ask_elternzeit_priorknowledge:
+    - text: "Hast Du Dich schon über Elternzeit informiert?"
+  utter_elternzeit_inform:
+    - text: "Elternzeit ist eine **unbezahlte Pause** vom Berufsleben, die Du zur Betreuung Deines Kindes nehmen kannst. Startzeitpunkt und Dauer musst Du bei Deinem Arbeitgeber anmelden 🤓 "
+  utter_ask_elternzeit_subtopic:
+    - text: "Möchtest Du noch etwas zu Voraussetzungen, Anmeldung oder Bezugsdauer wissen?"
+      buttons:
+      - payload: /choose_elternzeit_requirements
+        title: "Voraussetzungen"
+      - payload: /choose_elternzeit_notification
+        title: "Anmeldung"
+      - payload: /choose_elternzeit_duration
+        title: "Bezugsdauer"
+  utter_elternzeit_timepartner:
+    - text: "Ja, für Mütter beginnt die Elternzeit frühestens nach dem Ende der Mutterschutzfrist. Also hast Du noch genug Zeit bis zur Anmeldung 🐢"
+  utter_elternzeit_reply_outofscope:
+    - text: "Aber schau doch mal hier auf dem [🔗 Familienportal](https://familienportal.de/familienportal/familienleistungen/elternzeit/faq/wann-und-wie-muss-ich-elternzeit-beantragen-/124810)."
+  
+
 
 forms:
   - elterngeldrequirements_form
