@@ -8,12 +8,17 @@ on:
 
 jobs:
   action_server_job:
+    runs-on: ubuntu-latest
+    name: Build Rasa Action Server image and upgrade Rasa X deployment
     steps:
-      - name: My action server image
-        uses: RasaHQ/action-server-gha@master
-        with: 
-          docker_image_name: 'tech4germany/rasa_familienlotse'
-          actions_directory: 'actions'
-          docker_registry_login: ${{ secrets.DOCKER_HUB_LOGIN }}
-          docker_registry_password: ${{ secrets.DOCKER_HUB_PASSWORD }}
-          docker_image_tag: ${{ github.sha}}
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: My action server image
+      uses: RasaHQ/action-server-gha@master
+      with: 
+        docker_image_name: 'tech4germany/rasa_familienlotse'
+        actions_directory: 'actions'
+        docker_registry_login: ${{ secrets.DOCKER_HUB_LOGIN }}
+        docker_registry_password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+        docker_image_tag: ${{ github.sha}}
