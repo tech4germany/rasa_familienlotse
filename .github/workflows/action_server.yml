@@ -14,6 +14,9 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
+    - name: Login to DockerHub Registry 🔢
+      run: echo "${{ secrets.DOCKER_HUB_PASSWORD }}" | docker login -u ${{ env.DOCKER_HUB_LOGIN }} --password-stdin || true
+
     - name: My action server image
       uses: RasaHQ/action-server-gha@master
       with: 
@@ -22,3 +25,4 @@ jobs:
         docker_registry_login: ${{ secrets.DOCKER_HUB_LOGIN }}
         docker_registry_password: ${{ secrets.DOCKER_HUB_PASSWORD }}
         docker_image_tag: ${{ github.sha}}
+  
