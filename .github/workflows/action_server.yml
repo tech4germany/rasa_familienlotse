@@ -12,8 +12,8 @@ jobs:
       - name: My action server image
         uses: RasaHQ/action-server-gha@master
         with: 
-    docker_image_name: 'tech4germany/rasa_familienlotse'
-    actions_directory: 'actions'
-    docker_registry_login: ${{ secrets.DOCKER_HUB_LOGIN }}
-    docker_registry_password: ${{ secrets.DOCKER_HUB_PASSWORD }}
-    docker_image_tag: ${{ github.sha}}
+          docker_image_name: 'tech4germany/rasa_familienlotse'
+          actions_directory: 'actions'
+          docker_registry_login: ${{ secrets.DOCKER_HUB_LOGIN }}
+          docker_registry_password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+          docker_image_tag: ${{ github.sha}}
