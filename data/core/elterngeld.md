@@ -27,6 +27,7 @@
   - form{"name": "elterngeldrequirements_form"}
   - form{"name": null}
   - utter_elterngeld_slots
+  - utter_ask_elterngeld_furthertopic
 
 ## elterngeld+prerequisites+denied+nofurtherquestion
 > elterngeld_subtopics
@@ -76,17 +77,30 @@
 ## elterngeld application
 > elterngeld_subtopics
 * choose_elterngeld_application
+  - utter_outofscope
   - utter_elterngeld_reply_outofscope
   - utter_goodbye
 
 ## elterngeld amount
 > elterngeld_subtopics
 * choose_elterngeld_amount
+  - utter_outofscope
   - utter_elterngeld_reply_outofscope
   - utter_goodbye
 
 ## elterngeld duration
 > elterngeld_subtopics
 * choose_elterngeld_duration
+  - utter_outofscope
   - utter_elterngeld_reply_outofscope
-  - utter_goodbye 
+  - utter_goodbye
+
+<!--
+## elterngeld+prerequisites+application+elterngelddigital
+* choose_elterngeld_application{"elterngeld_residence": "Berlin"} OR choose_elterngeld_application{"elterngeld_residence": "Bremen"}
+  - utter_elterngeld_application_elterngelddigital
+
+## elterngeld+prerequisites+application+bawü
+* choose_elterngeld_application{"elterngeld_residence": "Baden-Württemberg"}
+  - utter_elterngeld_application_bawue
+-->

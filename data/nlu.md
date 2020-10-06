@@ -31,13 +31,14 @@
 - Elterngeld Voraussetzung
 
 ## intent:choose_elterngeld_application
-- beantragung für Elterngeld
+- beantragung für Elterngeld in [BaWü](bundesland)
 - benatragung
 - Beantragungen
-- beantragen
+- beantragen in [Hamburg](bundesland)
 - bearntragen
 - ich will Elterngeld beantragen
 - Elterngeld antrag
+- Elterngeld beantragen in [RLP](bundesland)
 
 ## intent:choose_elterngeld_amount
 - Höhe Elterngeld
@@ -85,7 +86,7 @@
 - [Hessen](bundesland)
 - [Saarland](bundesland)
 - [sl](bundesland)
-<!-- elterngeld_residence_fallback-->
+<!-- bundesland_fallback-->
 - [ausland](bundesland)
 
 

@@ -65,7 +65,7 @@
   - utter_recommend_elterngeld
   - utter_ask_elterngeld_priorknowledge
 * affirm
-  - utter_hope_help
+  - utter_im_here_4_u
 * out_of_scope
   - utter_outofscope
   - utter_elterngeld_reply_outofscope

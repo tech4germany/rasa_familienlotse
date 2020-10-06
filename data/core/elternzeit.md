@@ -1,4 +1,4 @@
-## elternzeit+question
+## elternzeit+nopriorknowledge
 * greet_elternzeit
   - utter_welcomeback_time
   - utter_elternzeit_inform_deadline
@@ -13,4 +13,11 @@
   - utter_outofscope
   - utter_elternzeit_reply_outofscope
 
-<!-- next question in case of prior knowledge -->
+## elternzeit+priorknowledge
+* greet_elternzeit
+  - utter_welcomeback_time
+  - utter_elternzeit_inform_deadline
+  - utter_ask_elternzeit_priorknowledge
+* affirm
+  - utter_hope_help
+  - utter_im_here_4_u

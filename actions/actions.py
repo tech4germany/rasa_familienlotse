@@ -12,6 +12,7 @@ from typing import Any, Text, Dict, List, Union
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
+from rasa_sdk.events import SlotSet
 
 class ElterngeldRequirementsForm(FormAction):
 
@@ -21,6 +22,9 @@ class ElterngeldRequirementsForm(FormAction):
     @staticmethod
     def required_slots(tracker):
         # TODO: wenn ein slot mit nein, dann zu Ende
+        # if tracker.get_slot("elterngeld_care") == False or tracker.get_slot("elterngeld_samehousehold") == False or tracker.get_slot("elterngeld_workparttime") == False or tracker.get_slot("elterngeld_residence") is None:
+        #    return []
+        #else:
         return ["elterngeld_care", "elterngeld_samehousehold", "elterngeld_workparttime", "elterngeld_residence"]
 
     def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
@@ -52,7 +56,33 @@ class ElterngeldRequirementsForm(FormAction):
     ) -> List[Dict]:
 
         # dispatcher.utter_message("Thanks, great job!")
-        return []
+        if tracker.get_slot("elterngeld_care") == False or tracker.get_slot("elterngeld_samehousehold") == False or tracker.get_slot("elterngeld_workparttime") == False:
+            dispatcher.utter_message("utter_elterngeld_inform_prerequisites")
+            return []
+        residence = tracker.get_slot('elterngeld_residence')
+        if residence is not None:
+            if residence == "rlp":
+                residence_adapted = "Rheinland-Pfalz"
+            elif residence == "BER":
+                residence_adapted = "Berlin"
+            elif residence == "meckpomm":
+                residence_adapted = "Mecklenburg-Vorpommern"
+            elif residence == "SH":
+                residence_adapted = "Schleswig-Holstein"
+            elif residence in ["bawü","BaWü"]:
+                residence_adapted = "Baden-Württemberg"
+            elif residence in ["bay", "BY"]:
+                residence_adapted = "Bayern"
+            elif residence == "sl":
+                residence_adapted = "Saarland"
+            elif residence[0].islower():
+                residence_adapted = residence[0].upper()+residence[1:]
+            else:
+                residence_adapted = residence_adapted
+            return [SlotSet("elterngeld_residence", residence_adapted)]
+        else:
+            return []
+                    
 
 class FamilyDescriptionForm(FormAction):
 
