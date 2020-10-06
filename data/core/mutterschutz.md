@@ -69,4 +69,3 @@
 * out_of_scope
   - utter_outofscope
   - utter_elterngeld_reply_outofscope
-

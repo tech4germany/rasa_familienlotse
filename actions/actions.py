@@ -23,8 +23,8 @@ class ElterngeldRequirementsForm(FormAction):
     def required_slots(tracker):
         # TODO: wenn ein slot mit nein, dann zu Ende
         # if tracker.get_slot("elterngeld_care") == False or tracker.get_slot("elterngeld_samehousehold") == False or tracker.get_slot("elterngeld_workparttime") == False or tracker.get_slot("elterngeld_residence") is None:
-        #    return []
-        #else:
+        #     return []
+        # else:
         return ["elterngeld_care", "elterngeld_samehousehold", "elterngeld_workparttime", "elterngeld_residence"]
 
     def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
