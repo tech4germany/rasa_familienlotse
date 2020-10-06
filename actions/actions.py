@@ -21,12 +21,11 @@ class ElterngeldRequirementsForm(FormAction):
 
     @staticmethod
     def required_slots(tracker):
-        # TODO: wenn ein slot mit nein, dann zu Ende
-        if tracker.get_slot("elterngeld_care") == False: 
+        if tracker.get_slot("elterngeld_care") is False: 
             return []
-        elif tracker.get_slot("elterngeld_samehousehold") == False:
+        elif tracker.get_slot("elterngeld_samehousehold") is False:
             return []
-        elif tracker.get_slot("elterngeld_workparttime") == False:
+        elif tracker.get_slot("elterngeld_workparttime") is False:
             return []
         elif tracker.get_slot("elterngeld_workparttime") == "ausland":
             return []  
@@ -62,7 +61,7 @@ class ElterngeldRequirementsForm(FormAction):
     ) -> List[Dict]:
 
         # dispatcher.utter_message("Thanks, great job!")
-        if tracker.get_slot("elterngeld_care") == False or tracker.get_slot("elterngeld_samehousehold") == False or tracker.get_slot("elterngeld_workparttime") == False or tracker.get_slot("elterngeld_residence") == "ausland":
+        if tracker.get_slot("elterngeld_care") is False or tracker.get_slot("elterngeld_samehousehold") is False or tracker.get_slot("elterngeld_workparttime") is False or tracker.get_slot("elterngeld_residence") == "ausland":
             dispatcher.utter_message(template="utter_elterngeld_inform_prerequisites")
             return []
         residence = tracker.get_slot('elterngeld_residence')
@@ -84,7 +83,7 @@ class ElterngeldRequirementsForm(FormAction):
             elif residence[0].islower():
                 residence_adapted = residence[0].upper()+residence[1:]
             else:
-                residence_adapted = residence_adapted
+                residence_adapted
             return [SlotSet("elterngeld_residence", residence_adapted)]
         else:
             return []
