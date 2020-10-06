@@ -13,21 +13,15 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+    - name: Set Build ID from run ID and number
+      run: echo "BUILD_NUMBER=$GITHUB_RUN_NUMBER-$GITHUB_RUN_ID" >> $GITHUB_ENV
+
     - name: My action server image
       uses: RasaHQ/action-server-gha@master
       with: 
-        rasa_sdk_version: latest
+        rasa_sdk_version: 1.10.0
         docker_image_name: 't4grasafamilienlotse1/rasa_familienlotse_action_server'
         actions_directory: 'actions'
         docker_registry_login: ${{ secrets.DOCKER_HUB_LOGIN }}
         docker_registry_password: ${{ secrets.DOCKER_HUB_PASSWORD }}
-        docker_image_tag: ${{ github.sha}}
-    - name: My action server image2
-      uses: RasaHQ/action-server-gha@master
-      with: 
-        rasa_sdk_version: latest
-        docker_image_name: 't4grasafamilienlotse1/rasa_familienlotse_action_server'
-        actions_directory: 'actions'
-        docker_registry_login: ${{ secrets.DOCKER_HUB_LOGIN }}
-        docker_registry_password: ${{ secrets.DOCKER_HUB_PASSWORD }}
-        docker_image_tag: latest
+        docker_image_tag: ${{ env.BUILD_NUMBER }}
