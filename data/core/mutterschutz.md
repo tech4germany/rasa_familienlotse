@@ -32,4 +32,80 @@
 * choose_mutterschutz_general
   - utter_mutterschutz_reply_outofscope
 
+## whatsapp+familydescription+elterngeldstart
+* greet_whatsapp
+  - utter_welcomeback
+  - utter_moreinfo
+  - utter_ask_permission_familydescription
+* affirm
+  - utter_ask_familydescription
+* describe_family
+  - familydescription_form
+  - form{"name": "familydescription_form"}
+  - form{"name": null}
+  - utter_recommend_elterngeld
+  - utter_ask_elterngeld_priorknowledge
+* deny
+  - utter_elterngeld_inform
+  - utter_ask_elterngeld_subtopic
 
+## whatsapp+familydescription+elterngeldrelated
+* greet_whatsapp
+  - utter_welcomeback
+  - utter_moreinfo
+  - utter_ask_permission_familydescription
+* affirm
+  - utter_ask_familydescription
+* describe_family
+  - familydescription_form
+  - form{"name": "familydescription_form"}
+  - form{"name": null}
+  - utter_recommend_elterngeld
+  - utter_ask_elterngeld_priorknowledge
+* affirm
+  - utter_im_here_4_u
+* out_of_scope
+  - utter_outofscope
+  - utter_elterngeld_reply_outofscope
+
+## whatsapp+familydescription+permissiondenied
+* greet_whatsapp
+  - utter_welcomeback
+  - utter_moreinfo
+  - utter_ask_permission_familydescription
+* deny
+  - utter_hope_help
+  - utter_im_here_4_u
+
+## whatsapp+familydescription+stop
+* greet_whatsapp
+  - utter_welcomeback
+  - utter_moreinfo
+  - utter_ask_permission_familydescription
+* affirm
+  - utter_ask_familydescription
+* describe_family
+  - familydescription_form
+  - form{"name": "familydescription_form"}
+* out_of_scope
+  - utter_ask_continue
+* deny
+  - action_deactivate_form
+  - form{"name": null}
+  - utter_im_here_4_u
+
+## whatsapp+familydescription+continue
+* greet_whatsapp
+  - utter_welcomeback
+  - utter_moreinfo
+  - utter_ask_permission_familydescription
+* affirm
+  - utter_ask_familydescription
+* describe_family
+  - familydescription_form
+  - form{"name": "familydescription_form"}
+* out_of_scope
+  - utter_ask_continue
+* affirm
+  - familydescription_form
+  - form{"name": null}

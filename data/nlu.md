@@ -31,13 +31,14 @@
 - Elterngeld Voraussetzung
 
 ## intent:choose_elterngeld_application
-- beantragung für Elterngeld
+- beantragung für Elterngeld in [BaWü](bundesland)
 - benatragung
 - Beantragungen
-- beantragen
+- beantragen in [Hamburg](bundesland)
 - bearntragen
 - ich will Elterngeld beantragen
 - Elterngeld antrag
+- Elterngeld beantragen in [RLP](bundesland)
 
 ## intent:choose_elterngeld_amount
 - Höhe Elterngeld
@@ -85,7 +86,7 @@
 - [Hessen](bundesland)
 - [Saarland](bundesland)
 - [sl](bundesland)
-<!-- elterngeld_residence_fallback-->
+<!-- bundesland_fallback-->
 - [ausland](bundesland)
 
 
@@ -107,6 +108,7 @@
 - Wann endet die Mutterschutzfrist?
 
 ## intent:greet_mutterschutz
+<!-- TODO: Einstieg verändern!  -->
 - hi mutterschutz
 - hallo mutterschutz
 - hey mutterschutz
@@ -179,3 +181,56 @@
 - ich arbeite im Ausland, lebe in Deutschland. kann ich Elterngeld beantragen?
 - Wie bin ich versichert bei Elterngeld?
 - kann ich Elterngeld auch beantragen, wenn Kind nicht bei mir wohnt?
+- Wie hängt Kindergeld mit Elterngeld zusammen?
+
+## intent:describe_family
+<!-- TODO: extract entity from two inputs -->
+- Hi, ich bin im [3. Monat](familydescription_pregnancy_month) schwanger
+- Hi, ich bin [Mutter](familydescription_parent).
+- Hi, ich werde in [5 Monaten](familydescription_pregnancy_month) [Mutter](familydescription_parent)
+- In [4 Monaten](familydescription_pregnancy_month) werde ich [Mama](familydescription_parent) 
+- Hi, meine Freundin ist im [6. Monat](familydescription_pregnancy_month) schwanger.
+- Hi, meine Frau ist im [7. Monat](familydescription_pregnancy_month) schwanger.
+- Ich werde in [1 Monat](familydescription_pregnancy_month) [Vater](familydescription_parent)
+- Ich werde in [2 Monaten](familydescription_pregnancy_month) [Papa](familydescription_parent)
+
+## intent:greet_whatsapp
+- hi whatsapp
+- hello whatsapp
+- huhu whatsapp
+- hallo whatsapp
+- hey whatsapp 
+
+## intent:familydescription_parent
+- [Mutter](familydescription_parent)
+- [Mama](familydescription_parent)
+- [Mum](familydescription_parent)
+- [Vater](familydescription_parent)
+- [Papa](familydescription_parent)
+- [Dad](familydescription_parent)
+
+## intent:greet_elternzeit
+- Hi Elternzeit
+- Hallo Elternzeit
+- hey elternezit
+- huhu elternzeit
+- halllooo elternzeit
+
+## intent:elternzeit_timepartner
+- kann ich auch Elternzeit nehmen?
+- kann meine Frau auch Elternzeit nehmen?
+- kann ich als Mutter auch Elternzeit beantragen
+- kann ich Elternzeit anmelden?
+
+## intent:choose_elternzeit_notification
+- anmeldung
+- anmelden
+- Elternzeit anmelden
+- Elternzeit nehmen
+- elternzeit haben
+
+<!-- NEED TO MERGE WITH ELTERNGELD USING SLOT
+## intent:choose_elternzeit_requirements
+
+## intent_choose_elternzeit_duration
+-->

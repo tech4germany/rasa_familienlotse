@@ -1,0 +1,23 @@
+## elternzeit+nopriorknowledge
+* greet_elternzeit
+  - utter_welcomeback_time
+  - utter_elternzeit_inform_deadline
+  - utter_ask_elternzeit_priorknowledge
+* deny
+  - utter_elternzeit_inform
+  - utter_ask_elternzeit_subtopic
+* elternzeit_timepartner
+  - utter_elternzeit_timepartner
+  - utter_ask_knowmore
+* choose_elternzeit_notification
+  - utter_outofscope
+  - utter_elternzeit_reply_outofscope
+
+## elternzeit+priorknowledge
+* greet_elternzeit
+  - utter_welcomeback_time
+  - utter_elternzeit_inform_deadline
+  - utter_ask_elternzeit_priorknowledge
+* affirm
+  - utter_hope_help
+  - utter_im_here_4_u
