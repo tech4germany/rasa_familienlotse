@@ -21,4 +21,3 @@
 * affirm
   - utter_hope_help
   - utter_im_here_4_u
-  

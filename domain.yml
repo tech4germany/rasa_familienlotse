@@ -195,10 +195,10 @@ responses:
   - text: "Du musst die folgenden Voraussetzungen erfüllen, um Elterngeld beziehen
       zu können. \n - Du lebst in Deutschland. \n - Du wohnst mit Deinem Kind zusammen. \n
       - Du betreust Dein Kind selbst. \n - Du arbeitest höchstens 30 Stunden pro Woche."
-  utter_elterngeld_application_elterngelddigital:
-  - text: "Da Du in {elterngeld_residence} wohnst, kannst Du den Elterngeldantrag bei [🔗 Elterngeld Digital](https://www.elterngeld-digital.de/ams/Elterngeld/wizardng/FFE7CD?v=1601979713870) digital ausfüllen. Anschließend musst Du ihn ausdrucken und an Deine Elterngeldstelle schicken. Deine Elterngeldstelle findest Du [🔗 hier](https://familienportal.de/action/familienportal/125008/action/suche)."
-  utter_elterngeld_application_bawue:
-  - text: "Da Du in {elterngeld_residence} wohnst, kannst Du den Elterngeldantrag [🔗  hier](https://www.l-bank.de/produkte/familienfoerderung/elterngeld.html) digital ausfüllen. Anschließend musst Du ihn ausdrucken und an Deine Elterngeldstelle schicken. Deine Elterngeldstelle findest Du [🔗 hier](https://familienportal.de/action/familienportal/125008/action/suche)."
+  # utter_elterngeld_application_elterngelddigital:
+  # - text: "Da Du in {elterngeld_residence} wohnst, kannst Du den Elterngeldantrag bei [🔗 Elterngeld Digital](https://www.elterngeld-digital.de/ams/Elterngeld/wizardng/FFE7CD?v=1601979713870) digital ausfüllen. Anschließend musst Du ihn ausdrucken und an Deine Elterngeldstelle schicken. Deine Elterngeldstelle findest Du [🔗 hier](https://familienportal.de/action/familienportal/125008/action/suche)."
+  # utter_elterngeld_application_bawue:
+  # - text: "Da Du in {elterngeld_residence} wohnst, kannst Du den Elterngeldantrag [🔗  hier](https://www.l-bank.de/produkte/familienfoerderung/elterngeld.html) digital ausfüllen. Anschließend musst Du ihn ausdrucken und an Deine Elterngeldstelle schicken. Deine Elterngeldstelle findest Du [🔗 hier](https://familienportal.de/action/familienportal/125008/action/suche)."
 
   # mutterschutz
   utter_ask_mutterschutz_question:

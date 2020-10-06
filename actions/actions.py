@@ -22,10 +22,16 @@ class ElterngeldRequirementsForm(FormAction):
     @staticmethod
     def required_slots(tracker):
         # TODO: wenn ein slot mit nein, dann zu Ende
-        # if tracker.get_slot("elterngeld_care") == False or tracker.get_slot("elterngeld_samehousehold") == False or tracker.get_slot("elterngeld_workparttime") == False or tracker.get_slot("elterngeld_residence") is None:
-        #     return []
-        # else:
-        return ["elterngeld_care", "elterngeld_samehousehold", "elterngeld_workparttime", "elterngeld_residence"]
+        if tracker.get_slot("elterngeld_care") == False: 
+            return []
+        elif tracker.get_slot("elterngeld_samehousehold") == False:
+            return []
+        elif tracker.get_slot("elterngeld_workparttime") == False:
+            return []
+        elif tracker.get_slot("elterngeld_workparttime") == "ausland":
+            return []  
+        else:
+            return ["elterngeld_care", "elterngeld_samehousehold", "elterngeld_workparttime", "elterngeld_residence"]
 
     def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
         
@@ -56,8 +62,8 @@ class ElterngeldRequirementsForm(FormAction):
     ) -> List[Dict]:
 
         # dispatcher.utter_message("Thanks, great job!")
-        if tracker.get_slot("elterngeld_care") == False or tracker.get_slot("elterngeld_samehousehold") == False or tracker.get_slot("elterngeld_workparttime") == False:
-            dispatcher.utter_message("utter_elterngeld_inform_prerequisites")
+        if tracker.get_slot("elterngeld_care") == False or tracker.get_slot("elterngeld_samehousehold") == False or tracker.get_slot("elterngeld_workparttime") == False or tracker.get_slot("elterngeld_residence") == "ausland":
+            dispatcher.utter_message(template="utter_elterngeld_inform_prerequisites")
             return []
         residence = tracker.get_slot('elterngeld_residence')
         if residence is not None:

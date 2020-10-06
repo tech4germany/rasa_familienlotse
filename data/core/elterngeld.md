@@ -95,7 +95,7 @@
   - utter_elterngeld_reply_outofscope
   - utter_goodbye
 
-<!--
+<!-- 
 ## elterngeld+prerequisites+application+elterngelddigital
 * choose_elterngeld_application{"elterngeld_residence": "Berlin"} OR choose_elterngeld_application{"elterngeld_residence": "Bremen"}
   - utter_elterngeld_application_elterngelddigital

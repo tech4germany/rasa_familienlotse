@@ -39,7 +39,6 @@
   - utter_ask_permission_familydescription
 * affirm
   - utter_ask_familydescription
-<!-- fill family form -->
 * describe_family
   - familydescription_form
   - form{"name": "familydescription_form"}
@@ -57,7 +56,6 @@
   - utter_ask_permission_familydescription
 * affirm
   - utter_ask_familydescription
-<!-- fill family form -->
 * describe_family
   - familydescription_form
   - form{"name": "familydescription_form"}
@@ -69,3 +67,45 @@
 * out_of_scope
   - utter_outofscope
   - utter_elterngeld_reply_outofscope
+
+## whatsapp+familydescription+permissiondenied
+* greet_whatsapp
+  - utter_welcomeback
+  - utter_moreinfo
+  - utter_ask_permission_familydescription
+* deny
+  - utter_hope_help
+  - utter_im_here_4_u
+
+## whatsapp+familydescription+stop
+* greet_whatsapp
+  - utter_welcomeback
+  - utter_moreinfo
+  - utter_ask_permission_familydescription
+* affirm
+  - utter_ask_familydescription
+* describe_family
+  - familydescription_form
+  - form{"name": "familydescription_form"}
+* out_of_scope
+  - utter_ask_continue
+* deny
+  - action_deactivate_form
+  - form{"name": null}
+  - utter_im_here_4_u
+
+## whatsapp+familydescription+continue
+* greet_whatsapp
+  - utter_welcomeback
+  - utter_moreinfo
+  - utter_ask_permission_familydescription
+* affirm
+  - utter_ask_familydescription
+* describe_family
+  - familydescription_form
+  - form{"name": "familydescription_form"}
+* out_of_scope
+  - utter_ask_continue
+* affirm
+  - familydescription_form
+  - form{"name": null}
