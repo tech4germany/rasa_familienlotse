@@ -26,7 +26,6 @@
   - elterngeldrequirements_form
   - form{"name": "elterngeldrequirements_form"}
   - form{"name": null}
-  - utter_elterngeld_slots
   - utter_ask_elterngeld_furthertopic
 
 ## elterngeld+prerequisites+denied+nofurtherquestion

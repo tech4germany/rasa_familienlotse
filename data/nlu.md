@@ -109,12 +109,12 @@
 
 ## intent:greet_mutterschutz
 <!-- TODO: Einstieg verändern!  -->
-- hi mutterschutz
-- hallo mutterschutz
-- hey mutterschutz
-- frage mutterschutz
-- wieso mutterschutz
-- hello mutterschutz
+- start mutterschutz
+- go mutterschutz
+- Beginn mutterschutz
+- beginn mutterschutz
+- Start mutterschutz
+- los gehts mutterschutz
 - hallo mutterschutz
 
 ## intent:choose_whatsapp
@@ -210,11 +210,11 @@
 - [Dad](familydescription_parent)
 
 ## intent:greet_elternzeit
-- Hi Elternzeit
+- Start Elternzeit
 - Hallo Elternzeit
-- hey elternezit
-- huhu elternzeit
-- halllooo elternzeit
+- Los elternezit
+- Los gehts elternzeit
+- start elternzeit
 
 ## intent:elternzeit_timepartner
 - kann ich auch Elternzeit nehmen?
