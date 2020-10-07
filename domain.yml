@@ -10,7 +10,6 @@ intents:
 - choose_elterngeld_duration
 
 # mutterschutz
-- greet_mutterschutz
 - ask_mutterschutz_difference_mutterschutzfrist
 - ask_mutterschutz_period
 - choose_mutterschutz_general
@@ -32,6 +31,7 @@ intents:
 - goodbye
 - choose_whatsapp
 - greet_whatsapp
+- get_started
 
 entities:
 - elterngeld_care
@@ -77,37 +77,38 @@ slots:
 responses:
   # default
   utter_intro:
-    - text: "Hallo, ich bin **Sonne**! 🌞 \n
-        Ich kann Dich hier oder langfristig auf WhatsApp über Themen rund um **Familienleistungen** informieren und beraten."  
+    - text: "Hallo, ich bin **Sonne**! 👋\n
+        Ich bin Deine virtuelle Familienassistentin und würde Dich gerne zu Themen rund um **Familienleistungen** informieren und beraten.\n
+        Außerdem versuche ich Deine Fragen zu beantworten."  
   utter_welcomeback:
-  - text: Hallo, schön, wieder von Dir zu hören 🌞
-  - text: Schön, dass Du wieder da bist 🌞
-  - text: Willkommen zurück 🌞
+  - text: Hallo, schön, wieder von Dir zu hören 
+  - text: Schön, dass Du wieder da bist 
+  - text: Willkommen zurück 
   utter_welcomeback_time:
   - text: "Hey, nur noch **9** Wochen bis zum großen Tag! ✨"
   utter_goodbye:
-  - text: "Ok, dann bis zum nächsten Mal! 🌞"
+  - text: "Ok, dann bis zum nächsten Mal!"
   utter_ask_continue:
   - text: Tut mir leid, ich kann Dir gerade nicht ganz folgen. Möchtest Du weitermachen?
   utter_im_here_4_u:
-  - text: "Melde Dich gerne bei mir, wenn Du noch etwas brauchst 🌞"
-  - text: "Wenn Du trotzdem noch Fragen haben solltest, kannst Du sie mir jederzeit stellen 🌞"
+  - text: "Melde Dich gerne bei mir, wenn Du noch etwas brauchst."
+  - text: "Wenn Du trotzdem noch Fragen haben solltest, kannst Du sie mir jederzeit stellen."
   - text: "Das war es vorerst von mir. Wenn Du noch Fragen hast, melde Dich gerne."
   utter_hope_help:
-  - text: "Alles klar. Ich hoffe, ich konnte Dir helfen 🌞"
+  - text: "Alles klar. Ich hoffe, ich konnte Dir helfen."
   utter_whatsapp_offer:
-  - text: "Übrigens - Du kannst mich gerne auch auf WhatsApp hinzufügen. Dann kann ich Dich im passenden Moment über weitere Familienleistungen und Fristen informieren 💡"
+  - text: "Übrigens - Du kannst mich gerne auch auf WhatsApp hinzufügen. Dann kann ich Dich im **passenden Moment** über weitere Familienleistungen und Fristen informieren 💡"
     buttons:
     - payload: /choose_whatsapp
-      title: "Zu WhatsApp hinzufügen"
+      title: "Zu WhatsApp wechseln"
   # TODO: transform to button w/ WhatsApp Link
   utter_whatsapp_contact:
   - text: "Gerne können wir über WhatsApp Kontakt halten - das ist ja auch etwas bequemer als nur über die Website. Bitte füge mich unter [+49176...](https://wa.me/+4915228512776?text=hallo%20mutterschutz) zu Deinen Kontakten hinzu. Außerdem akzeptierst Du durch das Hinzufügen die [WhatsApp-AGBs](https://www.whatsapp.com/legal/?lang=de&eea=0)."
   utter_ask_knowmore:
     - text: "Hast Du noch eine weitere Frage? Schreib sie mir gerne."
-    - text: "Willst Du mehr darüber wissen? Du kannst mich auch etwas anderes fragen."
+    - text: "Willst Du mehr darüber wissen? Du kannst mich auch gerne etwas anderes fragen."
   utter_outofscope:
-    - text: "Sorry, das kann ich Dir leider noch nicht beantworten. Ich habe auch noch einiges zu lernen 🤓📚 "
+    - text: "Sorry, das kann ich Dir leider noch nicht beantworten. Ich habe auch noch einiges zu lernen 😊📚 "
     - text: "Das kann ich Dir leider noch nicht beantworten."
     - text: "Die Details dazu kenne ich leider noch nicht 🙈"  
   utter_more_info:
@@ -135,7 +136,7 @@ responses:
   - text: "In der Zwischenzeit findest Du mehr Infos zum **Elterngeld** auf dem [🔗 Familienportal](https://familienportal.de/familienportal/familienleistungen/elterngeld/faq)."
   utter_elterngeld_inform:
   - text: "**Elterngeld** ist eine Leistung, die Du vom Staat als Unterstützung erhalten
-      kannst, wenn Du nach der Geburt Deines Kindes gar nicht oder weniger arbeitest 🤓"
+      kannst, wenn Du nach der Geburt Deines Kindes gar nicht oder weniger arbeitest 😊"
   utter_ask_elterngeld_subtopic:
   - text: "Ich kann Dir jetzt mehr zu den **Voraussetzungen**, der **Beantragung**, der **Höhe**
       oder der **Bezugsdauer** des **Elterngeldes** erzählen. \n Möchtest Du zu einem dieser
@@ -158,7 +159,7 @@ responses:
     - payload: /deny
       title: Nein
   utter_ask_elterngeld_care:
-  - text: "Ok, erste Frage. Wirst Du Dein Kind selbst betreuen? 👶 "
+  - text: "Ok, erste Frage. Wirst Du Dein Kind selbst betreuen? 👶bab "
     buttons:
     - payload: '/affirm{"elterngeld_care": "ja"}'
       title: Ja
@@ -194,7 +195,8 @@ responses:
   utter_elterngeld_inform_prerequisites:
   - text: "Du musst die folgenden Voraussetzungen erfüllen, um **Elterngeld** beziehen
       zu können. \n - Du lebst in Deutschland. \n - Du wohnst mit Deinem Kind zusammen. \n
-      - Du betreust Dein Kind selbst. \n - Du arbeitest höchstens 30 Stunden pro Woche."
+      - Du betreust Dein Kind selbst. \n - Du arbeitest höchstens 30 Stunden pro Woche. \n
+      Leider erfüllst Du mindestens eine Bedingung davon nicht."
   # utter_elterngeld_application_elterngelddigital:
   # - text: "Da Du in {elterngeld_residence} wohnst, kannst Du den Elterngeldantrag bei [🔗 Elterngeld Digital](https://www.elterngeld-digital.de/ams/Elterngeld/wizardng/FFE7CD?v=1601979713870) digital ausfüllen. Anschließend musst Du ihn ausdrucken und an Deine Elterngeldstelle schicken. Deine Elterngeldstelle findest Du [🔗 hier](https://familienportal.de/action/familienportal/125008/action/suche)."
   # utter_elterngeld_application_bawue:
@@ -210,15 +212,15 @@ responses:
     # - payload: /choose_whatsapp
     #   title: "WhatsApp"
   utter_mutterschutz_differencereply:
-  - text: "Der **Mutterschutz** ist ein besonderer Schutz für schwangere oder stillende Arbeitnehmerinnen. \n 
-  Die **Mutterschutzfrist** hingegen ist ein Zeitraum vor und nach der Geburt, in dem die Arbeitnehmerin nicht arbeiten darf 🤓"
+  - text: "Der **Mutterschutz** ist ein besonderer Schutz für schwangere oder stillende Arbeitnehmerinnen.\n 
+      Die **Mutterschutzfrist** hingegen ist ein Zeitraum vor und nach der Geburt, in dem die Arbeitnehmerin nicht arbeiten darf 😊"
   utter_mutterschutz_periodreply:
   - text: "Der Zeitraum beginnt **6 Wochen vor** dem errechneten Geburtstermin und endet üblicherweise **8 Wochen nach** der Geburt 📅"
   utter_mutterschutz_reply_outofscope:
     - text: Das kann ich Dir leider noch nicht beantworten. Mehr Infos zu **Mutterschutz**
         findest Du auf dem [Familienportal](https://familienportal.de/familienportal/familienleistungen/mutterschutz).
   utter_ask_permission_familydescription:
-    - text: "Am besten kann ich Dich dazu beraten, wenn Du mir etwas  über Dich erzählst. Einverstanden? 🤓"
+    - text: "Am besten kann ich Dich dazu beraten, wenn Du mir etwas  über Dich erzählst. Einverstanden? 😊"
   utter_ask_familydescription:
     - text: "Ok! Bitte beschreibe mir kurz Deine Familiensituation."
   utter_ask_familydescription_parent:
@@ -237,7 +239,7 @@ responses:
   utter_ask_elternzeit_priorknowledge:
     - text: "Hast Du Dich schon über Elternzeit informiert?"
   utter_elternzeit_inform:
-    - text: "Elternzeit ist eine **unbezahlte Pause** vom Berufsleben, die Du zur Betreuung Deines Kindes nehmen kannst. Startzeitpunkt und Dauer musst Du bei Deinem Arbeitgeber anmelden 🤓 "
+    - text: "Elternzeit ist eine **unbezahlte Pause** vom Berufsleben, die Du zur Betreuung Deines Kindes nehmen kannst. Startzeitpunkt und Dauer musst Du bei Deinem Arbeitgeber anmelden 😊 "
   utter_ask_elternzeit_subtopic:
     - text: "Möchtest Du noch etwas zu Voraussetzungen, Anmeldung oder Bezugsdauer wissen?"
       buttons:
