@@ -10,7 +10,6 @@ intents:
 - choose_elterngeld_duration
 
 # mutterschutz
-- greet_mutterschutz
 - ask_mutterschutz_difference_mutterschutzfrist
 - ask_mutterschutz_period
 - choose_mutterschutz_general
@@ -25,6 +24,7 @@ intents:
 - choose_elternzeit_duration
 
 # default
+- get_started
 - out_of_scope
 - affirm
 - deny

@@ -1,6 +1,6 @@
 ## mutterschutz+difference+whatsapp
 <!-- TODO: greet mutterschutz as Platzhalter until get started custom action implemented -->
-* greet_mutterschutz   
+* get_started   
   - utter_intro
   - utter_ask_mutterschutz_question
 * ask_mutterschutz_difference_mutterschutzfrist
@@ -16,7 +16,7 @@
 
 ## mutterschutz+difference+nowhatsapp
 <!-- TODO: greet mutterschutz as Platzhalter until get started custom action implemented -->
-* greet_mutterschutz   
+* get_started   
   - utter_intro
   - utter_ask_mutterschutz_question
 * ask_mutterschutz_difference_mutterschutzfrist
@@ -33,7 +33,7 @@
 
 <!--
 ## mutterschutz+difference+whatsapp
-* greet_mutterschutz   
+* get_started   
   - utter_intro
   - utter_ask_mutterschutz_question
 * choose_whatsapp
