@@ -33,30 +33,34 @@ entities:
 - elterngeld_samehousehold
 - elterngeld_workparttime
 - elterngeld_residence
+- elterngeld_residence_link
 - familydescription_pregnancy_month
 - familydescription_parent
+
 slots:
   elterngeld_care:
     type: unfeaturized
   elterngeld_residence:
-    type: categorical
-    values:
-    - baden-württemberg
-    - bayern
-    - berlin
-    - brandenburg
-    - bremen
-    - hamburg
-    - hessen
-    - mecklenburg-vorpommern
-    - niedersachsen
-    - nordrhein-westfalen
-    - rheinland-pfalz
-    - saarland
-    - sachsen
-    - sachsen-anhalt
-    - schleswig-holstein
-    - thüringen
+    type: text
+    # values:
+    # - baden-württemberg
+    # - bayern
+    # - berlin
+    # - brandenburg
+    # - bremen
+    # - hamburg
+    # - hessen
+    # - mecklenburg-vorpommern
+    # - niedersachsen
+    # - nordrhein-westfalen
+    # - rheinland-pfalz
+    # - saarland
+    # - sachsen
+    # - sachsen-anhalt
+    # - schleswig-holstein
+    # - thüringen
+  elterngeld_residence_link:
+    type: unfeaturized
   elterngeld_samehousehold:
     type: unfeaturized
   elterngeld_workparttime:
@@ -189,17 +193,9 @@ responses:
       \ zu können. \n - Du lebst in Deutschland. \n - Du wohnst mit Deinem Kind zusammen.\
       \ \n - Du betreust Dein Kind selbst. \n - Du arbeitest höchstens 30 Stunden\
       \ pro Woche."
-  utter_elterngeld_application_elterngelddigital:
-  - text: Da Du in {elterngeld_residence} wohnst, kannst Du den Elterngeldantrag bei
-      [🔗 Elterngeld Digital](https://www.elterngeld-digital.de/ams/Elterngeld/wizardng/FFE7CD?v=1601979713870)
-      digital ausfüllen. Anschließend musst Du ihn ausdrucken und an Deine Elterngeldstelle
-      schicken. Deine Elterngeldstelle findest Du [🔗 hier](https://familienportal.de/action/familienportal/125008/action/suche).
-  utter_elterngeld_application_bawue:
-  - text: Da Du in {elterngeld_residence} wohnst, kannst Du den Elterngeldantrag [🔗  hier](https://www.l-bank.de/produkte/familienfoerderung/elterngeld.html)
-      digital ausfüllen. Anschließend musst Du ihn ausdrucken und an Deine Elterngeldstelle
-      schicken. Deine Elterngeldstelle findest Du [🔗 hier](https://familienportal.de/action/familienportal/125008/action/suche).
-  utter_elterngeld_application_bay:
-  - text: Da Du in {elterngeld_residence} wohnst, kannst Du den Elterngeldantrag [🔗  hier](https://www.zbfs.bayern.de/familie/elterngeld/antraege/index.php)
+  utter_elterngeld_application_link:
+  - text: Da Du in {elterngeld_residence} wohnst, kannst Du den Elterngeldantrag
+      [🔗 hier]({elterngeld_residence_link})
       digital ausfüllen. Anschließend musst Du ihn ausdrucken und an Deine Elterngeldstelle
       schicken. Deine Elterngeldstelle findest Du [🔗 hier](https://familienportal.de/action/familienportal/125008/action/suche).
   

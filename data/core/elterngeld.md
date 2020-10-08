@@ -95,48 +95,6 @@
   - utter_goodbye
 
  
-## elterngeld+prerequisites+application+elterngelddigital
-* choose_elterngeld_application{"elterngeld_residence": "Berlin"} OR choose_elterngeld_application{"elterngeld_residence":"Bremen"} OR choose_elterngeld_application{"elterngeld_residence":"Hamburg"} OR choose_elterngeld_application{"elterngeld_residence":"Rheinland-Pfalz"} OR choose_elterngeld_application{"elterngeld_residence":"Sachsen"} OR choose_elterngeld_application{"elterngeld_residence":"Thüringen"}
-  - utter_elterngeld_application_elterngelddigital
-
-## elterngeld+prerequisites+application+bawü
-* choose_elterngeld_application{"elterngeld_residence": "Baden-Württemberg"}
-  - utter_elterngeld_application_bawue
-
-## elterngeld+prerequisites+application+bay
-* choose_elterngeld_application{"elterngeld_residence": "Bayern"}
-  - utter_elterngeld_application_bay
-
-<!--
-## elterngeld+prerequisites+application+hes
-* choose_elterngeld_application{"elterngeld_residence": "Hessen"}
-  - utter_elterngeld_application_hes
-
-## elterngeld+prerequisites+application+saar
-* choose_elterngeld_application{"elterngeld_residence": "Saarland"}
-  - utter_elterngeld_application_saar
-
-## elterngeld+prerequisites+application+bb
-* choose_elterngeld_application{"elterngeld_residence": "Brandenburg"}
-  - utter_elterngeld_application_bb
-
-## elterngeld+prerequisites+application+meckpomm
-* choose_elterngeld_application{"elterngeld_residence": "Mecklenburg-Vorpommern"}
-  - utter_elterngeld_application_meckpomm
-
-## elterngeld+prerequisites+application+niesa
-* choose_elterngeld_application{"elterngeld_residence": "Niedersachsen"}
-  - utter_elterngeld_application_niesa
-
-## elterngeld+prerequisites+application+nrw
-* choose_elterngeld_application{"elterngeld_residence": "Nordrhein-Westfalen"}
-  - utter_elterngeld_application_nrw
-
-## elterngeld+prerequisites+application+sachan
-* choose_elterngeld_application{"elterngeld_residence": "Sachsen-Anhalt"}
-  - utter_elterngeld_application_sachan
-
-## elterngeld+prerequisites+application+sh
-* choose_elterngeld_application{"elterngeld_residence": "Schleswig-Holstein"}
-  - utter_elterngeld_application_sh
--->
+## elterngeld+prerequisites+application+link
+* choose_elterngeld_application
+  - utter_elterngeld_application_link
