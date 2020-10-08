@@ -159,7 +159,7 @@ responses:
     - payload: /deny
       title: Nein
   utter_ask_elterngeld_care:
-  - text: "Ok, erste Frage. Wirst Du Dein Kind selbst betreuen? 👶bab "
+  - text: "Ok, erste Frage. Wirst Du Dein Kind selbst betreuen? 👶 "
     buttons:
     - payload: '/affirm{"elterngeld_care": "ja"}'
       title: Ja
