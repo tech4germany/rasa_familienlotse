@@ -31,6 +31,9 @@ class ElterngeldRequirementsForm(FormAction):
             return []  
         else:
             return ["elterngeld_care", "elterngeld_samehousehold", "elterngeld_workparttime", "elterngeld_residence"]
+        # else:
+        #     return ["elterngeld_care", "elterngeld_samehousehold", "elterngeld_workparttime"]
+
 
     def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
         
@@ -48,7 +51,7 @@ class ElterngeldRequirementsForm(FormAction):
                 self.from_intent(intent="deny", value=False),
             ],
             "elterngeld_residence": [
-                self.from_entity(entity="bundesland", intent=["choose_elterngeld_residence"]),
+                self.from_entity(entity="elterngeld_residence", intent=["choose_elterngeld_residence"]),
             ],
 
         }
@@ -61,9 +64,11 @@ class ElterngeldRequirementsForm(FormAction):
     ) -> List[Dict]:
 
         # dispatcher.utter_message("Thanks, great job!")
-        if tracker.get_slot("elterngeld_care") is False or tracker.get_slot("elterngeld_samehousehold") is False or tracker.get_slot("elterngeld_workparttime") is False or tracker.get_slot("elterngeld_residence") == "ausland":
+        #if tracker.get_slot("elterngeld_care") is False or tracker.get_slot("elterngeld_samehousehold") is False or tracker.get_slot("elterngeld_workparttime") is False or tracker.get_slot("elterngeld_residence") == "ausland":
+        if tracker.get_slot("elterngeld_care") is False or tracker.get_slot("elterngeld_samehousehold") is False or tracker.get_slot("elterngeld_workparttime") is False:
             dispatcher.utter_message(template="utter_elterngeld_inform_prerequisites")
             return []
+        
         residence = tracker.get_slot('elterngeld_residence')
         if residence is not None:
             if residence == "rlp":

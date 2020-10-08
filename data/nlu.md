@@ -31,14 +31,14 @@
 - Elterngeld Voraussetzung
 
 ## intent:choose_elterngeld_application
-- beantragung für Elterngeld in [BaWü](bundesland)
+- beantragung für Elterngeld in [BaWü](elterngeld_residence)
 - benatragung
 - Beantragungen
-- beantragen in [Hamburg](bundesland)
+- beantragen in [Hamburg](elterngeld_residence)
 - bearntragen
 - ich will Elterngeld beantragen
 - Elterngeld antrag
-- Elterngeld beantragen in [RLP](bundesland)
+- Elterngeld beantragen in [RLP](elterngeld_residence)
 
 ## intent:choose_elterngeld_amount
 - Höhe Elterngeld
@@ -59,35 +59,35 @@
 
 ## intent:choose_elterngeld_residence
 <!-- elterngeld_digital-->
-- [Berlin](bundesland)
-- [BER](bundesland)
-- [Bremen](bundesland)
-- [Hamburg](bundesland)
-- [Rheinland-Pfalz](bundesland)
-- [rlp](bundesland)
-- [Sachsen](bundesland)
-- [Thüringen](bundesland)
+- [Berlin](elterngeld_residence)
+- [BER](elterngeld_residence)
+- [Bremen](elterngeld_residence)
+- [Hamburg](elterngeld_residence)
+- [Rheinland-Pfalz](elterngeld_residence)
+- [rlp](elterngeld_residence)
+- [Sachsen](elterngeld_residence)
+- [Thüringen](elterngeld_residence)
 <!-- elterngeld__not_digital-->
-- [Brandenburg](bundesland)
-- [Mecklenburg-Vorpommern](bundesland)
-- [meckpomm](bundesland)
-- [Niedersachsen](bundesland)
-- [Nordrhein-Westfalen](bundesland)
-- [NRW](bundesland)
-- [Sachsen-Anhalt](bundesland)
-- [Schleswig-Holstein](bundesland)
-- [SH](bundesland)
+- [Brandenburg](elterngeld_residence)
+- [Mecklenburg-Vorpommern](elterngeld_residence)
+- [meckpomm](elterngeld_residence)
+- [Niedersachsen](elterngeld_residence)
+- [Nordrhein-Westfalen](elterngeld_residence)
+- [NRW](elterngeld_residence)
+- [Sachsen-Anhalt](elterngeld_residence)
+- [Schleswig-Holstein](elterngeld_residence)
+- [SH](elterngeld_residence)
 <!-- elterngeld_own_solution_digital-->
-- [Baden-Württemberg](bundesland)
-- [bawü](bundesland)
-- [Bayern](bundesland)
-- [bay](bundesland)
-- [BY](bundesland)
-- [Hessen](bundesland)
-- [Saarland](bundesland)
-- [sl](bundesland)
-<!-- bundesland_fallback-->
-- [ausland](bundesland)
+- [Baden-Württemberg](elterngeld_residence)
+- [bawü](elterngeld_residence)
+- [Bayern](elterngeld_residence)
+- [bay](elterngeld_residence)
+- [BY](elterngeld_residence)
+- [Hessen](elterngeld_residence)
+- [Saarland](elterngeld_residence)
+- [sl](elterngeld_residence)
+<!-- elterngeld_residence_fallback-->
+- [ausland](elterngeld_residence)
 
 
 <!-- Mutterschutz -->
