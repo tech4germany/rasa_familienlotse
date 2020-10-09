@@ -209,6 +209,8 @@
 - [Papa](familydescription_parent)
 - [Dad](familydescription_parent)
 
+<!-- elternzeit -->
+
 ## intent:greet_elternzeit
 - Start Elternzeit
 - Hallo Elternzeit
@@ -228,9 +230,3 @@
 - Elternzeit anmelden
 - Elternzeit nehmen
 - elternzeit haben
-
-<!-- NEED TO MERGE WITH ELTERNGELD USING SLOT
-## intent:choose_elternzeit_requirements
-
-## intent_choose_elternzeit_duration
--->

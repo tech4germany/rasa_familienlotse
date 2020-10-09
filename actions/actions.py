@@ -31,9 +31,7 @@ class ElterngeldRequirementsForm(FormAction):
             return []  
         else:
             return ["elterngeld_care", "elterngeld_samehousehold", "elterngeld_workparttime", "elterngeld_residence"]
-        # else:
-        #     return ["elterngeld_care", "elterngeld_samehousehold", "elterngeld_workparttime"]
-
+        
 
     def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
         
@@ -63,8 +61,6 @@ class ElterngeldRequirementsForm(FormAction):
         domain: Dict[Text, Any],
     ) -> List[Dict]:
 
-        # dispatcher.utter_message("Thanks, great job!")
-        #if tracker.get_slot("elterngeld_care") is False or tracker.get_slot("elterngeld_samehousehold") is False or tracker.get_slot("elterngeld_workparttime") is False or tracker.get_slot("elterngeld_residence") == "ausland":
         if tracker.get_slot("elterngeld_care") is False or tracker.get_slot("elterngeld_samehousehold") is False or tracker.get_slot("elterngeld_workparttime") is False:
             dispatcher.utter_message(template="utter_elterngeld_inform_prerequisites")
             return []
@@ -107,7 +103,7 @@ class ElterngeldRequirementsForm(FormAction):
             elif residence[0].islower():
                 residence_adapted = residence[0].upper()+residence[1:]
             else:
-                residence_adapted
+                residence_adapted = residence
             return [SlotSet("elterngeld_residence", residence_adapted), SlotSet("elterngeld_residence_link", residence2link[residence_adapted])]
         else:
             return []
@@ -120,7 +116,6 @@ class FamilyDescriptionForm(FormAction):
 
     @staticmethod
     def required_slots(tracker):
-        # TODO: wenn ein slot mit nein, dann zu Ende
         return ["familydescription_parent", "familydescription_pregnancy_month"]
 
     def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
@@ -142,6 +137,5 @@ class FamilyDescriptionForm(FormAction):
         domain: Dict[Text, Any],
     ) -> List[Dict]:
 
-        # dispatcher.utter_message("Thanks, great job!")
         return []
 
