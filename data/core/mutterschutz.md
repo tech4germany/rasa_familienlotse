@@ -16,7 +16,7 @@
   - utter_mutterschutz_differencereply
   - utter_ask_knowmore
 
-## mutterschutz+period+affirm [utter_ask_knowmore -> affirm]
+## mutterschutz+period+affirm+whatsappoffer+deny [utter_ask_knowmore -> affirm]
 * ask_mutterschutz_period
   - utter_mutterschutz_periodreply
   - utter_ask_knowmore
@@ -26,7 +26,8 @@
 * deny
   - utter_im_here_4_u
 
-## mutterschutz+period+deny [utter_ask_knowmore -> deny]
+## mutterschutz+period+deny+whatsappoffer+affirm/choose_request_whatsappcode [utter_ask_knowmore -> deny]
+* ask_mutterschutz_period
   - utter_mutterschutz_periodreply
   - utter_ask_knowmore
 * deny
