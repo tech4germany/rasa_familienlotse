@@ -83,7 +83,7 @@ class ElterngeldRequirementsForm(FormAction):
             elif residence[0].islower():
                 residence_adapted = residence[0].upper()+residence[1:]
             else:
-                residence_adapted
+                residence_adapted = residence
             return [SlotSet("elterngeld_residence", residence_adapted)]
         else:
             return []
