@@ -171,6 +171,9 @@
 - Ja
 - ok
 - ja bitte
+- gerne
+- gerne mehr
+- erzähl mir mehr darüber
 
 ## intent:deny
 - ne
@@ -205,12 +208,6 @@
 - Ich werde in [2 Monaten](familydescription_pregnancy_month) [Papa](familydescription_parent)
 - wir bekommen in [6 Monaten](familydescription_pregnancy_month) unser Kind
 
-## intent:greet_whatsapp
-- hi whatsapp
-- hello whatsapp
-- huhu whatsapp
-- hallo whatsapp
-- hey whatsapp 
 
 ## intent:familydescription_parent
 - [Mutter](familydescription_parent)
