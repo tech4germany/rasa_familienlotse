@@ -10,6 +10,7 @@ intents:
 - choose_elterngeld_duration
 
 # mutterschutz
+- mutterschutz_topic
 - ask_mutterschutz_difference_mutterschutzfrist
 - ask_mutterschutz_period
 - choose_mutterschutz_general
@@ -17,6 +18,7 @@ intents:
 - familydescription_parent
 
 # elternzeit
+- elternzeit_topic
 - greet_elternzeit
 - elternzeit_timepartner
 - choose_elternzeit_notification
@@ -30,7 +32,8 @@ intents:
 - deny
 - greet
 - goodbye
-- choose_whatsapp
+- choose_request_whatsappcode
+- enter_whatsappcode
 - greet_whatsapp
 
 entities:
@@ -98,13 +101,12 @@ responses:
   utter_whatsapp_offer:
   - text: "Übrigens - Du kannst mich gerne auch auf WhatsApp hinzufügen. Dann kann ich Dich im passenden Moment über weitere Familienleistungen und Fristen informieren 💡"
     buttons:
-    - payload: /choose_whatsapp
+    - payload: /choose_request_whatsappcode
       title: "Zu WhatsApp hinzufügen"
   # TODO: transform to button w/ WhatsApp Link
-  utter_whatsapp_contact:
-  - text: "Gerne können wir über WhatsApp Kontakt halten - das ist ja auch etwas bequemer als nur über die Website. Bitte füge mich unter [+49176...](https://wa.me/+4915228512776?text=hallo%20mutterschutz) zu Deinen Kontakten hinzu. Außerdem akzeptierst Du durch das Hinzufügen die [WhatsApp-AGBs](https://www.whatsapp.com/legal/?lang=de&eea=0)."
+  utter_whatsapp_code:
+  - text: "Super! Gib bitte folgenden Code in WhatsApp ein: `t4g-sonne-start`."
   utter_ask_knowmore:
-    - text: "Hast Du noch eine weitere Frage? Schreib sie mir gerne."
     - text: "Willst Du mehr darüber wissen? Du kannst mich auch etwas anderes fragen."
   utter_outofscope:
     - text: "Sorry, das kann ich Dir leider noch nicht beantworten. Ich habe auch noch einiges zu lernen 🤓📚 "
@@ -207,8 +209,8 @@ responses:
     buttons:
     - payload: /choose_mutterschutz_general
       title: "Was ist Mutterschutz?"
-    # - payload: /choose_whatsapp
-    #   title: "WhatsApp"
+    - payload: /ask_mutterschutz_difference_mutterschutzfrist
+      title: "Unterschied Mutterschutz Mutterschutzfrist"
   utter_mutterschutz_differencereply:
   - text: "Der **Mutterschutz** ist ein besonderer Schutz für schwangere oder stillende Arbeitnehmerinnen. \n 
   Die **Mutterschutzfrist** hingegen ist ein Zeitraum vor und nach der Geburt, in dem die Arbeitnehmerin nicht arbeiten darf 🤓"

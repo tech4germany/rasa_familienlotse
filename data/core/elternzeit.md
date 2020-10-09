@@ -21,3 +21,14 @@
 * affirm
   - utter_hope_help
   - utter_im_here_4_u
+
+## elternzeit
+* elternzeit_topic
+  - utter_elternzeit_inform
+  - utter_ask_elternzeit_subtopic
+* elternzeit_timepartner
+  - utter_elternzeit_timepartner
+  - utter_ask_knowmore
+* choose_elternzeit_notification
+  - utter_outofscope
+  - utter_elternzeit_reply_outofscope

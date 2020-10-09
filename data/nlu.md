@@ -91,7 +91,12 @@
 
 
 <!-- Mutterschutz -->
-
+## intent:mutterschutz_topic
+- was ist Mutterschutz?
+- mutterschutz
+- was bekommt man bei Mutterschutz?
+- wie funktioniert Mutterschutz?
+- Schutz für Mütter
 
 ## intent:ask_mutterschutz_difference_mutterschutzfrist
 - Was ist der Unterschied zwischen Mutterschutz und Mutterschutzfrist?
@@ -116,7 +121,10 @@
 - los gehts mutterschutz
 - hallo mutterschutz
 
-## intent:choose_whatsapp
+## intent:enter_whatsappcode
+- t4g-sonne-start
+
+## intent:choose_request_whatsappcode
 - WhatsApp
 - WA
 - zu WhatsApp
@@ -186,14 +194,16 @@
 
 ## intent:describe_family
 <!-- TODO: extract entity from two inputs -->
-- Hi, ich bin im [3. Monat](familydescription_pregnancy_month) schwanger
-- Hi, ich bin [Mutter](familydescription_parent).
-- Hi, ich werde in [5 Monaten](familydescription_pregnancy_month) [Mutter](familydescription_parent)
-- In [4 Monaten](familydescription_pregnancy_month) werde ich [Mama](familydescription_parent) 
-- Hi, meine Freundin ist im [6. Monat](familydescription_pregnancy_month) schwanger.
-- Hi, meine Frau ist im [7. Monat](familydescription_pregnancy_month) schwanger.
+- [ich]{"entity": "familydescription_parent", "value": "Mama"} bin im [3. Monat](familydescription_pregnancy_month) schwanger
+- ich bin [Mutter](familydescription_parent).
+- ich werde in [5 Monaten](familydescription_pregnancy_month) [Mutter](familydescription_parent)
+- In [4 Monaten](familydescription_pregnancy_month) werde [ich]{"entity": "familydescription_parent", "value": "Mama"}
+- in [8 Monaten](familydescription_pregnancy_month) bekomme [ich]{"entity": "familydescription_parent", "value": "Mama"} ein Baby
+- [meine Freundin]{"entity": "familydescription_parent", "value": "Vater"} ist im [6. Monat](familydescription_pregnancy_month) schwanger.
+- [meine Frau]{"entity": "familydescription_parent", "value": "Vater"} ist im [7. Monat](familydescription_pregnancy_month) schwanger.
 - Ich werde in [1 Monat](familydescription_pregnancy_month) [Vater](familydescription_parent)
 - Ich werde in [2 Monaten](familydescription_pregnancy_month) [Papa](familydescription_parent)
+- wir bekommen in [6 Monaten](familydescription_pregnancy_month) unser Kind
 
 ## intent:greet_whatsapp
 - hi whatsapp
@@ -204,11 +214,26 @@
 
 ## intent:familydescription_parent
 - [Mutter](familydescription_parent)
+- [Mudder](familydescription_parent)
 - [Mama](familydescription_parent)
 - [Mum](familydescription_parent)
+- [Muddah](familydescription_parent)
+- [muddi](familydescription_parent)
 - [Vater](familydescription_parent)
 - [Papa](familydescription_parent)
 - [Dad](familydescription_parent)
+- [Vaddi](familydescription_parent)
+- [Daddy](familydescription_parent)
+- [Paps](familydescription_parent)
+
+
+<!-- Elternzeit -->
+## intent:elternzeit_topic
+- elternzeit
+- zeit für Eltern
+- Was ist Elternzeit?
+- Thema Elternzeit?
+- Kannst Du mir etwas über Elternezit sagen?
 
 ## intent:greet_elternzeit
 - Start Elternzeit
