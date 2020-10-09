@@ -107,8 +107,7 @@
 - Wann beginnt die Mutterschutzfrist?
 - Wann endet die Mutterschutzfrist?
 
-## intent:greet_mutterschutz
-<!-- TODO: Einstieg verändern!  -->
+## intent:get_started
 - start mutterschutz
 - go mutterschutz
 - Beginn mutterschutz
@@ -174,6 +173,8 @@
 - Nein
 - neeeee
 - nein danke
+- nein fürs erste nicht
+- nicht fürs erste
 
 ## intent:out_of_scope
 - Krankenschutz bei Elterngeld
