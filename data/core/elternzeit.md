@@ -30,3 +30,6 @@
   - utter_ask_knowmore
 * choose_elternzeit_notification
   - utter_elternzeit_reply_outofscope
+* elternzeit_period
+    - utter_elternzeit_period
+    
