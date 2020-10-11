@@ -6,7 +6,6 @@
   - utter_ask_elterngeld_precisequestion
 * out_of_scope
   - utter_elterngeld_reply_outofscope
-  - utter_goodbye
 
 ## elterngeld+general
 * elterngeld_topic
@@ -73,33 +72,8 @@
 
 <!-- further topic: application, amount, duration -->
 
-## elterngeld application
+## elterngeld application+amount+duration
 > elterngeld_subtopics
-* choose_elterngeld_application
+* choose_elterngeld_application OR choose_elterngeld_amount OR choose_elterngeld_duration
   - utter_outofscope
   - utter_elterngeld_reply_outofscope
-  - utter_goodbye
-
-## elterngeld amount
-> elterngeld_subtopics
-* choose_elterngeld_amount
-  - utter_outofscope
-  - utter_elterngeld_reply_outofscope
-  - utter_goodbye
-
-## elterngeld duration
-> elterngeld_subtopics
-* choose_elterngeld_duration
-  - utter_outofscope
-  - utter_elterngeld_reply_outofscope
-  - utter_goodbye
-
-<!-- 
-## elterngeld+prerequisites+application+elterngelddigital
-* choose_elterngeld_application{"elterngeld_residence": "Berlin"} OR choose_elterngeld_application{"elterngeld_residence": "Bremen"}
-  - utter_elterngeld_application_elterngelddigital
-
-## elterngeld+prerequisites+application+bawü
-* choose_elterngeld_application{"elterngeld_residence": "Baden-Württemberg"}
-  - utter_elterngeld_application_bawue
--->
