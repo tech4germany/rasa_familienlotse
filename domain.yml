@@ -47,6 +47,10 @@ intents:
 - goodbye
 - enter_whatsappcode
 - greet_whatsapp
+- who_are_you
+- how_are_you
+- feeling_good
+- feeling_bad
 responses:
   utter_ask_continue:
   - text: Tut mir leid, ich kann Dir gerade nicht ganz folgen. Möchtest Du weitermachen?
@@ -182,6 +186,9 @@ responses:
       Also hast Du noch genug Zeit bis zur Anmeldung 🐢
   utter_goodbye:
   - text: Ok, dann bis zum nächsten Mal! 🌞
+  utter_happy_to_here:
+  - text: Das freut mich außerordentlich.
+  - text: Das ist sehr schön.
   utter_hope_help:
   - text: Alles klar. Ich hoffe, ich konnte Dir helfen 🌞
   utter_im_here_4_u:
@@ -189,6 +196,12 @@ responses:
   - text: Wenn Du trotzdem noch Fragen haben solltest, kannst Du sie mir jederzeit
       stellen 🌞
   - text: Das war es vorerst von mir. Wenn Du noch Fragen hast, melde Dich gerne.
+  utter_im_fine:
+  - text: "Danke der Nachfrage - mir geht es blendend 🌞 \n Wie geht es Dir?"
+  - text: "Ich kann nicht klagen 🌞 Und selbst? "
+  utter_im_sonne:
+    - text: "Ich bin **Sonne**, Dein Familienlotse auf dem Familienportal 🌞"
+    - text: "Darf ich mich vorstellen? **Sonne** mein Name, Familienlotse auf dem Familienportal 🌞"
   utter_intro:
   - text: "Hallo, ich bin **Sonne**! \U0001F31E \n Ich kann Dich hier oder langfristig\
       \ auf WhatsApp über Themen rund um **Familienleistungen** informieren und beraten."
@@ -217,6 +230,8 @@ responses:
   utter_recommend_elterngeld:
   - text: Super, danke! Als werdende(r) {familydescription_parent} könnte auch **Elterngeld**
       für Dich interessant sein.
+  utter_sorry_to_hear:
+  - text: Das tut mir leid zu hören.
   utter_welcomeback:
   - text: Hallo, schön, wieder von Dir zu hören 🌞
   - text: Schön, dass Du wieder da bist 🌞

@@ -178,6 +178,41 @@
 - Wie bin ich versichert bei Elterngeld?
 - kann ich Elterngeld auch beantragen, wenn Kind nicht bei mir wohnt?
 - Wie hängt Kindergeld mit Elterngeld zusammen?
+- wie ist das Wetter?
+- was ist die Antwort auf alle Fragen?
+- Wer ist Bundeskanzler?
+
+## intent:who_are_you
+- Wer bist Du?
+- wie heißt Du?
+- was bist Du?
+- was ist ein Chatbot?
+- Wer ist Sonne?
+- wie ist Dein Name?
+
+## intent:how_are_you
+- wie geht's Dir?
+- alles gut?
+- geht's Dir gut?
+- wie geht's, wie steht's
+- wie ist das werte Befinden
+
+## intent:feeling_good
+- ok
+- gut
+- alles klar
+- läuft
+- mir geht's gut
+- geht gut
+- klasse
+- mir geht's super
+
+## intent:feeling_bad
+- mir geht's nicht so gut
+- mir geht's schlecht
+- nciht gut
+- garnicht gut
+- ich bin traurig
 
 ## intent:describe_family
 - [ich bin im]{"entity": "familydescription_parent", "value": "Mutter"} [3. Monat schwanger]{"entity": "familydescription_pregnancy_month", "value": "3"}
