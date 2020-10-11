@@ -187,6 +187,8 @@
 - in [8 Monaten]{"entity": "familydescription_pregnancy_month", "value": "8"} [bekomme ich ein Baby]{"entity": "familydescription_parent", "value": "Mutter"}
 - [meine Freundin]{"entity": "familydescription_parent", "value": "Vater"} ist im [6. Monat schwanger]{"entity": "familydescription_pregnancy_month", "value": "6"}
 - [meine Frau]{"entity": "familydescription_parent", "value": "Vater"} ist im [7. Monat schwanger]{"entity": "familydescription_pregnancy_month", "value": "7"}
+- ich bin [Mutter](familydescription_parent) von einem Kind
+- ich bin [Vater](familydescritpion_parent) von einem Kind
 - Ich werde in [einem Monat]{"entity": "familydescription_pregnancy_month", "value": "1"} Monat [Vater](familydescription_parent)
 - Ich werde in [zwei Monaten]{"entity": "familydescription_pregnancy_month", "value": "2"} [Papa](familydescription_parent)
 - wir bekommen in [6 Monaten]{"entity": "familydescription_pregnancy_month", "value": "6"} unser Kind
