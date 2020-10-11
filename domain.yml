@@ -137,7 +137,7 @@ responses:
     - payload: /choose_mutterschutz_general
       title: Was ist Mutterschutz?
     - payload: /ask_mutterschutz_difference_mutterschutzfrist
-      title: Unterschied Mutterschutz Mutterschutzfrist
+      title: Unterschied Mutterschutz und Mutterschutzfrist
     text: "Es sieht aus, als hast Du Dich gerade mit dem Thema **Mutterschutz** beschäftigt.\
       \ \n Wähle eine Beispielfrage aus oder schreib' mir direkt Deine Frage."
   utter_ask_permission_familydescription:
@@ -165,7 +165,7 @@ responses:
     text: Hast Du eine konkrete Frage zum **Elterngeld**? Oder soll ich Dir erstmal
       ein paar allgemeine Infos dazu geben?
   utter_elterngeld_reply_outofscope:
-  - text: "Du willst noch mehr dazu wissen? \n Das freut mich zu hören. Schau gerne\
+  - text: "Du willst noch mehr dazu wissen? \n Schau gerne\
       \ mal [\U0001F517 hier](https://familienportal.de/familienportal/familienleistungen/elterngeld/faq)\
       \ vorbei."
   utter_elternzeit_inform:
@@ -178,7 +178,7 @@ responses:
   utter_elternzeit_period:
   - text: Pro Kind kannst Du bis zu 3 Jahre **Elternzeit** nehmen.
   utter_elternzeit_reply_outofscope:
-  - text: "Du willst noch mehr dazu wissen? \n Das freut mich zu hören. Schau gerne\
+  - text: "Du willst noch mehr dazu wissen? \n Schau gerne\
       \ mal [\U0001F517 hier](https://familienportal.de/familienportal/familienleistungen/elternzeit/faq/wann-und-wie-muss-ich-elternzeit-beantragen-/124810)\
       \ vorbei."
   utter_elternzeit_timepartner:
@@ -186,10 +186,10 @@ responses:
       Also hast Du noch genug Zeit bis zur Anmeldung 🐢
   utter_goodbye:
   - text: Ok, dann bis zum nächsten Mal! 🌞
-  utter_happy_to_here:
+  utter_happy_to_hear:
   - text: Das freut mich außerordentlich.
   - text: Das ist sehr schön.
-  utter_hope_help:
+  utter_hope_helped:
   - text: Alles klar. Ich hoffe, ich konnte Dir helfen 🌞
   utter_im_here_4_u:
   - text: Melde Dich gerne bei mir, wenn Du noch etwas brauchst 🌞
@@ -220,7 +220,7 @@ responses:
   - text: Der Zeitraum beginnt **6 Wochen vor** dem errechneten Geburtstermin und
       endet üblicherweise **8 Wochen nach** der Geburt 📅
   utter_mutterschutz_reply_outofscope:
-  - text: "Du willst noch mehr dazu wissen? \n Das freut mich zu hören. Schau gerne\
+  - text: "Du willst noch mehr dazu wissen? \n Schau gerne\
       \ mal [\U0001F517 hier](https://familienportal.de/familienportal/familienleistungen/mutterschutz)\
       \ vorbei."
   utter_outofscope:

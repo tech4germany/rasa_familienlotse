@@ -18,7 +18,7 @@
   - utter_elternzeit_inform_deadline
   - utter_ask_elternzeit_priorknowledge
 * affirm
-  - utter_hope_help
+  - utter_hope_helped
   - utter_im_here_4_u
 
 ## elternzeit
