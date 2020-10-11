@@ -12,6 +12,7 @@
 - konkrete Frage
 - spezielle Frage
 - ich habe eine Frage
+- ich habe mein Kind bekommen, was muss ich jetzt tun?
 
 ## intent:choose_elterngeld_general
 - allgemeine Infos
@@ -49,6 +50,7 @@
 - wie viel Elterngeld?
 - Elterngeld viel?
 - wie viel Elterngeld bekomme ich
+- wie viel Elterngeld bekommt man denn
 
 ## intent:choose_elterngeld_period
 - dauer elterngeld
@@ -158,6 +160,7 @@
 - gerne
 - gerne mehr
 - erzähl mir mehr darüber
+- weitermachen
 
 ## intent:deny
 - ne
@@ -181,6 +184,9 @@
 - wie ist das Wetter?
 - was ist die Antwort auf alle Fragen?
 - Wer ist Bundeskanzler?
+- wie hängen Elterngeld und Kindergeld zusammen?
+- kann ich als Vater den Mutterschutz beantragen?
+
 
 ## intent:who_are_you
 - Wer bist Du?
@@ -189,6 +195,7 @@
 - was ist ein Chatbot?
 - Wer ist Sonne?
 - wie ist Dein Name?
+- wer bis du?
 
 ## intent:how_are_you
 - wie geht's Dir?
@@ -230,6 +237,7 @@
 - Ich werde in [zwei Monaten]{"entity": "familydescription_pregnancy_month", "value": "2"} [Papa](familydescription_parent)
 - wir bekommen in [6 Monaten]{"entity": "familydescription_pregnancy_month", "value": "6"} unser Kind
 - ich bin im [3. Monat schwanger]{"entity": "familydescription_pregnancy_month", "value": "3"}
+- ich habe zwei Kinder und eine [Ehefrau]{"entity": "familiendescription_parent", "value": "Vater"}
 
 ## intent:familydescription_parent
 - [Mutter](familydescription_parent)
