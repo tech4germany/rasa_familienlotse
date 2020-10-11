@@ -66,21 +66,7 @@ class ElterngeldRequirementsForm(FormAction):
             return []
         residence = tracker.get_slot('elterngeld_residence')
         if residence is not None:
-            if residence == "rlp":
-                residence_adapted = "Rheinland-Pfalz"
-            elif residence == "BER":
-                residence_adapted = "Berlin"
-            elif residence == "meckpomm":
-                residence_adapted = "Mecklenburg-Vorpommern"
-            elif residence == "SH":
-                residence_adapted = "Schleswig-Holstein"
-            elif residence in ["bawü","BaWü"]:
-                residence_adapted = "Baden-Württemberg"
-            elif residence in ["bay", "BY"]:
-                residence_adapted = "Bayern"
-            elif residence == "sl":
-                residence_adapted = "Saarland"
-            elif residence[0].islower():
+            if residence[0].islower():
                 residence_adapted = residence[0].upper()+residence[1:]
             else:
                 residence_adapted = residence

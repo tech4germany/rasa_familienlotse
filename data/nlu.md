@@ -1,4 +1,3 @@
-<!-- Elterngeld -->
 ## intent:elterngeld_topic
 - Hey, kannst Du mir beim Thema Elterngeld helfen?
 - Thema Elterngeld
@@ -58,39 +57,24 @@
 - Elterngeld wie viel Zeit
 
 ## intent:choose_elterngeld_residence
-<!-- elterngeld_digital-->
 - [Berlin](bundesland)
-- [BER](bundesland)
 - [Bremen](bundesland)
 - [Hamburg](bundesland)
 - [Rheinland-Pfalz](bundesland)
-- [rlp](bundesland)
 - [Sachsen](bundesland)
 - [Thüringen](bundesland)
-<!-- elterngeld__not_digital-->
 - [Brandenburg](bundesland)
 - [Mecklenburg-Vorpommern](bundesland)
-- [meckpomm](bundesland)
 - [Niedersachsen](bundesland)
 - [Nordrhein-Westfalen](bundesland)
-- [NRW](bundesland)
 - [Sachsen-Anhalt](bundesland)
 - [Schleswig-Holstein](bundesland)
-- [SH](bundesland)
-<!-- elterngeld_own_solution_digital-->
 - [Baden-Württemberg](bundesland)
-- [bawü](bundesland)
 - [Bayern](bundesland)
-- [bay](bundesland)
-- [BY](bundesland)
 - [Hessen](bundesland)
 - [Saarland](bundesland)
-- [sl](bundesland)
-<!-- bundesland_fallback-->
 - [ausland](bundesland)
 
-
-<!-- Mutterschutz -->
 ## intent:mutterschutz_topic
 - was ist Mutterschutz?
 - mutterschutz
@@ -139,8 +123,6 @@
 - schutz mutter
 - schutz mama
 - Mamaschutz
-
-<!-- default -->
 
 ## intent:greet
 - hey
@@ -196,35 +178,35 @@
 - Wie hängt Kindergeld mit Elterngeld zusammen?
 
 ## intent:describe_family
-<!-- TODO: extract entity from two inputs -->
-- [ich]{"entity": "familydescription_parent", "value": "Mama"} bin im [3. Monat](familydescription_pregnancy_month) schwanger
+- [ich bin im]{"entity": "familydescription_parent", "value": "Mutter"} [3. Monat schwanger]{"entity": "familydescription_pregnancy_month", "value": "3"}
+- [ich bin schwanger]{"entity": "familydescription_parent", "value": "Mutter"}
+- [ich bekomme ein Kind]{"entity": "familydescription_parent", "value": "Mutter"}
 - ich bin [Mutter](familydescription_parent).
-- ich werde in [5 Monaten](familydescription_pregnancy_month) [Mutter](familydescription_parent)
-- In [4 Monaten](familydescription_pregnancy_month) werde [ich]{"entity": "familydescription_parent", "value": "Mama"}
-- in [8 Monaten](familydescription_pregnancy_month) bekomme [ich]{"entity": "familydescription_parent", "value": "Mama"} ein Baby
-- [meine Freundin]{"entity": "familydescription_parent", "value": "Vater"} ist im [6. Monat](familydescription_pregnancy_month) schwanger.
-- [meine Frau]{"entity": "familydescription_parent", "value": "Vater"} ist im [7. Monat](familydescription_pregnancy_month) schwanger.
-- Ich werde in [1 Monat](familydescription_pregnancy_month) [Vater](familydescription_parent)
-- Ich werde in [2 Monaten](familydescription_pregnancy_month) [Papa](familydescription_parent)
-- wir bekommen in [6 Monaten](familydescription_pregnancy_month) unser Kind
-
+- ich werde in [5 Monaten]{"entity": "familydescription_pregnancy_month", "value": "5"} Monaten [Mutter](familydescription_parent)
+- In [4 Monaten]{"entity": "familydescription_pregnancy_month", "value": "4"} werde [ich Mutter]{"entity": "familydescription_parent", "value": "Mutter"}
+- in [8 Monaten]{"entity": "familydescription_pregnancy_month", "value": "8"} [bekomme ich ein Baby]{"entity": "familydescription_parent", "value": "Mutter"}
+- [meine Freundin]{"entity": "familydescription_parent", "value": "Vater"} ist im [6. Monat schwanger]{"entity": "familydescription_pregnancy_month", "value": "6"}
+- [meine Frau]{"entity": "familydescription_parent", "value": "Vater"} ist im [7. Monat schwanger]{"entity": "familydescription_pregnancy_month", "value": "7"}
+- Ich werde in [einem Monat]{"entity": "familydescription_pregnancy_month", "value": "1"} Monat [Vater](familydescription_parent)
+- Ich werde in [zwei Monaten]{"entity": "familydescription_pregnancy_month", "value": "2"} [Papa](familydescription_parent)
+- wir bekommen in [6 Monaten]{"entity": "familydescription_pregnancy_month", "value": "6"} unser Kind
+- ich bin im [3. Monat schwanger]{"entity": "familydescription_pregnancy_month", "value": "3"}
+- [ich bin im]{"entity": "familydescription_parent", "value": "Mutter"} [3. Monat schwanger]{"entity": "familydescription_pregnancy_month", "value": "3"}
 
 ## intent:familydescription_parent
 - [Mutter](familydescription_parent)
-- [Mudder](familydescription_parent)
-- [Mama](familydescription_parent)
-- [Mum](familydescription_parent)
-- [Muddah](familydescription_parent)
-- [muddi](familydescription_parent)
+- [Mudder]{"entity": "familydescription_parent", "value": "Mutter"}
+- [Mama]{"entity": "familydescription_parent", "value": "Mutter"}
+- [Mum]{"entity": "familydescription_parent", "value": "Mutter"}
+- [Muddah]{"entity": "familydescription_parent", "value": "Mutter"}
+- [muddi]{"entity": "familydescription_parent", "value": "Mutter"}
 - [Vater](familydescription_parent)
-- [Papa](familydescription_parent)
-- [Dad](familydescription_parent)
-- [Vaddi](familydescription_parent)
-- [Daddy](familydescription_parent)
-- [Paps](familydescription_parent)
+- [Papa]{"entity": "familydescription_parent", "value": "Vater"}
+- [Dad]{"entity": "familydescription_parent", "value": "Vater"}
+- [Vaddi]{"entity": "familydescription_parent", "value": "Vater"}
+- [Daddy]{"entity": "familydescription_parent", "value": "Vater"}
+- [Paps]{"entity": "familydescription_parent", "value": "Vater"}
 
-
-<!-- Elternzeit -->
 ## intent:elternzeit_topic
 - elternzeit
 - zeit für Eltern
@@ -252,8 +234,100 @@
 - Elternzeit nehmen
 - elternzeit haben
 
-<!-- NEED TO MERGE WITH ELTERNGELD USING SLOT
-## intent:choose_elternzeit_requirements
+## synonym:Mutter
+- ich bin im 3. Monat schwanger
+- ich bin schwanger
+- ich bekomme ein Kind
+- ich Mutter
+- bekomme ich ein Baby
+- Mudder
+- Mama
+- Mum
+- Muddah
+- muddi
+- ich bekomme bald mein Kind
 
-## intent_choose_elternzeit_duration
--->
+## synonym:Vater
+- meine Freundin ist schwanger
+- meine Frau ist schwanger
+- meine Frau
+- meine Freundin
+- Papa
+- Dad
+- Vaddi
+- Daddy
+- Paps
+
+## synonym:1
+- einem Monat
+- nächsten Monat
+
+## synonym:2
+- zwei Monaten
+- in 2 Monaten
+
+## synonym:3
+- 3. Monat schwanger
+- in 3 Monaten
+- in drei Monaten
+
+## synonym:4
+- 4 Monaten
+- in 4 Monaten
+
+## synonym:5
+- 5 Monaten
+- in 5 Monaten
+
+## synonym:6
+- 6. Monat schwanger
+- 6 Monaten
+- in sechs Monaten
+
+## synonym:7
+- 7. Monat schwanger
+- in sieben Monaten
+
+## synonym:8
+- 8 Monaten
+- in acht Monaten
+
+## synonym:Baden-Württemberg
+- bawü
+- bw
+- baden
+- württemberg
+
+## synonym:Bayern
+- bay
+- bayern
+- BY
+
+## synonym:Berlin
+- BER
+- ber
+
+## synonym:Bremen
+- HB
+
+## synonym:Hamburg
+- HH
+
+## synonym:Mecklenburg-Vorpommern
+- meckpomm
+- mecklenburg
+- vorpommern
+
+## synonym:Rheinland-Pfalz
+- rlp
+- rheinland
+- pfalz
+
+## synonym:Saarland
+- SL
+
+## synonym:Schleswig-Holstein
+- SH
+- Schleswig
+- Holstein
+

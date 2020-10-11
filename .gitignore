@@ -131,3 +131,4 @@ dmypy.json
 # ignore models
 models/
 __pycache__/
+story_graph.dot
