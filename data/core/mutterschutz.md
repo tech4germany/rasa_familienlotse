@@ -46,4 +46,4 @@
 
 ## mutterschutz+mutterschutz_general
 * choose_mutterschutz_general OR mutterschutz_topic
-  - utter_mutterschutz_reply_outofscope
+  - utter_mutterschutz_inform

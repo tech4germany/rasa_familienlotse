@@ -75,5 +75,4 @@
 ## elterngeld application+amount+duration
 > elterngeld_subtopics
 * choose_elterngeld_application OR choose_elterngeld_amount OR choose_elterngeld_duration
-  - utter_outofscope
   - utter_elterngeld_reply_outofscope
