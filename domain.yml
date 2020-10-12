@@ -49,6 +49,7 @@ intents:
 - choose_elternzeit_requirements
 - choose_elternzeit_period
 - get_started
+- start
 - out_of_scope
 - greet
 - goodbye
