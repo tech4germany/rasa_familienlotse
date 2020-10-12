@@ -35,6 +35,7 @@
   - utter_recommend_elterngeld
   - utter_ask_elterngeld_priorknowledge
 * affirm
+  - utter_encourage
   - utter_im_here_4_u
 
 ## whatsapp+familydescription+stop

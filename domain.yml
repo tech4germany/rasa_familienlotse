@@ -92,6 +92,9 @@ responses:
   - text: "Ok, dann bis zum nächsten Mal! 🌞"
   utter_ask_continue:
   - text: Tut mir leid, ich kann Dir gerade nicht ganz folgen. Möchtest Du weitermachen?
+  utter_encourage:
+  - text: "Ah sehr gut."
+  - text: "Top!"
   utter_im_here_4_u:
   - text: "Melde Dich gerne bei mir, wenn Du noch etwas brauchst 🌞"
   - text: "Wenn Du trotzdem noch Fragen haben solltest, kannst Du sie mir jederzeit stellen 🌞"
