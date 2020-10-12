@@ -108,6 +108,7 @@
 - Start mutterschutz
 - los gehts mutterschutz
 - hallo mutterschutz
+- Start Mutterschutz
 
 ## intent:enter_whatsappcode
 - t4g-sonne-start
@@ -124,8 +125,6 @@
 - mutterschutz
 - schutz für mütter
 - Mutterschutz
-- schutz mutter
-- schutz mama
 - Mamaschutz
 
 ## intent:greet
@@ -221,24 +220,6 @@
 - garnicht gut
 - ich bin traurig
 
-## intent:describe_family
-- [ich bin im]{"entity": "familydescription_parent", "value": "Mutter"} [3. Monat schwanger]{"entity": "familydescription_pregnancy_month", "value": "3"}
-- [ich bin schwanger]{"entity": "familydescription_parent", "value": "Mutter"}
-- [ich bekomme ein Kind]{"entity": "familydescription_parent", "value": "Mutter"}
-- ich bin [Mutter](familydescription_parent).
-- ich werde in [5 Monaten]{"entity": "familydescription_pregnancy_month", "value": "5"} Monaten [Mutter](familydescription_parent)
-- In [4 Monaten]{"entity": "familydescription_pregnancy_month", "value": "4"} werde [ich Mutter]{"entity": "familydescription_parent", "value": "Mutter"}
-- in [8 Monaten]{"entity": "familydescription_pregnancy_month", "value": "8"} [bekomme ich ein Baby]{"entity": "familydescription_parent", "value": "Mutter"}
-- [meine Freundin]{"entity": "familydescription_parent", "value": "Vater"} ist im [6. Monat schwanger]{"entity": "familydescription_pregnancy_month", "value": "6"}
-- [meine Frau]{"entity": "familydescription_parent", "value": "Vater"} ist im [7. Monat schwanger]{"entity": "familydescription_pregnancy_month", "value": "7"}
-- ich bin [Mutter](familydescription_parent) von einem Kind
-- ich bin [Vater](familydescritpion_parent) von einem Kind
-- Ich werde in [einem Monat]{"entity": "familydescription_pregnancy_month", "value": "1"} Monat [Vater](familydescription_parent)
-- Ich werde in [zwei Monaten]{"entity": "familydescription_pregnancy_month", "value": "2"} [Papa](familydescription_parent)
-- wir bekommen in [6 Monaten]{"entity": "familydescription_pregnancy_month", "value": "6"} unser Kind
-- ich bin im [3. Monat schwanger]{"entity": "familydescription_pregnancy_month", "value": "3"}
-- ich habe zwei Kinder und eine [Ehefrau]{"entity": "familiendescription_parent", "value": "Vater"}
-
 ## intent:familydescription_parent
 - [Mutter](familydescription_parent)
 - [Mudder]{"entity": "familydescription_parent", "value": "Mutter"}
@@ -246,12 +227,20 @@
 - [Mum]{"entity": "familydescription_parent", "value": "Mutter"}
 - [Muddah]{"entity": "familydescription_parent", "value": "Mutter"}
 - [muddi]{"entity": "familydescription_parent", "value": "Mutter"}
+- [mutter]{"entity": "familydescription_parent", "value": "Mutter"}
 - [Vater](familydescription_parent)
 - [Papa]{"entity": "familydescription_parent", "value": "Vater"}
 - [Dad]{"entity": "familydescription_parent", "value": "Vater"}
 - [Vaddi]{"entity": "familydescription_parent", "value": "Vater"}
 - [Daddy]{"entity": "familydescription_parent", "value": "Vater"}
 - [Paps]{"entity": "familydescription_parent", "value": "Vater"}
+
+## intent:familydescription_pregnancy_month
+- ich bin im [3](familydescription_pregnancy_month). Monat schwanger
+- ich bin [nicht schwanger]{"entity": "familydescription_pregnancy_month", "value": "False"}
+- im [5](familydescription_pregnancy_month). Monat
+- [9](familydescription_pregnancy_month). Monat
+- [1](familydescription_pregnancy_month). Monat
 
 ## intent:elternzeit_topic
 - elternzeit
@@ -297,40 +286,6 @@
 - wie viele Monate Elternzeit
 - wie viel Jahre Elternzeit
 
-## synonym:1
-- einem Monat
-- nächsten Monat
-
-## synonym:2
-- zwei Monaten
-- in 2 Monaten
-
-## synonym:3
-- 3. Monat schwanger
-- in 3 Monaten
-- in drei Monaten
-
-## synonym:4
-- 4 Monaten
-- in 4 Monaten
-
-## synonym:5
-- 5 Monaten
-- in 5 Monaten
-
-## synonym:6
-- 6. Monat schwanger
-- 6 Monaten
-- in sechs Monaten
-
-## synonym:7
-- 7. Monat schwanger
-- in sieben Monaten
-
-## synonym:8
-- 8 Monaten
-- in acht Monaten
-
 ## synonym:Baden-Württemberg
 - bawü
 - bw
@@ -349,6 +304,9 @@
 ## synonym:Bremen
 - HB
 
+## synonym:False
+- nicht schwanger
+
 ## synonym:Hamburg
 - HH
 
@@ -358,18 +316,13 @@
 - vorpommern
 
 ## synonym:Mutter
-- ich bin im
-- ich bin schwanger
-- ich bekomme ein Kind
-- ich Mutter
-- bekomme ich ein Baby
 - Mudder
 - Mama
 - Mum
 - Muddah
 - muddi
-- ich bin im 3. Monat schwanger
-- ich bekomme bald mein Kind
+- mutter
+- mama
 
 ## synonym:Rheinland-Pfalz
 - rlp
@@ -385,12 +338,11 @@
 - Holstein
 
 ## synonym:Vater
-- meine Freundin
-- meine Frau
 - Papa
 - Dad
 - Vaddi
 - Daddy
 - Paps
-- meine Freundin ist schwanger
-- meine Frau ist schwanger
+- papa
+- dad
+- vadda
