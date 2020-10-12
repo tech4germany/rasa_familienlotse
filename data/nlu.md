@@ -104,6 +104,7 @@
 - Start mutterschutz
 - los gehts mutterschutz
 - hallo mutterschutz
+- Start Mutterschutz
 
 ## intent:enter_whatsappcode
 - t4g-sonne-start
@@ -192,11 +193,11 @@
 - [Paps]{"entity": "familydescription_parent", "value": "Vater"}
 
 ## intent:familydescription_pregnancy_month
-- ich bin im [3]{"entity": "familiydescription_pregnancy_month", "value": "3"}. Monat schwanger
+- ich bin im [3](familiydescription_pregnancy_month). Monat schwanger
 - ich bin [nicht schwanger]{"entity": "familiydescription_pregnancy_month", "value": "False"}
-- im [5]{"entity": "familiydescription_pregnancy_month", "value": "5"}. Monat
-- [9]{"entity": "familiydescription_pregnancy_month", "value": "9"}. Monat
-- [1]{"entity": "familiydescription_pregnancy_month", "value": "1"}. Monat
+- im [5](familiydescription_pregnancy_month). Monat
+- [9](familiydescription_pregnancy_month). Monat
+- [1](familiydescription_pregnancy_month). Monat
 
 ## intent:elternzeit_topic
 - elternzeit
@@ -225,21 +226,6 @@
 - Elternzeit nehmen
 - elternzeit haben
 
-## synonym:Mutter
-- Mudder
-- Mama
-- Mum
-- Muddah
-- muddi
-- ich bekomme bald mein Kind
-
-## synonym:Vater
-- Papa
-- Dad
-- Vaddi
-- Daddy
-- Paps
-
 ## synonym:Baden-Württemberg
 - bawü
 - bw
@@ -258,6 +244,9 @@
 ## synonym:Bremen
 - HB
 
+## synonym:False
+- nicht schwanger
+
 ## synonym:Hamburg
 - HH
 
@@ -265,6 +254,13 @@
 - meckpomm
 - mecklenburg
 - vorpommern
+
+## synonym:Mutter
+- Mudder
+- Mama
+- Mum
+- Muddah
+- muddi
 
 ## synonym:Rheinland-Pfalz
 - rlp
@@ -278,3 +274,10 @@
 - SH
 - Schleswig
 - Holstein
+
+## synonym:Vater
+- Papa
+- Dad
+- Vaddi
+- Daddy
+- Paps

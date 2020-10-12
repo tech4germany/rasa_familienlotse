@@ -52,26 +52,7 @@ slots:
   elterngeld_workparttime:
     type: unfeaturized
   elterngeld_residence:
-    type: unfeaturized
-    # type: text
-    # type: categorical
-    # values:
-    # - Baden-Württemberg
-    # - Bayern
-    # - Berlin
-    # - Brandenburg
-    # - Bremen
-    # - Hamburg
-    # - Hessen
-    # - Mecklenburg-Vorpommern
-    # - Niedersachsen
-    # - Nordrhein-Westfalen
-    # - Rheinland-Pfalz
-    # - Saarland
-    # - Sachsen
-    # - Sachsen-Anhalt
-    # - Schleswig-Holstein
-    # - Thüringen 
+    type: unfeaturized 
   familydescription_pregnancy_month:
     type: unfeaturized
   familydescription_parent:
@@ -225,7 +206,6 @@ responses:
     - text: "Spreche ich mit der Mutter oder dem Vater?"
   utter_ask_familydescription_pregnancy_month:
     - text: "Bist Du schwanger? Wenn ja, in welchem Monat?"
-    # TODO: Buttons zur Benutzersteuerung?
   utter_recommend_elterngeld:
     - text: "Super, danke! Als werdende(r) {familydescription_parent} könnte auch **Elterngeld** für Dich interessant sein."
   utter_ask_elterngeld_priorknowledge:
