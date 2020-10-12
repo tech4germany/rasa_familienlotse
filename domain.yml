@@ -217,9 +217,8 @@ responses:
   - text: "Die **Mutterschutzfrist** hingegen ist ein Zeitraum vor und nach der Geburt, in dem die Arbeitnehmerin nicht arbeiten darf 🤓"
   utter_mutterschutz_periodreply:
   - text: "Der Zeitraum beginnt **6 Wochen vor** dem errechneten Geburtstermin und endet üblicherweise **8 Wochen nach** der Geburt 📅"
-  utter_mutterschutz_reply_outofscope:
-    - text: Das kann ich Dir leider noch nicht beantworten. Mehr Infos zu **Mutterschutz**
-        findest Du auf dem [Familienportal](https://familienportal.de/familienportal/familienleistungen/mutterschutz).
+  utter_mutterschutz_reference:
+    - text: Mehr Infos zu **Mutterschutz** findest Du auf dem [Familienportal](https://familienportal.de/familienportal/familienleistungen/mutterschutz).
   utter_ask_permission_familydescription:
     - text: "Am besten kann ich Dich dazu beraten, wenn Du mir etwas  über Dich erzählst. Einverstanden? 🤓"
   utter_ask_familydescription:
