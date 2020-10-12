@@ -131,7 +131,7 @@ responses:
       title: Allgemeine Infos
   utter_ask_elterngeld_precisequestion:
   - text: Dann stelle jetzt Deine Frage.
-  utter_elterngeld_reply_outofscope:
+  utter_elterngeld_reference:
   - text: "Mehr Infos zu **Elterngeld**
       findest Du auf dem [Familienportal](https://familienportal.de/familienportal/familienleistungen/elterngeld/faq)."
   - text: "In der Zwischenzeit findest Du mehr Infos zum **Elterngeld** auf dem [🔗 Familienportal](https://familienportal.de/familienportal/familienleistungen/elterngeld/faq)."

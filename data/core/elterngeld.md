@@ -5,7 +5,8 @@
 * choose_elterngeld_precise
   - utter_ask_elterngeld_precisequestion
 * out_of_scope
-  - utter_elterngeld_reply_outofscope
+  - utter_outofscope
+  - utter_elterngeld_reference
 
 ## elterngeld+general
 * elterngeld_topic
@@ -76,4 +77,4 @@
 > elterngeld_subtopics
 * choose_elterngeld_application OR choose_elterngeld_amount OR choose_elterngeld_duration
   - utter_outofscope
-  - utter_elterngeld_reply_outofscope
+  - utter_elterngeld_reference
