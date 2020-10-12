@@ -121,8 +121,6 @@
 - mutterschutz
 - schutz für mütter
 - Mutterschutz
-- schutz mutter
-- schutz mama
 - Mamaschutz
 
 ## intent:greet
@@ -185,6 +183,7 @@
 - [Mum]{"entity": "familydescription_parent", "value": "Mutter"}
 - [Muddah]{"entity": "familydescription_parent", "value": "Mutter"}
 - [muddi]{"entity": "familydescription_parent", "value": "Mutter"}
+- [mutter]{"entity": "familydescription_parent", "value": "Mutter"}
 - [Vater](familydescription_parent)
 - [Papa]{"entity": "familydescription_parent", "value": "Vater"}
 - [Dad]{"entity": "familydescription_parent", "value": "Vater"}
@@ -261,6 +260,8 @@
 - Mum
 - Muddah
 - muddi
+- mutter
+- mama
 
 ## synonym:Rheinland-Pfalz
 - rlp
@@ -281,3 +282,6 @@
 - Vaddi
 - Daddy
 - Paps
+- papa
+- dad
+- vadda

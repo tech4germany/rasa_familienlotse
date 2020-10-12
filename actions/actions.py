@@ -83,10 +83,10 @@ class FamilyDescriptionForm(FormAction):
     @staticmethod
     def required_slots(tracker):
 
-        if tracker.get_slot("familydescription_parent") != "Mutter":
-            return ["familydescription_parent"]
-        else:
-            return ["familydescription_parent", "familydescription_pregnancy_month"]
+        # if tracker.get_slot("familydescription_parent") != "Mutter":
+        #     return ["familydescription_parent"]
+        # else:
+        return ["familydescription_parent", "familydescription_pregnancy_month"]
 
     def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
         
@@ -108,4 +108,3 @@ class FamilyDescriptionForm(FormAction):
 
         # dispatcher.utter_message("Thanks, great job!")
         return []
-
