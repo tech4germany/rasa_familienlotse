@@ -82,19 +82,21 @@ class FamilyDescriptionForm(FormAction):
 
     @staticmethod
     def required_slots(tracker):
-        # TODO: wenn ein slot mit nein, dann zu Ende
-        return ["familydescription_parent", "familydescription_pregnancy_month"]
+
+        if tracker.get_slot == "Mutter":
+            return ["familydescription_parent", "familydescription_pregnancy_month"]
+        else:
+            return ["familydescprition_parent"]
 
     def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
         
         return {
             "familydescription_parent": [
-                self.from_entity(entity="familydescription_parent", intent=["describe_family", "familydescription_parent"]), 
+                self.from_entity(entity="familydescription_parent", intent="familydescription_parent"), 
             ],
             "familydescription_pregnancy_month": [
-                self.from_entity(entity="familydescription_pregnancy_month", intent="describe_family"),
+                self.from_entity(entity="familydescription_pregnancy_month", intent="familydescription_pregnancy_month"),
             ],
-
         }
 
     def submit(

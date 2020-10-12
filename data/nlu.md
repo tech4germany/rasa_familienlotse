@@ -177,24 +177,6 @@
 - kann ich Elterngeld auch beantragen, wenn Kind nicht bei mir wohnt?
 - Wie hängt Kindergeld mit Elterngeld zusammen?
 
-## intent:describe_family
-- [ich bin im]{"entity": "familydescription_parent", "value": "Mutter"} [3. Monat schwanger]{"entity": "familydescription_pregnancy_month", "value": "3"}
-- [ich bin schwanger]{"entity": "familydescription_parent", "value": "Mutter"}
-- [ich bekomme ein Kind]{"entity": "familydescription_parent", "value": "Mutter"}
-- ich bin [Mutter](familydescription_parent).
-- ich werde in [5 Monaten]{"entity": "familydescription_pregnancy_month", "value": "5"} Monaten [Mutter](familydescription_parent)
-- In [4 Monaten]{"entity": "familydescription_pregnancy_month", "value": "4"} werde [ich Mutter]{"entity": "familydescription_parent", "value": "Mutter"}
-- in [8 Monaten]{"entity": "familydescription_pregnancy_month", "value": "8"} [bekomme ich ein Baby]{"entity": "familydescription_parent", "value": "Mutter"}
-- [meine Freundin]{"entity": "familydescription_parent", "value": "Vater"} ist im [6. Monat schwanger]{"entity": "familydescription_pregnancy_month", "value": "6"}
-- [meine Frau]{"entity": "familydescription_parent", "value": "Vater"} ist im [7. Monat schwanger]{"entity": "familydescription_pregnancy_month", "value": "7"}
-- ich bin [Mutter](familydescription_parent) von einem Kind
-- ich bin [Vater](familydescritpion_parent) von einem Kind
-- Ich werde in [einem Monat]{"entity": "familydescription_pregnancy_month", "value": "1"} Monat [Vater](familydescription_parent)
-- Ich werde in [zwei Monaten]{"entity": "familydescription_pregnancy_month", "value": "2"} [Papa](familydescription_parent)
-- wir bekommen in [6 Monaten]{"entity": "familydescription_pregnancy_month", "value": "6"} unser Kind
-- ich bin im [3. Monat schwanger]{"entity": "familydescription_pregnancy_month", "value": "3"}
-- [ich bin im]{"entity": "familydescription_parent", "value": "Mutter"} [3. Monat schwanger]{"entity": "familydescription_pregnancy_month", "value": "3"}
-
 ## intent:familydescription_parent
 - [Mutter](familydescription_parent)
 - [Mudder]{"entity": "familydescription_parent", "value": "Mutter"}
@@ -208,6 +190,13 @@
 - [Vaddi]{"entity": "familydescription_parent", "value": "Vater"}
 - [Daddy]{"entity": "familydescription_parent", "value": "Vater"}
 - [Paps]{"entity": "familydescription_parent", "value": "Vater"}
+
+## intent:familydescription_pregnancy_month
+- ich bin im [3]{"entity": "familiydescription_pregnancy_month", "value": "3"}. Monat schwanger
+- ich bin [nicht schwanger]{"entity": "familiydescription_pregnancy_month", "value": "False"}
+- im [5]{"entity": "familiydescription_pregnancy_month", "value": "5"}. Monat
+- [9]{"entity": "familiydescription_pregnancy_month", "value": "9"}. Monat
+- [1]{"entity": "familiydescription_pregnancy_month", "value": "1"}. Monat
 
 ## intent:elternzeit_topic
 - elternzeit
@@ -237,11 +226,6 @@
 - elternzeit haben
 
 ## synonym:Mutter
-- ich bin im 3. Monat schwanger
-- ich bin schwanger
-- ich bekomme ein Kind
-- ich Mutter
-- bekomme ich ein Baby
 - Mudder
 - Mama
 - Mum
@@ -250,49 +234,11 @@
 - ich bekomme bald mein Kind
 
 ## synonym:Vater
-- meine Freundin ist schwanger
-- meine Frau ist schwanger
-- meine Frau
-- meine Freundin
 - Papa
 - Dad
 - Vaddi
 - Daddy
 - Paps
-
-## synonym:1
-- einem Monat
-- nächsten Monat
-
-## synonym:2
-- zwei Monaten
-- in 2 Monaten
-
-## synonym:3
-- 3. Monat schwanger
-- in 3 Monaten
-- in drei Monaten
-
-## synonym:4
-- 4 Monaten
-- in 4 Monaten
-
-## synonym:5
-- 5 Monaten
-- in 5 Monaten
-
-## synonym:6
-- 6. Monat schwanger
-- 6 Monaten
-- in sechs Monaten
-
-## synonym:7
-- 7. Monat schwanger
-- in sieben Monaten
-
-## synonym:8
-- 8 Monaten
-- in acht Monaten
 
 ## synonym:Baden-Württemberg
 - bawü
@@ -332,4 +278,3 @@
 - SH
 - Schleswig
 - Holstein
-

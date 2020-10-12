@@ -14,8 +14,8 @@ intents:
 - ask_mutterschutz_difference_mutterschutzfrist
 - ask_mutterschutz_period
 - choose_mutterschutz_general
-- describe_family
 - familydescription_parent
+- familydescription_pregnancy_month
 
 # elternzeit
 - elternzeit_topic
@@ -221,8 +221,6 @@ responses:
         findest Du auf dem [Familienportal](https://familienportal.de/familienportal/familienleistungen/mutterschutz).
   utter_ask_permission_familydescription:
     - text: "Am besten kann ich Dich dazu beraten, wenn Du mir etwas  über Dich erzählst. Einverstanden? 🤓"
-  utter_ask_familydescription:
-    - text: "Ok! Bitte beschreibe mir kurz Deine Familiensituation."
   utter_ask_familydescription_parent:
     - text: "Spreche ich mit der Mutter oder dem Vater?"
   utter_ask_familydescription_pregnancy_month:
