@@ -21,14 +21,17 @@
 - Allgemeine Info
 - Informationen
 
-## intent:choose_elterngeld_requirements
-- Voraussetzungen für Elterngeld
+## intent:requirements_inform
 - Voraussetzungen
 - Vorausetzung
 - Vorraussetzung
 - voraus setzung
+- Voraussetzungen für Elterngeld
 - was sind die Voraussetzunge für Elterngeld?
 - Elterngeld Voraussetzung
+- Voraussetzungen für Elternzeit
+- was sind die Voraussetzunge für Elternzeit?
+- Elternzeit Voraussetzung
 
 ## intent:choose_elterngeld_application
 - beantragung für Elterngeld in [BaWü](bundesland)
@@ -52,7 +55,7 @@
 - wie viel Elterngeld bekomme ich
 - wie viel Elterngeld bekommt man denn
 
-## intent:choose_elterngeld_period
+## intent:period_inform
 - dauer elterngeld
 - wie lange dauert elterngeld
 - wie lange hält Elterngeld
@@ -64,6 +67,13 @@
 - Dauer Elterngeld
 - wie viel Monate Elterngeld
 - wie viel Jahre Elterngeld
+- wie lange Elternzeit
+- wie lange bekommt man Elternzeit
+- wie lange dauert die Elternzeit?
+- elternzeit Dauer
+- Dauer Elternzeit
+- wie viele Monate Elternzeit
+- wie viel Jahre Elternzeit
 
 ## intent:choose_elterngeld_residence
 - [Berlin](bundesland)
@@ -242,7 +252,6 @@
 - [Vaddi]{"entity": "familydescription_parent", "value": "Vater"}
 - [Daddy]{"entity": "familydescription_parent", "value": "Vater"}
 - [Paps]{"entity": "familydescription_parent", "value": "Vater"}
-- [mutter]{"entity": "familydescription_parent", "value": "Mutter"}
 
 ## intent:familydescription_pregnancy_month
 - ich bin im [3. Monat]{"entity": "familydescription_pregnancy_month", "value": "3"}. Monat schwanger
@@ -282,42 +291,6 @@
 - Elternzeit anmelden
 - Elternzeit nehmen
 - elternzeit haben
-
-## intent:elternzeit_period
-- wie lange Elternzeit
-- wie lange bekommt man Elternzeit
-- wie lange dauert die Elternzeit?
-- elternzeit Dauer
-- Dauer Elternzeit
-- wie viele Monate Elternzeit
-- wie viel Jahre Elternzeit
-
-## synonym:1
-- 1. Monat
-
-## synonym:2
-- 2. Monat
-
-## synonym:3
-- 3. Monat
-
-## synonym:4
-- 4. Monat
-
-## synonym:5
-- 5. Monat
-
-## synonym:6
-- 6. Monat
-
-## synonym:7
-- 7. Monat
-
-## synonym:8
-- 8. Monat
-
-## synonym:9
-- 9. Monat
 
 ## synonym:Baden-Württemberg
 - bawü
