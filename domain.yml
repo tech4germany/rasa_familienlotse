@@ -153,12 +153,11 @@ responses:
   utter_elterngeld_affirm_prerequisites:
   - text: Super, Du erfüllst die Voraussetzungen für das Elterngeld! 🎉
   utter_elterngeld_amount:
-  - text: Am besten Du schaust Dir mal den [\U0001F517 Elterngeldrechner](https://familienportal.de/familienportal/meta/egr)
+  - text: Am besten Du schaust Dir mal den [🔗 Elterngeldrechner](https://familienportal.de/familienportal/meta/egr)
       an.
   utter_elterngeld_application:
   - text: Du kannst Elterngeld erst nach der Geburt Deines Kindes beantragen. Am besten
-      innerhalb der ersten 3 Lebensmonate. Mehr Informationen dazu findest Du \U0001F517
-      hier](https://familienportal.de/familienportal/familienleistungen/elterngeld/faq/wie-kann-ich-elterngeld-beantragen-/124762)
+      innerhalb der ersten 3 Lebensmonate. Mehr Informationen dazu findest Du [🔗 hier](https://familienportal.de/familienportal/familienleistungen/elterngeld/faq/wie-kann-ich-elterngeld-beantragen-/124762)
   utter_elterngeld_inform:
   - text: '**Elterngeld** ist eine Leistung, die Du vom Staat als Unterstützung erhalten
       kannst, wenn Du nach der Geburt Deines Kindes gar nicht oder weniger arbeitest
@@ -180,7 +179,7 @@ responses:
     text: Hast Du eine konkrete Frage zum **Elterngeld**? Oder soll ich Dir erstmal
       ein paar allgemeine Infos dazu geben?
   utter_elterngeld_reply_outofscope:
-  - text: "Du willst noch mehr dazu wissen? \n Schau gerne mal [\U0001F517 hier](https://familienportal.de/familienportal/familienleistungen/elterngeld/faq)\
+  - text: "Du willst noch mehr dazu wissen? \n Schau gerne mal [🔗 hier](https://familienportal.de/familienportal/familienleistungen/elterngeld/faq)\
       \ vorbei."
   utter_elternzeit_inform:
   - text: 'Elternzeit ist eine **unbezahlte Pause** vom Berufsleben, die Du zur Betreuung
@@ -192,7 +191,7 @@ responses:
   utter_elternzeit_period:
   - text: Pro Kind kannst Du bis zu 3 Jahre **Elternzeit** nehmen.
   utter_elternzeit_reply_outofscope:
-  - text: "Du willst noch mehr dazu wissen? \n Schau gerne mal [\U0001F517 hier](https://familienportal.de/familienportal/familienleistungen/elternzeit/faq/wann-und-wie-muss-ich-elternzeit-beantragen-/124810)\
+  - text: "Du willst noch mehr dazu wissen? \n Schau gerne mal [🔗 hier](https://familienportal.de/familienportal/familienleistungen/elternzeit/faq/wann-und-wie-muss-ich-elternzeit-beantragen-/124810)\
       \ vorbei."
   utter_elternzeit_timepartner:
   - text: Ja, für Mütter beginnt die **Elternzeit** frühestens nach dem Ende der **Mutterschutzfrist**.
@@ -205,7 +204,7 @@ responses:
   utter_hope_helped:
   - text: Alles klar. Ich hoffe, ich konnte Dir helfen 🌞
   utter_im_fine:
-  - text: "Danke der Nachfrage - mir geht es blendend \U0001F31E \n Wie geht es Dir?"
+  - text: "Danke der Nachfrage - mir geht es blendend 🌞 \n Wie geht es Dir?"
   - text: 'Ich kann nicht klagen 🌞 Und selbst? '
   utter_im_here_4_u:
   - text: Melde Dich gerne bei mir, wenn Du noch etwas brauchst 🌞
@@ -217,7 +216,7 @@ responses:
   - text: Darf ich mich vorstellen? **Sonne** mein Name, Familienlotse auf dem Familienportal
       🌞
   utter_intro:
-  - text: "Hallo, ich bin **Sonne**! \U0001F31E \n Ich kann Dich hier oder langfristig\
+  - text: "Hallo, ich bin **Sonne**! 🌞 \n Ich kann Dich hier oder langfristig\
       \ auf Telegram über Themen rund um **Familienleistungen** informieren und beraten."
   utter_more_info:
   - text: Du hast Dich zuletzt nach **Mutterschutz** erkundigt. Es gibt noch viele
@@ -225,7 +224,7 @@ responses:
   utter_mutterschutz_differencereply:
   - text: "Der **Mutterschutz** ist ein besonderer Schutz für schwangere oder stillende\
       \ Arbeitnehmerinnen. \n Die **Mutterschutzfrist** hingegen ist ein Zeitraum\
-      \ vor und nach der Geburt, in dem die Arbeitnehmerin nicht arbeiten darf \U0001F913"
+      \ vor und nach der Geburt, in dem die Arbeitnehmerin nicht arbeiten darf 🤓"
   utter_mutterschutz_inform:
   - text: "**Mutterschutz** ist ein besonderer Schutz für Arbeitnehmerinnen, die schwanger\
       \ sind oder ein Kind stellen.\n Vor und nach der Geburt soll damit Mutter als\
@@ -234,11 +233,11 @@ responses:
   - text: Der Zeitraum beginnt **6 Wochen vor** dem errechneten Geburtstermin und
       endet üblicherweise **8 Wochen nach** der Geburt 📅
   utter_mutterschutz_reply_outofscope:
-  - text: "Du willst noch mehr dazu wissen? \n Schau gerne mal [\U0001F517 hier](https://familienportal.de/familienportal/familienleistungen/mutterschutz)\
+  - text: "Du willst noch mehr dazu wissen? \n Schau gerne mal [🔗 hier](https://familienportal.de/familienportal/familienleistungen/mutterschutz)\
       \ vorbei."
   utter_outofscope:
   - text: "Ich kenne mich bisher nur mit **Mutterschutz**, **Elterngeld** und **Elternzeit**\
-      \ aus. \n Weitere Leistungen findest Du [\U0001F517 hier](https://familienportal.de/familienportal/familienleistungen/familienleistungen-ueberblick)\U0001F913\
+      \ aus. \n Weitere Leistungen findest Du [🔗 hier](https://familienportal.de/familienportal/familienleistungen/familienleistungen-ueberblick)🤓\
       \U0001F4DA "
   utter_recommend_elterngeld:
   - text: Super, danke! Als werdende(r) {familydescription_parent} könnte auch **Elterngeld**

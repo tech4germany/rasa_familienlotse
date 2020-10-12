@@ -210,6 +210,9 @@
 - geht's Dir gut?
 - wie geht's, wie steht's
 - wie ist das werte Befinden
+- wie gehts
+- alles klar?
+- how are you
 
 ## intent:feeling_good
 - gut
