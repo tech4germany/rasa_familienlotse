@@ -1,4 +1,4 @@
-## mutterschutz+difference+affirm_knowmore+deny_whatsappoffer
+## mutterschutz+difference+affirm_knowmore+deny_telegramoffer
 * get_started   
   - utter_intro
   - utter_ask_mutterschutz_question
@@ -7,11 +7,11 @@
   - utter_ask_knowmore
 * affirm
   - utter_mutterschutz_reply_outofscope
-  - utter_whatsapp_offer
+  - utter_telegram_offer
 * deny
   - utter_im_here_4_u
 
-## mutterschutz+difference+deny_knowmore+affirm_whatsapp
+## mutterschutz+difference+deny_knowmore+affirm_telegram
 * get_started   
   - utter_intro
   - utter_ask_mutterschutz_question
@@ -20,29 +20,29 @@
   - utter_ask_knowmore
 * deny
   - utter_hope_helped
-  - utter_whatsapp_offer
-* affirm OR choose_request_whatsappcode
-    - utter_whatsapp_code
+  - utter_telegram_offer
+* affirm OR choose_request_telegramcode
+    - utter_telegram_code
 
-## mutterschutz+period+affirm+whatsappoffer+deny
+## mutterschutz+period+affirm+telegramoffer+deny
 * ask_mutterschutz_period
   - utter_mutterschutz_periodreply
   - utter_ask_knowmore
 * affirm
   - utter_mutterschutz_reply_outofscope
-  - utter_whatsapp_offer
+  - utter_telegram_offer
 * deny
   - utter_im_here_4_u
 
-## mutterschutz+period+deny+whatsappoffer+affirm/choose_request_whatsappcode
+## mutterschutz+period+deny+telegramoffer+affirm/choose_request_telegramcode
 * ask_mutterschutz_period
   - utter_mutterschutz_periodreply
   - utter_ask_knowmore
 * deny
   - utter_hope_helped
-  - utter_whatsapp_offer
-* affirm OR choose_request_whatsappcode
-  - utter_whatsapp_code
+  - utter_telegram_offer
+* affirm OR choose_request_telegramcode
+  - utter_telegram_code
 
 ## mutterschutz+mutterschutz_general
 * choose_mutterschutz_general OR mutterschutz_topic

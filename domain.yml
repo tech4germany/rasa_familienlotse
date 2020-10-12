@@ -10,8 +10,8 @@ actions:
 - utter_mutterschutz_reply_outofscope
 - utter_recommend_elterngeld
 - utter_welcomeback
-- utter_whatsapp_code
-- utter_whatsapp_offer
+- utter_telegram_code
+- utter_telegram_offer
 entities:
 - bundesland
 - elterngeld_care
@@ -26,9 +26,9 @@ intents:
 - familydescription_pregnancy_month
 - affirm
 - familydescription_parent
-- enter_whatsappcode
+- enter_telegramcode
 - deny
-- choose_request_whatsappcode
+- choose_request_telegramcode
 - elternzeit_period
 - choose_elterngeld_amount
 - ask_mutterschutz_period
@@ -53,7 +53,7 @@ intents:
 - out_of_scope
 - greet
 - goodbye
-- greet_whatsapp
+- greet_telegram
 - who_are_you
 - how_are_you
 - feeling_good
@@ -218,7 +218,7 @@ responses:
       🌞
   utter_intro:
   - text: "Hallo, ich bin **Sonne**! \U0001F31E \n Ich kann Dich hier oder langfristig\
-      \ auf WhatsApp über Themen rund um **Familienleistungen** informieren und beraten."
+      \ auf Telegram über Themen rund um **Familienleistungen** informieren und beraten."
   utter_more_info:
   - text: Du hast Dich zuletzt nach **Mutterschutz** erkundigt. Es gibt noch viele
       weitere Familienleistungen, die für Dich relevant sein könnten.
@@ -251,13 +251,13 @@ responses:
   - text: Willkommen zurück 🌞
   utter_welcomeback_time:
   - text: Hey, nur noch **9** Wochen bis zum großen Tag! ✨
-  utter_whatsapp_code:
-  - text: 'Super! Gib bitte folgenden Code in WhatsApp ein: `t4g-sonne-start`.'
-  utter_whatsapp_offer:
+  utter_telegram_code:
+  - text: 'Super! Gib bitte folgenden Code in Telegram ein: `t4g-sonne-start`.'
+  utter_telegram_offer:
   - buttons:
-    - payload: /choose_request_whatsappcode
-      title: Zu WhatsApp hinzufügen
-    text: Übrigens - Du kannst mich gerne auch auf WhatsApp hinzufügen. Dann kann
+    - payload: /choose_request_telegramcode
+      title: Zu Telegram hinzufügen
+    text: Übrigens - Du kannst mich gerne auch auf Telegram hinzufügen. Dann kann
       ich Dich im passenden Moment über weitere Familienleistungen und Fristen informieren
       💡
 session_config:

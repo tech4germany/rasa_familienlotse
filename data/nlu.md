@@ -116,20 +116,19 @@
 - hallo mutterschutz
 - Start Mutterschutz
 
-## intent:enter_whatsappcode
+## intent:enter_telegramcode
 - t4g-sonne-start
 - sonne-start-t4g
 - start-sonne-t4g
 - start-sonnet4g
 - t4gsonnestart
 
-## intent:choose_request_whatsappcode
-- WhatsApp
-- WA
-- zu WhatsApp
-- habt Ihr WhatsApp als Kanal?
-- ist WhatsApp angeschlossen?
-- WhatsApp möglich?
+## intent:choose_request_telegramcode
+- Telegram
+- zu Telegram
+- habt Ihr Telegram als Kanal?
+- ist Telegram angeschlossen?
+- Telegram möglich?
 
 ## intent:choose_mutterschutz_general
 - mutterschutz
