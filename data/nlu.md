@@ -193,11 +193,11 @@
 - [Paps]{"entity": "familydescription_parent", "value": "Vater"}
 
 ## intent:familydescription_pregnancy_month
-- ich bin im [3](familiydescription_pregnancy_month). Monat schwanger
-- ich bin [nicht schwanger]{"entity": "familiydescription_pregnancy_month", "value": "False"}
-- im [5](familiydescription_pregnancy_month). Monat
-- [9](familiydescription_pregnancy_month). Monat
-- [1](familiydescription_pregnancy_month). Monat
+- ich bin im [3](familydescription_pregnancy_month). Monat schwanger
+- ich bin [nicht schwanger]{"entity": "familydescription_pregnancy_month", "value": "False"}
+- im [5](familydescription_pregnancy_month). Monat
+- [9](familydescription_pregnancy_month). Monat
+- [1](familydescription_pregnancy_month). Monat
 
 ## intent:elternzeit_topic
 - elternzeit
