@@ -144,6 +144,10 @@ responses:
   - text: Bist Du schwanger? Wenn ja, in welchem Monat?
   utter_ask_knowmore:
   - text: Willst Du mehr darüber wissen? Du kannst mich auch etwas anderes fragen.
+    - payload: /affirm
+      title: Ja
+    - payload: /deny
+      title: Nein
   utter_ask_mutterschutz_question:
   - buttons:
     - payload: /choose_mutterschutz_general

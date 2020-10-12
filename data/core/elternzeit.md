@@ -7,10 +7,19 @@
   - utter_elternzeit_inform
   - utter_ask_elternzeit_subtopic
 
-## elternzeit+timepartner
+## elternzeit+timepartner+affirm
 * elternzeit_timepartner
   - utter_elternzeit_timepartner
   - utter_ask_knowmore
+* affirm
+  - utter_elternzeit_reply_outofscope
+
+## elternzeit+timepartner+affirm
+* elternzeit_timepartner
+  - utter_elternzeit_timepartner
+  - utter_ask_knowmore
+* deny
+  - utter_im_here_4_u
 
 ## elternzeit+notification
 * choose_elternzeit_notification
