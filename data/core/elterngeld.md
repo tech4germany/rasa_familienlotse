@@ -70,10 +70,14 @@
   - elterngeldrequirements_form
   - form{"name":null}
 
-<!-- further topic: application, amount, duration -->
+## elterngeld+period
+* choose_elterngeld_period
+  - utter_elterngeld_period
 
-## elterngeld application+amount+duration
-> elterngeld_subtopics
-* choose_elterngeld_application OR choose_elterngeld_amount OR choose_elterngeld_duration
-  - utter_outofscope
-  - utter_elterngeld_reply_outofscope
+## elterngeld+application
+* choose_elterngeld_application
+  - utter_elterngeld_application
+
+## elterngeld+period
+* choose_elterngeld_amount
+  - utter_elterngeld_amount

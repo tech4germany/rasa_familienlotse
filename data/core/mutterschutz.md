@@ -19,8 +19,8 @@
   - utter_mutterschutz_differencereply
   - utter_ask_knowmore
 * deny
-    - utter_hope_help
-    - utter_whatsapp_offer
+  - utter_hope_helped
+  - utter_whatsapp_offer
 * affirm OR choose_request_whatsappcode
     - utter_whatsapp_code
 
@@ -39,11 +39,11 @@
   - utter_mutterschutz_periodreply
   - utter_ask_knowmore
 * deny
-  - utter_hope_help
+  - utter_hope_helped
   - utter_whatsapp_offer
 * affirm OR choose_request_whatsappcode
   - utter_whatsapp_code
 
 ## mutterschutz+mutterschutz_general
 * choose_mutterschutz_general OR mutterschutz_topic
-  - utter_mutterschutz_reply_outofscope
+  - utter_mutterschutz_inform

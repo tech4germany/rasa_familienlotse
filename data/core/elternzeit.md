@@ -10,7 +10,6 @@
   - utter_elternzeit_timepartner
   - utter_ask_knowmore
 * choose_elternzeit_notification
-  - utter_outofscope
   - utter_elternzeit_reply_outofscope
 
 ## elternzeit+priorknowledge
@@ -19,7 +18,7 @@
   - utter_elternzeit_inform_deadline
   - utter_ask_elternzeit_priorknowledge
 * affirm
-  - utter_hope_help
+  - utter_hope_helped
   - utter_im_here_4_u
 
 ## elternzeit
@@ -30,5 +29,7 @@
   - utter_elternzeit_timepartner
   - utter_ask_knowmore
 * choose_elternzeit_notification
-  - utter_outofscope
   - utter_elternzeit_reply_outofscope
+* elternzeit_period
+    - utter_elternzeit_period
+    

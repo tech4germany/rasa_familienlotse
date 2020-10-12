@@ -12,6 +12,7 @@
 - konkrete Frage
 - spezielle Frage
 - ich habe eine Frage
+- ich habe mein Kind bekommen, was muss ich jetzt tun?
 
 ## intent:choose_elterngeld_general
 - allgemeine Infos
@@ -48,8 +49,10 @@
 - wie viel Elterngeld bekomme ich?
 - wie viel Elterngeld?
 - Elterngeld viel?
+- wie viel Elterngeld bekomme ich
+- wie viel Elterngeld bekommt man denn
 
-## intent:choose_elterngeld_duration
+## intent:choose_elterngeld_period
 - dauer elterngeld
 - wie lange dauert elterngeld
 - wie lange hält Elterngeld
@@ -95,6 +98,7 @@
 - Wie lange gilt die Mutterschutzfrist?
 - Wann beginnt die Mutterschutzfrist?
 - Wann endet die Mutterschutzfrist?
+- wie lange ist Mutterschutzfrist
 
 ## intent:get_started
 - start mutterschutz
@@ -156,6 +160,7 @@
 - gerne
 - gerne mehr
 - erzähl mir mehr darüber
+- weitermachen
 
 ## intent:deny
 - ne
@@ -176,6 +181,45 @@
 - Wie bin ich versichert bei Elterngeld?
 - kann ich Elterngeld auch beantragen, wenn Kind nicht bei mir wohnt?
 - Wie hängt Kindergeld mit Elterngeld zusammen?
+- wie ist das Wetter?
+- was ist die Antwort auf alle Fragen?
+- Wer ist Bundeskanzler?
+- wie hängen Elterngeld und Kindergeld zusammen?
+- kann ich als Vater den Mutterschutz beantragen?
+
+
+## intent:who_are_you
+- Wer bist Du?
+- wie heißt Du?
+- was bist Du?
+- was ist ein Chatbot?
+- Wer ist Sonne?
+- wie ist Dein Name?
+- wer bis du?
+
+## intent:how_are_you
+- wie geht's Dir?
+- alles gut?
+- geht's Dir gut?
+- wie geht's, wie steht's
+- wie ist das werte Befinden
+
+## intent:feeling_good
+- ok
+- gut
+- alles klar
+- läuft
+- mir geht's gut
+- geht gut
+- klasse
+- mir geht's super
+
+## intent:feeling_bad
+- mir geht's nicht so gut
+- mir geht's schlecht
+- nciht gut
+- garnicht gut
+- ich bin traurig
 
 ## intent:describe_family
 - [ich bin im]{"entity": "familydescription_parent", "value": "Mutter"} [3. Monat schwanger]{"entity": "familydescription_pregnancy_month", "value": "3"}
@@ -193,7 +237,7 @@
 - Ich werde in [zwei Monaten]{"entity": "familydescription_pregnancy_month", "value": "2"} [Papa](familydescription_parent)
 - wir bekommen in [6 Monaten]{"entity": "familydescription_pregnancy_month", "value": "6"} unser Kind
 - ich bin im [3. Monat schwanger]{"entity": "familydescription_pregnancy_month", "value": "3"}
-- [ich bin im]{"entity": "familydescription_parent", "value": "Mutter"} [3. Monat schwanger]{"entity": "familydescription_pregnancy_month", "value": "3"}
+- ich habe zwei Kinder und eine [Ehefrau]{"entity": "familiendescription_parent", "value": "Vater"}
 
 ## intent:familydescription_parent
 - [Mutter](familydescription_parent)
@@ -236,29 +280,22 @@
 - Elternzeit nehmen
 - elternzeit haben
 
-## synonym:Mutter
-- ich bin im 3. Monat schwanger
-- ich bin schwanger
-- ich bekomme ein Kind
-- ich Mutter
-- bekomme ich ein Baby
-- Mudder
-- Mama
-- Mum
-- Muddah
-- muddi
-- ich bekomme bald mein Kind
+## intent:choose_elterngeld_period
+- wie lange Elterngeld
+- wie lange bekommt man Elterngeld
+- Elterngeld Dauer
+- Dauer Elterngeld
+- wie viel Monate Elterngeld
+- wie viel Jahre Elterngeld
 
-## synonym:Vater
-- meine Freundin ist schwanger
-- meine Frau ist schwanger
-- meine Frau
-- meine Freundin
-- Papa
-- Dad
-- Vaddi
-- Daddy
-- Paps
+## intent:elternzeit_period
+- wie lange Elternzeit
+- wie lange bekommt man Elternzeit
+- wie lange dauert die Elternzeit?
+- elternzeit Dauer
+- Dauer Elternzeit
+- wie viele Monate Elternzeit
+- wie viel Jahre Elternzeit
 
 ## synonym:1
 - einem Monat
@@ -320,6 +357,20 @@
 - mecklenburg
 - vorpommern
 
+## synonym:Mutter
+- ich bin im
+- ich bin schwanger
+- ich bekomme ein Kind
+- ich Mutter
+- bekomme ich ein Baby
+- Mudder
+- Mama
+- Mum
+- Muddah
+- muddi
+- ich bin im 3. Monat schwanger
+- ich bekomme bald mein Kind
+
 ## synonym:Rheinland-Pfalz
 - rlp
 - rheinland
@@ -333,3 +384,13 @@
 - Schleswig
 - Holstein
 
+## synonym:Vater
+- meine Freundin
+- meine Frau
+- Papa
+- Dad
+- Vaddi
+- Daddy
+- Paps
+- meine Freundin ist schwanger
+- meine Frau ist schwanger
