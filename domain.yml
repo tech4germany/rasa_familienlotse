@@ -18,6 +18,7 @@ forms:
 - familydescription_form
 intents:
 - choose_elterngeld_period
+- choose_elterngeld_application
 - choose_request_whatsappcode
 - elternzeit_period
 - choose_elterngeld_amount
@@ -145,6 +146,10 @@ responses:
       Einverstanden? 🤓
   utter_elterngeld_affirm_prerequisites:
   - text: Super, Du erfüllst die Voraussetzungen für das Elterngeld! 🎉
+  utter_elterngeld_amount:
+  - text: Am besten Du schaust Dir mal den [\U0001F517 Elterngeldrechner](https://familienportal.de/familienportal/meta/egr) an.
+  utter_elterngeld_application:
+  - text: Du kannst Elterngeld erst nach der Geburt Deines Kindes beantragen. Am besten innerhalb der ersten 3 Lebensmonate. Mehr Informationen dazu findest Du \U0001F517 hier](https://familienportal.de/familienportal/familienleistungen/elterngeld/faq/wie-kann-ich-elterngeld-beantragen-/124762)
   utter_elterngeld_inform:
   - text: '**Elterngeld** ist eine Leistung, die Du vom Staat als Unterstützung erhalten
       kannst, wenn Du nach der Geburt Deines Kindes gar nicht oder weniger arbeitest

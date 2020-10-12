@@ -74,9 +74,10 @@
 * choose_elterngeld_period
   - utter_elterngeld_period
 
-<!-- further topic: application, amount, period -->
+## elterngeld+application
+* choose_elterngeld_application
+  - utter_elterngeld_application
 
-## elterngeld application+amount+period
-> elterngeld_subtopics
-* choose_elterngeld_application OR choose_elterngeld_amount
-  - utter_elterngeld_reply_outofscope
+## elterngeld+period
+* choose_elterngeld_amount
+  - utter_elterngeld_amount
