@@ -207,7 +207,7 @@ responses:
   utter_ask_familydescription_pregnancy_month:
     - text: "Bist Du schwanger? Wenn ja, in welchem Monat?"
   utter_recommend_elterngeld:
-    - text: "Super, danke! Als werdende(r) {familydescription_parent} könnte auch **Elterngeld** für Dich interessant sein."
+    - text: "Super, danke! Als {familydescription_parent} könnte auch **Elterngeld** für Dich interessant sein."
   utter_ask_elterngeld_priorknowledge:
     - text: "Hast Du Dich damit schon beschäftigt?"
 
