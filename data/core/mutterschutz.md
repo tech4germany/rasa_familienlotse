@@ -3,7 +3,8 @@
   - utter_intro
   - utter_ask_mutterschutz_question
 * ask_mutterschutz_difference_mutterschutzfrist
-  - utter_mutterschutz_differencereply
+  - utter_mutterschutz_general
+  - utter_mutterschutz_mutterschutzfrist
   - utter_ask_knowmore
 * affirm
   - utter_mutterschutz_reply_outofscope
@@ -16,7 +17,8 @@
   - utter_intro
   - utter_ask_mutterschutz_question
 * ask_mutterschutz_difference_mutterschutzfrist
-  - utter_mutterschutz_differencereply
+  - utter_mutterschutz_general
+  - utter_mutterschutz_mutterschutzfrist
   - utter_ask_knowmore
 * deny
     - utter_hope_help
@@ -46,4 +48,5 @@
 
 ## mutterschutz+mutterschutz_general
 * choose_mutterschutz_general OR mutterschutz_topic
-  - utter_mutterschutz_reply_outofscope
+  - utter_mutterschutz_general
+  - utter_ask_knowmore

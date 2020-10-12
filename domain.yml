@@ -211,9 +211,10 @@ responses:
       title: "Was ist Mutterschutz?"
     - payload: /ask_mutterschutz_difference_mutterschutzfrist
       title: "Unterschied Mutterschutz Mutterschutzfrist"
-  utter_mutterschutz_differencereply:
-  - text: "Der **Mutterschutz** ist ein besonderer Schutz für schwangere oder stillende Arbeitnehmerinnen. \n 
-  Die **Mutterschutzfrist** hingegen ist ein Zeitraum vor und nach der Geburt, in dem die Arbeitnehmerin nicht arbeiten darf 🤓"
+  utter_mutterschutz_general:
+  - text: "Der **Mutterschutz** ist ein besonderer Schutz für schwangere oder stillende Arbeitnehmerinnen. \n"
+  utter_mutterschutz_mutterschutzfrist:
+  - text: "Die **Mutterschutzfrist** hingegen ist ein Zeitraum vor und nach der Geburt, in dem die Arbeitnehmerin nicht arbeiten darf 🤓"
   utter_mutterschutz_periodreply:
   - text: "Der Zeitraum beginnt **6 Wochen vor** dem errechneten Geburtstermin und endet üblicherweise **8 Wochen nach** der Geburt 📅"
   utter_mutterschutz_reply_outofscope:
