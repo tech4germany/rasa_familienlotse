@@ -58,6 +58,12 @@
 - wie lange hält Elterngeld
 - wie lange bekomme ich Elterngeld?
 - Elterngeld wie viel Zeit
+- wie lange Elterngeld
+- wie lange bekommt man Elterngeld
+- Elterngeld Dauer
+- Dauer Elterngeld
+- wie viel Monate Elterngeld
+- wie viel Jahre Elterngeld
 
 ## intent:choose_elterngeld_residence
 - [Berlin](bundesland)
@@ -112,6 +118,10 @@
 
 ## intent:enter_whatsappcode
 - t4g-sonne-start
+- sonne-start-t4g
+- start-sonne-t4g
+- start-sonnet4g
+- t4gsonnestart
 
 ## intent:choose_request_whatsappcode
 - WhatsApp
@@ -186,7 +196,6 @@
 - wie hängen Elterngeld und Kindergeld zusammen?
 - kann ich als Vater den Mutterschutz beantragen?
 
-
 ## intent:who_are_you
 - Wer bist Du?
 - wie heißt Du?
@@ -204,7 +213,6 @@
 - wie ist das werte Befinden
 
 ## intent:feeling_good
-- ok
 - gut
 - alles klar
 - läuft
@@ -234,13 +242,19 @@
 - [Vaddi]{"entity": "familydescription_parent", "value": "Vater"}
 - [Daddy]{"entity": "familydescription_parent", "value": "Vater"}
 - [Paps]{"entity": "familydescription_parent", "value": "Vater"}
+- [mutter]{"entity": "familydescription_parent", "value": "Mutter"}
 
 ## intent:familydescription_pregnancy_month
-- ich bin im [3](familydescription_pregnancy_month). Monat schwanger
+- ich bin im [3. Monat]{"entity": "familydescription_pregnancy_month", "value": "3"}. Monat schwanger
 - ich bin [nicht schwanger]{"entity": "familydescription_pregnancy_month", "value": "False"}
-- im [5](familydescription_pregnancy_month). Monat
-- [9](familydescription_pregnancy_month). Monat
-- [1](familydescription_pregnancy_month). Monat
+- im [5. Monat]{"entity": "familydescription_pregnancy_month", "value": "5"}
+- [9. Monat]{"entity": "familydescription_pregnancy_month", "value": "9"}
+- [1. Monat]{"entity": "familydescription_pregnancy_month", "value": "1"}
+- [2. Monat]{"entity": "familydescription_pregnancy_month", "value": "2"}
+- [4. Monat]{"entity": "familydescription_pregnancy_month", "value": "4"}
+- [6. Monat]{"entity": "familydescription_pregnancy_month", "value": "6"}
+- [7. Monat]{"entity": "familydescription_pregnancy_month", "value": "7"}
+- [8. Monat]{"entity": "familydescription_pregnancy_month", "value": "8"}
 
 ## intent:elternzeit_topic
 - elternzeit
@@ -269,14 +283,6 @@
 - Elternzeit nehmen
 - elternzeit haben
 
-## intent:choose_elterngeld_period
-- wie lange Elterngeld
-- wie lange bekommt man Elterngeld
-- Elterngeld Dauer
-- Dauer Elterngeld
-- wie viel Monate Elterngeld
-- wie viel Jahre Elterngeld
-
 ## intent:elternzeit_period
 - wie lange Elternzeit
 - wie lange bekommt man Elternzeit
@@ -285,6 +291,33 @@
 - Dauer Elternzeit
 - wie viele Monate Elternzeit
 - wie viel Jahre Elternzeit
+
+## synonym:1
+- 1. Monat
+
+## synonym:2
+- 2. Monat
+
+## synonym:3
+- 3. Monat
+
+## synonym:4
+- 4. Monat
+
+## synonym:5
+- 5. Monat
+
+## synonym:6
+- 6. Monat
+
+## synonym:7
+- 7. Monat
+
+## synonym:8
+- 8. Monat
+
+## synonym:9
+- 9. Monat
 
 ## synonym:Baden-Württemberg
 - bawü

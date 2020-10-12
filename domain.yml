@@ -1,9 +1,15 @@
 actions:
+- utter_ask_elterngeld_priorknowledge
 - utter_ask_knowmore
+- utter_ask_permission_familydescription
 - utter_elterngeld_reply_outofscope
 - utter_elternzeit_period
+- utter_im_here_4_u
+- utter_more_info
 - utter_mutterschutz_periodreply
 - utter_mutterschutz_reply_outofscope
+- utter_recommend_elterngeld
+- utter_welcomeback
 - utter_whatsapp_code
 - utter_whatsapp_offer
 entities:
@@ -17,26 +23,25 @@ forms:
 - elterngeldrequirements_form
 - familydescription_form
 intents:
-- choose_elterngeld_period
-- choose_elterngeld_application
+- familydescription_pregnancy_month
+- affirm
+- familydescription_parent
+- enter_whatsappcode
+- deny
 - choose_request_whatsappcode
 - elternzeit_period
 - choose_elterngeld_amount
-- affirm
 - ask_mutterschutz_period
 - elterngeld_topic
 - choose_elterngeld_residence
 - choose_elterngeld_precise
 - choose_elterngeld_general
+- choose_elterngeld_period
 - choose_elterngeld_requirements
 - choose_elterngeld_application
 - mutterschutz_topic
 - ask_mutterschutz_difference_mutterschutzfrist
 - choose_mutterschutz_general
-- familydescription_parent
-- familydescription_pregnancy_month
-
-# elternzeit
 - elternzeit_topic
 - greet_elternzeit
 - elternzeit_timepartner
@@ -45,31 +50,13 @@ intents:
 - choose_elternzeit_period
 - get_started
 - out_of_scope
-- deny
 - greet
 - goodbye
-- enter_whatsappcode
 - greet_whatsapp
 - who_are_you
 - how_are_you
 - feeling_good
 - feeling_bad
-
-
-slots:
-  elterngeld_care:
-    type: unfeaturized
-  elterngeld_samehousehold:
-    type: unfeaturized
-  elterngeld_workparttime:
-    type: unfeaturized
-  elterngeld_residence:
-    type: unfeaturized 
-  familydescription_pregnancy_month:
-    type: unfeaturized
-  familydescription_parent:
-    type: unfeaturized
-
 responses:
   utter_ask_continue:
   - text: Tut mir leid, ich kann Dir gerade nicht ganz folgen. Möchtest Du weitermachen?
@@ -165,20 +152,24 @@ responses:
   utter_elterngeld_affirm_prerequisites:
   - text: Super, Du erfüllst die Voraussetzungen für das Elterngeld! 🎉
   utter_elterngeld_amount:
-  - text: Am besten Du schaust Dir mal den [\U0001F517 Elterngeldrechner](https://familienportal.de/familienportal/meta/egr) an.
+  - text: Am besten Du schaust Dir mal den [\U0001F517 Elterngeldrechner](https://familienportal.de/familienportal/meta/egr)
+      an.
   utter_elterngeld_application:
-  - text: Du kannst Elterngeld erst nach der Geburt Deines Kindes beantragen. Am besten innerhalb der ersten 3 Lebensmonate. Mehr Informationen dazu findest Du \U0001F517 hier](https://familienportal.de/familienportal/familienleistungen/elterngeld/faq/wie-kann-ich-elterngeld-beantragen-/124762)
+  - text: Du kannst Elterngeld erst nach der Geburt Deines Kindes beantragen. Am besten
+      innerhalb der ersten 3 Lebensmonate. Mehr Informationen dazu findest Du \U0001F517
+      hier](https://familienportal.de/familienportal/familienleistungen/elterngeld/faq/wie-kann-ich-elterngeld-beantragen-/124762)
   utter_elterngeld_inform:
   - text: '**Elterngeld** ist eine Leistung, die Du vom Staat als Unterstützung erhalten
       kannst, wenn Du nach der Geburt Deines Kindes gar nicht oder weniger arbeitest
       🤓'
-  utter_elterngeld_period:
-  - text: "Bei der Dauer des **Elterngelds** kannst Du Dich entscheiden: Entweder bis zu 12 Monate Basiselterngeld oder ElterngeldPlus bis zu 24 Monate."
   utter_elterngeld_inform_prerequisites:
   - text: "Du musst die folgenden Voraussetzungen erfüllen, um **Elterngeld** beziehen\
       \ zu können. \n - Du lebst in Deutschland. \n - Du wohnst mit Deinem Kind zusammen.\
       \ \n - Du betreust Dein Kind selbst. \n - Du arbeitest höchstens 30 Stunden\
       \ pro Woche."
+  utter_elterngeld_period:
+  - text: 'Bei der Dauer des **Elterngelds** kannst Du Dich entscheiden: Entweder
+      bis zu 12 Monate Basiselterngeld oder ElterngeldPlus bis zu 24 Monate.'
   utter_elterngeld_precise_general:
   - buttons:
     - payload: /choose_elterngeld_precise
@@ -188,8 +179,7 @@ responses:
     text: Hast Du eine konkrete Frage zum **Elterngeld**? Oder soll ich Dir erstmal
       ein paar allgemeine Infos dazu geben?
   utter_elterngeld_reply_outofscope:
-  - text: "Du willst noch mehr dazu wissen? \n Schau gerne\
-      \ mal [\U0001F517 hier](https://familienportal.de/familienportal/familienleistungen/elterngeld/faq)\
+  - text: "Du willst noch mehr dazu wissen? \n Schau gerne mal [\U0001F517 hier](https://familienportal.de/familienportal/familienleistungen/elterngeld/faq)\
       \ vorbei."
   utter_elternzeit_inform:
   - text: 'Elternzeit ist eine **unbezahlte Pause** vom Berufsleben, die Du zur Betreuung
@@ -201,8 +191,7 @@ responses:
   utter_elternzeit_period:
   - text: Pro Kind kannst Du bis zu 3 Jahre **Elternzeit** nehmen.
   utter_elternzeit_reply_outofscope:
-  - text: "Du willst noch mehr dazu wissen? \n Schau gerne\
-      \ mal [\U0001F517 hier](https://familienportal.de/familienportal/familienleistungen/elternzeit/faq/wann-und-wie-muss-ich-elternzeit-beantragen-/124810)\
+  - text: "Du willst noch mehr dazu wissen? \n Schau gerne mal [\U0001F517 hier](https://familienportal.de/familienportal/familienleistungen/elternzeit/faq/wann-und-wie-muss-ich-elternzeit-beantragen-/124810)\
       \ vorbei."
   utter_elternzeit_timepartner:
   - text: Ja, für Mütter beginnt die **Elternzeit** frühestens nach dem Ende der **Mutterschutzfrist**.
@@ -214,17 +203,18 @@ responses:
   - text: Das ist sehr schön.
   utter_hope_helped:
   - text: Alles klar. Ich hoffe, ich konnte Dir helfen 🌞
+  utter_im_fine:
+  - text: "Danke der Nachfrage - mir geht es blendend \U0001F31E \n Wie geht es Dir?"
+  - text: 'Ich kann nicht klagen 🌞 Und selbst? '
   utter_im_here_4_u:
   - text: Melde Dich gerne bei mir, wenn Du noch etwas brauchst 🌞
   - text: Wenn Du trotzdem noch Fragen haben solltest, kannst Du sie mir jederzeit
       stellen 🌞
   - text: Das war es vorerst von mir. Wenn Du noch Fragen hast, melde Dich gerne.
-  utter_im_fine:
-  - text: "Danke der Nachfrage - mir geht es blendend 🌞 \n Wie geht es Dir?"
-  - text: "Ich kann nicht klagen 🌞 Und selbst? "
   utter_im_sonne:
-    - text: "Ich bin **Sonne**, Dein Familienlotse auf dem Familienportal 🌞"
-    - text: "Darf ich mich vorstellen? **Sonne** mein Name, Familienlotse auf dem Familienportal 🌞"
+  - text: Ich bin **Sonne**, Dein Familienlotse auf dem Familienportal 🌞
+  - text: Darf ich mich vorstellen? **Sonne** mein Name, Familienlotse auf dem Familienportal
+      🌞
   utter_intro:
   - text: "Hallo, ich bin **Sonne**! \U0001F31E \n Ich kann Dich hier oder langfristig\
       \ auf WhatsApp über Themen rund um **Familienleistungen** informieren und beraten."
@@ -243,8 +233,7 @@ responses:
   - text: Der Zeitraum beginnt **6 Wochen vor** dem errechneten Geburtstermin und
       endet üblicherweise **8 Wochen nach** der Geburt 📅
   utter_mutterschutz_reply_outofscope:
-  - text: "Du willst noch mehr dazu wissen? \n Schau gerne\
-      \ mal [\U0001F517 hier](https://familienportal.de/familienportal/familienleistungen/mutterschutz)\
+  - text: "Du willst noch mehr dazu wissen? \n Schau gerne mal [\U0001F517 hier](https://familienportal.de/familienportal/familienleistungen/mutterschutz)\
       \ vorbei."
   utter_outofscope:
   - text: "Ich kenne mich bisher nur mit **Mutterschutz**, **Elterngeld** und **Elternzeit**\
@@ -273,3 +262,18 @@ responses:
 session_config:
   carry_over_slots_to_new_session: false
   session_expiration_time: 60
+slots:
+  elterngeld_care:
+    type: unfeaturized
+  elterngeld_residence:
+    type: unfeaturized
+  elterngeld_samehousehold:
+    type: unfeaturized
+  elterngeld_workparttime:
+    type: unfeaturized
+  familydescription_parent:
+    type: unfeaturized
+  familydescription_pregnancy_month:
+    type: unfeaturized
+  requested_slot:
+    type: unfeaturized

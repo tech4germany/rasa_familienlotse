@@ -64,5 +64,5 @@
   - utter_more_info
   - utter_ask_permission_familydescription
 * deny
-  - utter_hope_help
+  - utter_hope_helped
   - utter_im_here_4_u
