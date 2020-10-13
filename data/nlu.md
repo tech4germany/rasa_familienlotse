@@ -95,7 +95,6 @@
 - [Saarland](elterngeld_residence)
 - [ausland](elterngeld_residence)
 
-
 ## intent:mutterschutz_topic
 - was ist Mutterschutz?
 - mutterschutz
@@ -117,7 +116,6 @@
 - Wann beginnt die Mutterschutzfrist?
 - Wann endet die Mutterschutzfrist?
 - wie lange ist Mutterschutzfrist
-
 
 ## intent:get_started
 - start mutterschutz
@@ -248,7 +246,14 @@
 
 ## intent:familydescription_parent
 - [Mutter](familydescription_parent)
+- [mutter]{"familydescription_parent":, "value": "Mutter"}
+- [muddi]{"entity": "familydescription_parent", "value": "Mutter"}
+- [Mama]{"entity": "familydescription_parent", "value": "Mutter"}
+- [Mum]{"entity": "familydescription_parent", "value": "Mutter"}
 - [Vater](familydescription_parent)
+- [vater]{"entity": "familydescription_parent", "value": "Vater"}
+- [dad]{"entity": "familydescription_parent", "value": "Vater"}
+- [muddi]{"entity": "familydescription_parent", "value": "Mutter"}
 
 ## intent:familydescription_pregnancy_month
 - ich bin im [3. Monat]{"entity": "familydescription_pregnancy_month", "value": "3"}. Monat schwanger
@@ -261,6 +266,8 @@
 - [6. Monat]{"entity": "familydescription_pregnancy_month", "value": "6"}
 - [7. Monat]{"entity": "familydescription_pregnancy_month", "value": "7"}
 - [8. Monat]{"entity": "familydescription_pregnancy_month", "value": "8"}
+- im [7. Monat]{"entity": "familydescription_pregnancy_month", "value": "7"}
+- im [siebten Monat]{"entity": "familydescription_pregnancy_month", "value": "7"}
 
 ## intent:elternzeit_topic
 - elternzeit
@@ -290,6 +297,42 @@
 - elternzeit haben
 - wie kann ich Elternzeit anmelden
 - wo kann ich elternzeit anmelden?
+
+## synonym:1
+- 1. Monat
+- erster Monat
+
+## synonym:2
+- 2. Monat
+- zweiter Monat
+
+## synonym:3
+- 3. Monat
+- dritter Monat
+
+## synonym:4
+- 4. Monat
+- vierter Monat
+
+## synonym:5
+- 5. Monat
+- fünfter Monat
+
+## synonym:6
+- 6. Monat
+- sechster Monat
+
+## synonym:7
+- 7. Monat
+- siebter Monat
+
+## synonym:8
+- 8. Monat
+- achter Monat
+
+## synonym:9
+- 9. Monat
+- neunter Monat
 
 ## synonym:Baden-Württemberg
 - bawü
@@ -321,12 +364,12 @@
 - vorpommern
 
 ## synonym:Mutter
-- Mudder
+- mutter
+- muddi
 - Mama
 - Mum
+- Mudder
 - Muddah
-- muddi
-- mutter
 - mama
 
 ## synonym:Rheinland-Pfalz
@@ -343,11 +386,12 @@
 - Holstein
 
 ## synonym:Vater
+- vater
+- dad
 - Papa
 - Dad
 - Vaddi
 - Daddy
 - Paps
 - papa
-- dad
 - vadda

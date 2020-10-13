@@ -2,16 +2,16 @@ actions:
 - utter_ask_elterngeld_priorknowledge
 - utter_ask_knowmore
 - utter_ask_permission_familydescription
-- utter_distinguish_requirements_elterngeld_elternzeit
 - utter_distinguish_period_elterngeld_elternzeit
-- utter_elterngeld_reference
-- utter_elterngeld_application_reference
-- utter_elterngeld_application_link
-- utter_elterngeld_period_reference
+- utter_distinguish_requirements_elterngeld_elternzeit
 - utter_elterngeld_amount_reference
-- utter_elternzeit_reference
-- utter_elternzeit_period_reference
+- utter_elterngeld_application_link
+- utter_elterngeld_application_reference
+- utter_elterngeld_period_reference
+- utter_elterngeld_reference
 - utter_elternzeit_notification_reference
+- utter_elternzeit_period_reference
+- utter_elternzeit_reference
 - utter_elternzeit_requirements_reference
 - utter_im_here_4_u
 - utter_more_info
@@ -20,13 +20,13 @@ actions:
 - utter_mutterschutz_periodreply
 - utter_mutterschutz_reference
 - utter_recommend_elterngeld
-- utter_welcomeback
 - utter_telegram_code
 - utter_telegram_offer
+- utter_welcomeback
 entities:
+- elterngeld_care
 - elterngeld_residence
 - elterngeld_residence_link
-- elterngeld_care
 - elterngeld_samehousehold
 - elterngeld_workparttime
 - familydescription_parent
@@ -35,12 +35,12 @@ forms:
 - elterngeldrequirements_form
 - familydescription_form
 intents:
+- enter_telegramcode
+- familydescription_pregnancy_month
+- familydescription_parent
+- affirm
 - requirements_inform
 - period_inform
-- familydescription_pregnancy_month
-- affirm
-- familydescription_parent
-- enter_telegramcode
 - deny
 - choose_request_telegramcode
 - elternzeit_period
@@ -91,8 +91,8 @@ responses:
       title: Höhe
     - payload: /choose_elterngeld_period
       title: Bezugsdauer
-    text: Soll ich Dir sonst noch etwas zu Beantragung, Höhe oder Bezugsdauer
-      von Elterngeld erklären?
+    text: Soll ich Dir sonst noch etwas zu Beantragung, Höhe oder Bezugsdauer von
+      Elterngeld erklären?
   utter_ask_elterngeld_precisequestion:
   - text: Dann stelle jetzt Deine Frage.
   utter_ask_elterngeld_priorknowledge:
@@ -113,8 +113,8 @@ responses:
       title: Ja
     - payload: /deny
       title: Nein
-    text: "Lass uns herausfinden, ob Du die Voraussetzungen erfüllst 🔍\
-      \  \n Kann ich Dir dafür ein paar Fragen zu Deiner Situation stellen?"
+    text: "Lass uns herausfinden, ob Du die Voraussetzungen erfüllst \U0001F50D  \n\
+      \ Kann ich Dir dafür ein paar Fragen zu Deiner Situation stellen?"
   utter_ask_elterngeld_subtopic:
   - buttons:
     - payload: /choose_elterngeld_requirements
@@ -125,9 +125,9 @@ responses:
       title: Höhe
     - payload: /choose_elterngeld_period
       title: Bezugsdauer
-    text: "Ich kann Dir jetzt mehr zu den Voraussetzungen, der Beantragung,\
-      \ der Höhe oder der Bezugsdauer des Elterngeldes erzählen. \n Möchtest\
-      \ Du zu einem dieser Themen mehr wissen?"
+    text: "Ich kann Dir jetzt mehr zu den Voraussetzungen, der Beantragung, der Höhe\
+      \ oder der Bezugsdauer des Elterngeldes erzählen. \n Möchtest Du zu einem dieser\
+      \ Themen mehr wissen?"
   utter_ask_elterngeld_workparttime:
   - buttons:
     - payload: '/affirm{"elterngeld_workparttime": "ja"}'
@@ -145,26 +145,25 @@ responses:
       title: Anmeldung
     - payload: /choose_elternzeit_period
       title: Bezugsdauer
-    text: Möchtest Du noch etwas zu Voraussetzungen, Anmeldung oder Bezugsdauer
-      wissen?
+    text: Möchtest Du noch etwas zu Voraussetzungen, Anmeldung oder Bezugsdauer wissen?
   utter_ask_familydescription:
   - text: Ok! Bitte beschreibe mir kurz Deine Familiensituation.
   utter_ask_familydescription_parent:
-  - text: Spreche ich mit der Mutter oder dem Vater?
-    buttons:
-      - payload: '/familydescription_parent{"entity": "Mutter"}'
-        title: Mutter
-      - payload: '/familydescription_parent{"entity": "Vater"}'
-        title: Vater
+  - buttons:
+    - payload: '/familydescription_parent{"familydescription_parent": "Mutter"}'
+      title: Mutter
+    - payload: '/familydescription_parent{"familydescription_parent": "Vater"}'
+      title: Vater
+    text: Spreche ich mit der Mutter oder dem Vater?
   utter_ask_familydescription_pregnancy_month:
   - text: Bist Du schwanger? Wenn ja, in welchem Monat?
   utter_ask_knowmore:
-  - text: Willst Du mehr darüber wissen? Du kannst mich auch etwas anderes fragen.
-    buttons:
+  - buttons:
     - payload: /affirm
       title: Ja
     - payload: /deny
       title: Nein
+    text: Willst Du mehr darüber wissen? Du kannst mich auch etwas anderes fragen.
   utter_ask_mutterschutz_question:
   - buttons:
     - payload: /choose_mutterschutz_general
@@ -176,6 +175,20 @@ responses:
   utter_ask_permission_familydescription:
   - text: Am besten kann ich Dich dazu beraten, wenn Du mir etwas über Dich erzählst.
       Einverstanden? 🤓
+  utter_confirm_happy:
+  - text: Ah super!
+  - text: Sehr gut.
+  - text: Top!
+  utter_distinguish_period_elterngeld_elternzeit:
+  - buttons:
+    - payload: /choose_elterngeld_period
+      title: Elterngeld
+    - payload: /choose_elternzeit_period
+      title: Elternzeit
+    - payload: /choose_mutterschutz_period
+      title: Mutterschutz
+    text: Entschuldige - meintest Du die Bezugsdauer von Elterngeld, die Dauer von
+      Elternzeit oder Mutterschutz?
   utter_distinguish_requirements_elterngeld_elternzeit:
   - buttons:
     - payload: /choose_elterngeld_requirements
@@ -183,55 +196,41 @@ responses:
     - payload: /choose_elternzeit_requirements
       title: Elternzeit
     text: Entschuldige - meintest Du die Voraussetzungen für Elterngeld oder Elternzeit?
-  utter_distinguish_period_elterngeld_elternzeit:
-    - buttons:
-      - payload: /choose_elterngeld_period
-        title: Elterngeld
-      - payload: /choose_elternzeit_period
-        title: Elternzeit
-      - payload: /choose_mutterschutz_period
-        title: Mutterschutz
-      text: Entschuldige - meintest Du die Bezugsdauer von Elterngeld, die Dauer von Elternzeit oder Mutterschutz?
-  utter_confirm_happy:
-  - text: Ah super!
-  - text: Sehr gut.
-  - text: Top!
   utter_elterngeld_affirm_prerequisites:
   - text: Super, Du erfüllst die Voraussetzungen für das Elterngeld! 🎉
   utter_elterngeld_amount_reference:
   - text: Am besten schaust Du Dir mal den [🔗 Elterngeldrechner](https://familienportal.de/familienportal/meta/egr)
       an.
   utter_elterngeld_application_link:
-  - text: "Da Du in {elterngeld_residence} wohnst, kannst Du den Elterngeldantrag
-    [🔗 hier]({elterngeld_residence_link})
-    digital ausfüllen. Anschließend musst Du ihn ausdrucken und an Deine Elterngeldstelle
-    schicken. Deine Elterngeldstelle findest Du [🔗 hier](https://familienportal.de/action/familienportal/125008/action/suche)."
+  - text: Da Du in {elterngeld_residence} wohnst, kannst Du den Elterngeldantrag [🔗
+      hier]({elterngeld_residence_link}) digital ausfüllen. Anschließend musst Du
+      ihn ausdrucken und an Deine Elterngeldstelle schicken. Deine Elterngeldstelle
+      findest Du [🔗 hier](https://familienportal.de/action/familienportal/125008/action/suche).
   utter_elterngeld_application_reference:
-  - text: Mehr Informationen zur Beantragung findest Du 
-      [🔗 hier](https://familienportal.de/familienportal/familienleistungen/elterngeld/faq/wie-kann-ich-elterngeld-beantragen-/124762)
+  - text: Mehr Informationen zur Beantragung findest Du [🔗 hier](https://familienportal.de/familienportal/familienleistungen/elterngeld/faq/wie-kann-ich-elterngeld-beantragen-/124762)
   utter_elterngeld_inform:
-  - text: 'Elterngeld ist eine Leistung, die Du vom Staat als Unterstützung erhalten
+  - text: Elterngeld ist eine Leistung, die Du vom Staat als Unterstützung erhalten
       kannst, wenn Du nach der Geburt Deines Kindes gar nicht oder weniger arbeitest
-      🤓'
+      🤓
   utter_elterngeld_inform_prerequisites:
   - text: "Du musst die folgenden Voraussetzungen erfüllen, um Elterngeld beziehen\
       \ zu können. \n - Du lebst in Deutschland. \n - Du wohnst mit Deinem Kind zusammen.\
       \ \n - Du betreust Dein Kind selbst. \n - Du arbeitest höchstens 30 Stunden\
       \ pro Woche."
   utter_elterngeld_period_reference:
-  - text: 'In der Zwischenzeit kannst Du [🔗 hier](https://familienportal.de/familienportal/familienleistungen/elterngeld/faq/wie-lange-kann-ich-elterngeld-bekommen-/124728) mehr zum Thema Bezugsdauer nachlesen.'
+  - text: In der Zwischenzeit kannst Du [🔗 hier](https://familienportal.de/familienportal/familienleistungen/elterngeld/faq/wie-lange-kann-ich-elterngeld-bekommen-/124728)
+      mehr zum Thema Bezugsdauer nachlesen.
   utter_elterngeld_precise_general:
   - buttons:
     - payload: /choose_elterngeld_precise
       title: Konkrete Frage
     - payload: /choose_elterngeld_general
       title: Allgemeine Infos
-    text: Hast Du eine konkrete Frage zum Elterngeld? Oder soll ich Dir erstmal
-      ein paar allgemeine Infos dazu geben?
+    text: Hast Du eine konkrete Frage zum Elterngeld? Oder soll ich Dir erstmal ein
+      paar allgemeine Infos dazu geben?
   utter_elterngeld_reference:
-  - text: "Mehr Infos zu Elterngeld findest Du auf dem [🔗 Familienportal](https://familienportal.de/familienportal/familienleistungen/elterngeld/faq)."
-  - text: "In der Zwischenzeit findest Du mehr Infos zum Elterngeld auf dem [🔗
-      Familienportal](https://familienportal.de/familienportal/familienleistungen/elterngeld/faq)."
+  - text: Mehr Infos zu Elterngeld findest Du auf dem [🔗 Familienportal](https://familienportal.de/familienportal/familienleistungen/elterngeld/faq).
+  - text: In der Zwischenzeit findest Du mehr Infos zum Elterngeld auf dem [🔗 Familienportal](https://familienportal.de/familienportal/familienleistungen/elterngeld/faq).
   utter_elternzeit_inform:
   - text: 'Elternzeit ist eine unbezahlte Pause vom Berufsleben, die Du zur Betreuung
       Deines Kindes nehmen kannst. Startzeitpunkt und Dauer musst Du bei Deinem Arbeitgeber
@@ -239,14 +238,15 @@ responses:
   utter_elternzeit_inform_deadline:
   - text: Falls Dein Partner direkt ab der Geburt Elternzeit nehmen möchte, müsst
       Ihr das in den nächsten 2 Wochen anmelden.
-  utter_elternzeit_period_reference:
-  - text: "Mehr Infos zur Bezugsdauer findest Du [🔗 hier](https://familienportal.de/familienportal/familienleistungen/elternzeit/faq/wie-kann-ich-die-dauer-der-elternzeit-berechnen-/124832)."
-  utter_elternzeit_reference:
-  - text: "Mehr Infos zu Elternzeit findest Du [🔗 hier](https://familienportal.de/familienportal/familienleistungen/elternzeit/faq/wann-und-wie-muss-ich-elternzeit-beantragen-/124810)."
   utter_elternzeit_notification_reference:
-  - text: "Du kannst Infos zur Anmeldung [🔗 hier](https://familienportal.de/familienportal/familienleistungen/elternzeit/faq/wann-und-wie-muss-ich-elternzeit-beantragen-/124810) nachlesen."
+  - text: Du kannst Infos zur Anmeldung [🔗 hier](https://familienportal.de/familienportal/familienleistungen/elternzeit/faq/wann-und-wie-muss-ich-elternzeit-beantragen-/124810)
+      nachlesen.
+  utter_elternzeit_period_reference:
+  - text: Mehr Infos zur Bezugsdauer findest Du [🔗 hier](https://familienportal.de/familienportal/familienleistungen/elternzeit/faq/wie-kann-ich-die-dauer-der-elternzeit-berechnen-/124832).
+  utter_elternzeit_reference:
+  - text: Mehr Infos zu Elternzeit findest Du [🔗 hier](https://familienportal.de/familienportal/familienleistungen/elternzeit/faq/wann-und-wie-muss-ich-elternzeit-beantragen-/124810).
   utter_elternzeit_requirements_reference:
-  - text: "In der Zwischenzeit findest Du alle Infos zu den Voraussetzungen [🔗 hier](https://familienportal.de/familienportal/familienleistungen/elternzeit/faq/was-ist-elternzeit--/124702)."
+  - text: In der Zwischenzeit findest Du alle Infos zu den Voraussetzungen [🔗 hier](https://familienportal.de/familienportal/familienleistungen/elternzeit/faq/was-ist-elternzeit--/124702).
   utter_elternzeit_timepartner:
   - text: Ja, für Mütter beginnt die Elternzeit frühestens nach dem Ende der Mutterschutzfrist.
       Also hast Du noch genug Zeit bis zur Anmeldung 🐢
@@ -258,7 +258,7 @@ responses:
   utter_hope_helped:
   - text: Alles klar. Ich hoffe, ich konnte Dir helfen 🌞
   utter_im_fine:
-  - text: "Danke der Nachfrage - mir geht es blendend 🌞 \n Wie geht es Dir?"
+  - text: "Danke der Nachfrage - mir geht es blendend \U0001F31E \n Wie geht es Dir?"
   - text: 'Ich kann nicht klagen 🌞 Und selbst? '
   utter_im_here_4_u:
   - text: Melde Dich gerne bei mir, wenn Du noch etwas brauchst 🌞
@@ -270,44 +270,38 @@ responses:
   - text: Darf ich mich vorstellen? Sonne mein Name, Familienlotse auf dem Familienportal
       🌞
   utter_intro:
-  - text: "Hallo, ich bin Sonne! 🌞 \n Ich kann Dich hier oder langfristig\
+  - text: "Hallo, ich bin Sonne! \U0001F31E \n Ich kann Dich hier oder langfristig\
       \ auf Telegram über Themen rund um Familienleistungen informieren und beraten."
   utter_more_info:
-  - text: Du hast Dich zuletzt nach Mutterschutz erkundigt. Es gibt noch viele
-      weitere Familienleistungen, die für Dich relevant sein könnten.
-  utter_mutterschutz_mutterschutzfrist:
-  - text: "Die Mutterschutzfrist hingegen ist ein Zeitraum\
-      \ vor und nach der Geburt, in dem die Arbeitnehmerin nicht arbeiten darf 🤓"
+  - text: Du hast Dich zuletzt nach Mutterschutz erkundigt. Es gibt noch viele weitere
+      Familienleistungen, die für Dich relevant sein könnten.
   utter_mutterschutz_inform:
   - text: "Der Mutterschutz ist ein besonderer Schutz für schwangere oder stillende\
       \ Arbeitnehmerinnen. \n"
+  utter_mutterschutz_mutterschutzfrist:
+  - text: Die Mutterschutzfrist hingegen ist ein Zeitraum vor und nach der Geburt,
+      in dem die Arbeitnehmerin nicht arbeiten darf 🤓
   utter_mutterschutz_periodreply:
-  - text: Der Zeitraum beginnt 6 Wochen vor dem errechneten Geburtstermin und
-      endet üblicherweise 8 Wochen nach der Geburt 📅
+  - text: Der Zeitraum beginnt 6 Wochen vor dem errechneten Geburtstermin und endet
+      üblicherweise 8 Wochen nach der Geburt 📅
   utter_mutterschutz_reference:
-  - text: "Mehr Infos zu Mutterschutz findest Du [🔗 hier](https://familienportal.de/familienportal/familienleistungen/mutterschutz)."
+  - text: Mehr Infos zu Mutterschutz findest Du [🔗 hier](https://familienportal.de/familienportal/familienleistungen/mutterschutz).
   utter_outofscope:
-  - text: "Ich kenne mich bisher nur mit Mutterschutz, Elterngeld und Elternzeit\
-      \ aus. \n Weitere Leistungen findest Du [🔗 hier](https://familienportal.de/familienportal/familienleistungen/familienleistungen-ueberblick)🤓\
-      📚"
+  - text: "Ich kenne mich bisher nur mit Mutterschutz, Elterngeld und Elternzeit aus.\
+      \ \n Weitere Leistungen findest Du [\U0001F517 hier](https://familienportal.de/familienportal/familienleistungen/familienleistungen-ueberblick)\U0001F913\
+      \U0001F4DA"
   utter_recommend_elterngeld:
-  - text: Super, danke! Als {familydescription_parent} könnte auch Elterngeld
-      für Dich interessant sein.
+  - text: Super, danke! Als {familydescription_parent} könnte auch Elterngeld für
+      Dich interessant sein.
   utter_sorry:
-  - text: "Sorry, das kann ich Dir leider noch nicht beantworten. Ich habe auch noch
-      einiges zu lernen 🤓📚 "
-  - text: "Das kann ich Dir leider noch nicht beantworten."
-  - text: "Die Details dazu kenne ich leider noch nicht 🙈"
+  - text: 'Sorry, das kann ich Dir leider noch nicht beantworten. Ich habe auch noch
+      einiges zu lernen 🤓📚 '
+  - text: Das kann ich Dir leider noch nicht beantworten.
+  - text: Die Details dazu kenne ich leider noch nicht 🙈
   utter_sorry_to_hear:
   - text: Das tut mir leid zu hören.
-  utter_welcomeback:
-  - text: Hallo, schön, wieder von Dir zu hören 🌞
-  - text: Schön, dass Du wieder da bist 🌞
-  - text: Willkommen zurück 🌞
-  utter_welcomeback_time:
-  - text: Hey, nur noch 9 Wochen bis zum großen Tag! ✨
   utter_telegram_code:
-  - text: 'Super! Bitte wechsle in die Telegram-App und suche nach `familienlotse_bot`.'
+  - text: Super! Bitte wechsle in die Telegram-App und suche nach `familienlotse_bot`.
   utter_telegram_offer:
   - buttons:
     - payload: /choose_request_telegramcode
@@ -315,6 +309,12 @@ responses:
     text: Übrigens - Du kannst mich gerne auch auf Telegram hinzufügen. Dann kann
       ich Dich im passenden Moment über weitere Familienleistungen und Fristen informieren
       💡
+  utter_welcomeback:
+  - text: Hallo, schön, wieder von Dir zu hören 🌞
+  - text: Schön, dass Du wieder da bist 🌞
+  - text: Willkommen zurück 🌞
+  utter_welcomeback_time:
+  - text: Hey, nur noch 9 Wochen bis zum großen Tag! ✨
 session_config:
   carry_over_slots_to_new_session: false
   session_expiration_time: 60
