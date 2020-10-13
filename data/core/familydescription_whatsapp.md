@@ -1,6 +1,6 @@
-<!-- Übergabe an WhatsApp -->
-## whatsapp+familydescription+affirm+form_complete+affirm
-* enter_whatsappcode
+<!-- Übergabe an Telegram -->
+## telegram+familydescription+affirm+form_complete+affirm
+* enter_telegramcode OR start
   - utter_welcomeback
   - utter_more_info
   - utter_ask_permission_familydescription
@@ -14,8 +14,8 @@
   - utter_confirm_happy
   - utter_im_here_4_u
 
-## whatsapp+familydescription+affirm+form_complete+deny
-* enter_whatsappcode
+## telegram+familydescription+affirm+form_complete+deny
+* enter_telegramcode OR start
   - utter_welcomeback
   - utter_more_info
   - utter_ask_permission_familydescription
@@ -29,8 +29,8 @@
   - utter_elterngeld_inform
   - utter_ask_elterngeld_subtopic
 
-## whatsapp+familydescription+affirm+form_continue
-* enter_whatsappcode
+## telegram+familydescription+affirm+form_continue
+* enter_telegramcode OR start
   - utter_welcomeback
   - utter_more_info
   - utter_ask_permission_familydescription
@@ -44,8 +44,8 @@
   - form{"name": null}
   
 
-## whatsapp+familydescription+affirm
-* enter_whatsappcode
+## telegram+familydescription+affirm
+* enter_telegramcode OR start
   - utter_welcomeback
   - utter_more_info
   - utter_ask_permission_familydescription
@@ -59,8 +59,8 @@
   - form{"name": null}
   - utter_im_here_4_u
 
-## whatsapp+familydescription+deny
-* enter_whatsappcode
+## telegram+familydescription+deny
+* enter_telegramcode OR start
   - utter_welcomeback
   - utter_more_info
   - utter_ask_permission_familydescription

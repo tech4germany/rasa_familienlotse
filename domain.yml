@@ -20,8 +20,8 @@ actions:
 - utter_mutterschutz_reference
 - utter_recommend_elterngeld
 - utter_welcomeback
-- utter_whatsapp_code
-- utter_whatsapp_offer
+- utter_telegram_code
+- utter_telegram_offer
 entities:
 - elterngeld_residence
 - elterngeld_residence_link
@@ -39,9 +39,9 @@ intents:
 - familydescription_pregnancy_month
 - affirm
 - familydescription_parent
-- enter_whatsappcode
+- enter_telegramcode
 - deny
-- choose_request_whatsappcode
+- choose_request_telegramcode
 - elternzeit_period
 - choose_elterngeld_amount
 - ask_mutterschutz_period
@@ -62,10 +62,11 @@ intents:
 - choose_elternzeit_period
 - choose_elternzeit_requirements
 - get_started
+- start
 - out_of_scope
 - greet
 - goodbye
-- greet_whatsapp
+- greet_telegram
 - who_are_you
 - how_are_you
 - feeling_good
@@ -110,7 +111,7 @@ responses:
       title: Ja
     - payload: /deny
       title: Nein
-    text: "Lass uns herausfinden, ob Du die **Voraussetzungen** erfüllst \U0001F50D\
+    text: "Lass uns herausfinden, ob Du die **Voraussetzungen** erfüllst 🔍\
       \  \n Kann ich Dir dafür ein paar Fragen zu Deiner Situation stellen?"
   utter_ask_elterngeld_subtopic:
   - buttons:
@@ -189,7 +190,7 @@ responses:
   utter_elterngeld_affirm_prerequisites:
   - text: Super, Du erfüllst die Voraussetzungen für das Elterngeld! 🎉
   utter_elterngeld_amount_reference:
-  - text: Am besten schaust Du Dir mal den [\U0001F517 Elterngeldrechner](https://familienportal.de/familienportal/meta/egr)
+  - text: Am besten schaust Du Dir mal den [🔗 Elterngeldrechner](https://familienportal.de/familienportal/meta/egr)
       an.
   utter_elterngeld_application_reference:
   - text: Mehr Informationen zur Beantragung findest Du 
@@ -214,7 +215,7 @@ responses:
     text: Hast Du eine konkrete Frage zum **Elterngeld**? Oder soll ich Dir erstmal
       ein paar allgemeine Infos dazu geben?
   utter_elterngeld_reference:
-  - text: "Mehr Infos zu **Elterngeld** findest Du auf dem [Familienportal](https://familienportal.de/familienportal/familienleistungen/elterngeld/faq)."
+  - text: "Mehr Infos zu **Elterngeld** findest Du auf dem [🔗 Familienportal](https://familienportal.de/familienportal/familienleistungen/elterngeld/faq)."
   - text: "In der Zwischenzeit findest Du mehr Infos zum **Elterngeld** auf dem [🔗
       Familienportal](https://familienportal.de/familienportal/familienleistungen/elterngeld/faq)."
   utter_elternzeit_inform:
@@ -243,7 +244,7 @@ responses:
   utter_hope_helped:
   - text: Alles klar. Ich hoffe, ich konnte Dir helfen 🌞
   utter_im_fine:
-  - text: "Danke der Nachfrage - mir geht es blendend \U0001F31E \n Wie geht es Dir?"
+  - text: "Danke der Nachfrage - mir geht es blendend 🌞 \n Wie geht es Dir?"
   - text: 'Ich kann nicht klagen 🌞 Und selbst? '
   utter_im_here_4_u:
   - text: Melde Dich gerne bei mir, wenn Du noch etwas brauchst 🌞
@@ -255,14 +256,14 @@ responses:
   - text: Darf ich mich vorstellen? **Sonne** mein Name, Familienlotse auf dem Familienportal
       🌞
   utter_intro:
-  - text: "Hallo, ich bin **Sonne**! \U0001F31E \n Ich kann Dich hier oder langfristig\
-      \ auf WhatsApp über Themen rund um **Familienleistungen** informieren und beraten."
+  - text: "Hallo, ich bin **Sonne**! 🌞 \n Ich kann Dich hier oder langfristig\
+      \ auf Telegram über Themen rund um **Familienleistungen** informieren und beraten."
   utter_more_info:
   - text: Du hast Dich zuletzt nach **Mutterschutz** erkundigt. Es gibt noch viele
       weitere Familienleistungen, die für Dich relevant sein könnten.
   utter_mutterschutz_mutterschutzfrist:
   - text: "Die **Mutterschutzfrist** hingegen ist ein Zeitraum\
-      \ vor und nach der Geburt, in dem die Arbeitnehmerin nicht arbeiten darf \U0001F913"
+      \ vor und nach der Geburt, in dem die Arbeitnehmerin nicht arbeiten darf 🤓"
   utter_mutterschutz_inform:
   - text: "Der **Mutterschutz** ist ein besonderer Schutz für schwangere oder stillende\
       \ Arbeitnehmerinnen. \n"
@@ -270,11 +271,11 @@ responses:
   - text: Der Zeitraum beginnt **6 Wochen vor** dem errechneten Geburtstermin und
       endet üblicherweise **8 Wochen nach** der Geburt 📅
   utter_mutterschutz_reference:
-  - text: "Mehr Infos zu Mutterschutz findest Du [\U0001F517 hier](https://familienportal.de/familienportal/familienleistungen/mutterschutz)."
+  - text: "Mehr Infos zu Mutterschutz findest Du [🔗 hier](https://familienportal.de/familienportal/familienleistungen/mutterschutz)."
   utter_outofscope:
   - text: "Ich kenne mich bisher nur mit **Mutterschutz**, **Elterngeld** und **Elternzeit**\
-      \ aus. \n Weitere Leistungen findest Du [\U0001F517 hier](https://familienportal.de/familienportal/familienleistungen/familienleistungen-ueberblick)\U0001F913\
-      \U0001F4DA "
+      \ aus. \n Weitere Leistungen findest Du [🔗 hier](https://familienportal.de/familienportal/familienleistungen/familienleistungen-ueberblick)🤓\
+      📚"
   utter_recommend_elterngeld:
   - text: Super, danke! Als werdende(r) {familydescription_parent} könnte auch **Elterngeld**
       für Dich interessant sein.
@@ -291,13 +292,13 @@ responses:
   - text: Willkommen zurück 🌞
   utter_welcomeback_time:
   - text: Hey, nur noch **9** Wochen bis zum großen Tag! ✨
-  utter_whatsapp_code:
-  - text: 'Super! Gib bitte folgenden Code in WhatsApp ein: `t4g-sonne-start`.'
-  utter_whatsapp_offer:
+  utter_telegram_code:
+  - text: 'Super! Gib bitte folgenden Code in Telegram ein: `t4g-sonne-start`.'
+  utter_telegram_offer:
   - buttons:
-    - payload: /choose_request_whatsappcode
-      title: Zu WhatsApp hinzufügen
-    text: Übrigens - Du kannst mich gerne auch auf WhatsApp hinzufügen. Dann kann
+    - payload: /choose_request_telegramcode
+      title: Zu Telegram hinzufügen
+    text: Übrigens - Du kannst mich gerne auch auf Telegram hinzufügen. Dann kann
       ich Dich im passenden Moment über weitere Familienleistungen und Fristen informieren
       💡
 session_config:
