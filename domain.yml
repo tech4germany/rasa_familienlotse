@@ -45,7 +45,7 @@ intents:
 - choose_request_telegramcode
 - elternzeit_period
 - choose_elterngeld_amount
-- ask_mutterschutz_period
+- ask_mutterschutzfrist_period
 - elterngeld_topic
 - choose_elterngeld_residence
 - choose_elterngeld_precise
@@ -56,7 +56,7 @@ intents:
 - mutterschutz_topic
 - ask_mutterschutz_difference_mutterschutzfrist
 - choose_mutterschutz_general
-- choose_mutterschutz_period
+- choose_mutterschutzfrist_period
 - elternzeit_topic
 - greet_elternzeit
 - elternzeit_timepartner
@@ -185,10 +185,10 @@ responses:
       title: Elterngeld
     - payload: /choose_elternzeit_period
       title: Elternzeit
-    - payload: /choose_mutterschutz_period
-      title: Mutterschutz
+    - payload: /choose_mutterschutzfrist_period
+      title: Mutterschutzfrist
     text: Entschuldige - meintest Du die Bezugsdauer von Elterngeld, die Dauer von
-      Elternzeit oder Mutterschutz?
+      Elternzeit oder die der Mutterschutzfrist?
   utter_distinguish_requirements_elterngeld_elternzeit:
   - buttons:
     - payload: /choose_elterngeld_requirements

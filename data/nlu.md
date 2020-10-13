@@ -110,7 +110,7 @@
 - Ich weiß nicht, was der Unterschied zwischen Mutterschutz und Mutterschutzfrist ist
 - Mutterschutz Mutterschutzfrist
 
-## intent:ask_mutterschutz_period
+## intent:ask_mutterschutzfrist_period
 - Wie lange ist der Mutterschutzfrist-Zeitraum?
 - Wie lange gilt die Mutterschutzfrist?
 - Wann beginnt die Mutterschutzfrist?
