@@ -28,7 +28,7 @@
     - utter_telegram_code
 
 ## mutterschutz+period+affirm+telegramoffer+deny
-* ask_mutterschutz_period
+* ask_mutterschutz_period OR choose_mutterschutz_period
   - utter_mutterschutz_periodreply
   - utter_ask_knowmore
 * affirm
@@ -39,7 +39,7 @@
   - utter_im_here_4_u
 
 ## mutterschutz+period+deny+telegramoffer+affirm/choose_request_telegramcode
-* ask_mutterschutz_period
+* ask_mutterschutz_period OR choose_mutterschutz_period
   - utter_mutterschutz_periodreply
   - utter_ask_knowmore
 * deny

@@ -5,11 +5,6 @@
   - utter_ask_elternzeit_priorknowledge
 * deny
   - utter_elternzeit_inform
-  - utter_ask_elternzeit_subtopic
-
-## elternzeit+timepartner+affirm
-* elternzeit_timepartner
-  - utter_elternzeit_timepartner
   - utter_ask_knowmore
 * affirm
   - utter_elternzeit_reference
@@ -18,7 +13,9 @@
 * elternzeit_timepartner
   - utter_elternzeit_timepartner
   - utter_ask_knowmore
-  
+* affirm
+  - utter_elternzeit_reference
+
 ## elternzeit+priorknowledge
 * greet_elternzeit
   - utter_welcomeback_time

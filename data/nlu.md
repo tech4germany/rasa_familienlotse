@@ -74,6 +74,7 @@
 - Dauer Elternzeit
 - wie viele Monate Elternzeit
 - wie viel Jahre Elternzeit
+- wie lange ist das?
 
 ## intent:choose_elterngeld_residence
 - [Berlin](elterngeld_residence)
@@ -116,6 +117,7 @@
 - Wann beginnt die Mutterschutzfrist?
 - Wann endet die Mutterschutzfrist?
 - wie lange ist Mutterschutzfrist
+
 
 ## intent:get_started
 - start mutterschutz
@@ -246,18 +248,7 @@
 
 ## intent:familydescription_parent
 - [Mutter](familydescription_parent)
-- [Mudder]{"entity": "familydescription_parent", "value": "Mutter"}
-- [Mama]{"entity": "familydescription_parent", "value": "Mutter"}
-- [Mum]{"entity": "familydescription_parent", "value": "Mutter"}
-- [Muddah]{"entity": "familydescription_parent", "value": "Mutter"}
-- [muddi]{"entity": "familydescription_parent", "value": "Mutter"}
-- [mutter]{"entity": "familydescription_parent", "value": "Mutter"}
 - [Vater](familydescription_parent)
-- [Papa]{"entity": "familydescription_parent", "value": "Vater"}
-- [Dad]{"entity": "familydescription_parent", "value": "Vater"}
-- [Vaddi]{"entity": "familydescription_parent", "value": "Vater"}
-- [Daddy]{"entity": "familydescription_parent", "value": "Vater"}
-- [Paps]{"entity": "familydescription_parent", "value": "Vater"}
 
 ## intent:familydescription_pregnancy_month
 - ich bin im [3. Monat]{"entity": "familydescription_pregnancy_month", "value": "3"}. Monat schwanger
@@ -297,6 +288,8 @@
 - Elternzeit anmelden
 - Elternzeit nehmen
 - elternzeit haben
+- wie kann ich Elternzeit anmelden
+- wo kann ich elternzeit anmelden?
 
 ## synonym:Baden-Württemberg
 - bawü
