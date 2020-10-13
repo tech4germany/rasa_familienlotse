@@ -351,6 +351,7 @@
 - bw
 - baden
 - württemberg
+- baden württemberg
 
 ## synonym:Bayern
 - bay
