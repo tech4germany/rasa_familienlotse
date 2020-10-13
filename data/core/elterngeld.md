@@ -73,12 +73,15 @@
 
 ## elterngeld+period
 * choose_elterngeld_period
-  - utter_elterngeld_period
+  - utter_sorry
+  - utter_elterngeld_period_reference
 
 ## elterngeld+application
 * choose_elterngeld_application
-  - utter_elterngeld_application
+  - utter_sorry
+  - utter_elterngeld_application_reference
 
 ## elterngeld+period
 * choose_elterngeld_amount
-  - utter_elterngeld_amount
+  - utter_sorry
+  - utter_elterngeld_amount_reference
