@@ -6,6 +6,7 @@ actions:
 - utter_distinguish_period_elterngeld_elternzeit
 - utter_elterngeld_reference
 - utter_elterngeld_application_reference
+- utter_elterngeld_application_link
 - utter_elterngeld_period_reference
 - utter_elterngeld_amount_reference
 - utter_elternzeit_reference
@@ -192,6 +193,11 @@ responses:
   utter_elterngeld_amount_reference:
   - text: Am besten schaust Du Dir mal den [🔗 Elterngeldrechner](https://familienportal.de/familienportal/meta/egr)
       an.
+  utter_elterngeld_application_link:
+  - text: "Da Du in {elterngeld_residence} wohnst, kannst Du den Elterngeldantrag
+    [🔗 hier]({elterngeld_residence_link})
+    digital ausfüllen. Anschließend musst Du ihn ausdrucken und an Deine Elterngeldstelle
+    schicken. Deine Elterngeldstelle findest Du [🔗 hier](https://familienportal.de/action/familienportal/125008/action/suche)."
   utter_elterngeld_application_reference:
   - text: Mehr Informationen zur Beantragung findest Du 
       [🔗 hier](https://familienportal.de/familienportal/familienleistungen/elterngeld/faq/wie-kann-ich-elterngeld-beantragen-/124762)
@@ -277,7 +283,7 @@ responses:
       \ aus. \n Weitere Leistungen findest Du [🔗 hier](https://familienportal.de/familienportal/familienleistungen/familienleistungen-ueberblick)🤓\
       📚"
   utter_recommend_elterngeld:
-  - text: Super, danke! Als werdende(r) {familydescription_parent} könnte auch **Elterngeld**
+  - text: Super, danke! Als {familydescription_parent} könnte auch **Elterngeld**
       für Dich interessant sein.
   utter_sorry:
   - text: "Sorry, das kann ich Dir leider noch nicht beantworten. Ich habe auch noch

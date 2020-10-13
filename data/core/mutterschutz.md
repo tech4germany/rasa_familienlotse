@@ -9,7 +9,7 @@
 * affirm
   - utter_sorry
   - utter_mutterschutz_reference
-  - utter_whatsapp_offer
+  - utter_telegram_offer
 * deny
   - utter_im_here_4_u
 
@@ -34,7 +34,7 @@
 * affirm
   - utter_sorry
   - utter_mutterschutz_reference
-  - utter_whatsapp_offer
+  - utter_telegram_offer
 * deny
   - utter_im_here_4_u
 

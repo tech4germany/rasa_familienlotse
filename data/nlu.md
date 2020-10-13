@@ -180,6 +180,9 @@
 - gerne mehr
 - erzähl mir mehr darüber
 - weitermachen
+- klar
+- go
+- logo
 
 ## intent:deny
 - ne
