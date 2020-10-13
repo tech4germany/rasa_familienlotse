@@ -98,7 +98,7 @@ responses:
       title: Ja
     - payload: /deny
       title: Nein
-    text: "Lass uns herausfinden, ob Du die **Voraussetzungen** erfüllst \U0001F50D\
+    text: "Lass uns herausfinden, ob Du die **Voraussetzungen** erfüllst 🔍\
       \  \n Kann ich Dir dafür ein paar Fragen zu Deiner Situation stellen?"
   utter_ask_elterngeld_subtopic:
   - buttons:
@@ -238,7 +238,7 @@ responses:
   utter_outofscope:
   - text: "Ich kenne mich bisher nur mit **Mutterschutz**, **Elterngeld** und **Elternzeit**\
       \ aus. \n Weitere Leistungen findest Du [🔗 hier](https://familienportal.de/familienportal/familienleistungen/familienleistungen-ueberblick)🤓\
-      \U0001F4DA "
+      📚"
   utter_recommend_elterngeld:
   - text: Super, danke! Als werdende(r) {familydescription_parent} könnte auch **Elterngeld**
       für Dich interessant sein.
