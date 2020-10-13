@@ -25,3 +25,11 @@
 ## feeling_bad
 * feeling_bad
   - utter_sorry_to_hear
+
+## distinguish requirements elterngeld+elternzeit
+* requirements_inform
+  - utter_distinguish_requirements_elterngeld_elternzeit
+
+## distinguish period elterngeld+elternzeit
+* period_inform
+  - utter_distinguish_period_elterngeld_elternzeit

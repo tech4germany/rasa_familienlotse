@@ -2,8 +2,11 @@ actions:
 - utter_ask_elterngeld_priorknowledge
 - utter_ask_knowmore
 - utter_ask_permission_familydescription
+- utter_distinguish_requirements_elterngeld_elternzeit
+- utter_distinguish_period_elterngeld_elternzeit
 - utter_elterngeld_reply_outofscope
 - utter_elternzeit_period
+- utter_elternzeit_requirements
 - utter_im_here_4_u
 - utter_more_info
 - utter_mutterschutz_periodreply
@@ -23,6 +26,8 @@ forms:
 - elterngeldrequirements_form
 - familydescription_form
 intents:
+- requirements_inform
+- period_inform
 - familydescription_pregnancy_month
 - affirm
 - familydescription_parent
@@ -46,8 +51,8 @@ intents:
 - greet_elternzeit
 - elternzeit_timepartner
 - choose_elternzeit_notification
-- choose_elternzeit_requirements
 - choose_elternzeit_period
+- choose_elternzeit_requirements
 - get_started
 - out_of_scope
 - greet
@@ -129,7 +134,8 @@ responses:
       title: Anmeldung
     - payload: /choose_elternzeit_period
       title: Bezugsdauer
-    text: Möchtest Du noch etwas zu Voraussetzungen, Anmeldung oder Bezugsdauer wissen?
+    text: Möchtest Du noch etwas zu **Voraussetzungen**, **Anmeldung** oder **Bezugsdauer**
+      wissen?
   utter_ask_familydescription:
   - text: Ok! Bitte beschreibe mir kurz Deine Familiensituation.
   utter_ask_familydescription_parent:
@@ -138,6 +144,10 @@ responses:
   - text: Bist Du schwanger? Wenn ja, in welchem Monat?
   utter_ask_knowmore:
   - text: Willst Du mehr darüber wissen? Du kannst mich auch etwas anderes fragen.
+    - payload: /affirm
+      title: Ja
+    - payload: /deny
+      title: Nein
   utter_ask_mutterschutz_question:
   - buttons:
     - payload: /choose_mutterschutz_general
@@ -149,6 +159,20 @@ responses:
   utter_ask_permission_familydescription:
   - text: Am besten kann ich Dich dazu beraten, wenn Du mir etwas  über Dich erzählst.
       Einverstanden? 🤓
+  utter_distinguish_requirements_elterngeld_elternzeit:
+  - buttons:
+    - payload: /choose_elterngeld_requirements
+      title: Elterngeld
+    - payload: /choose_elternzeit_requirements
+      title: Elternzeit
+    text: Entschuldige - meintest Du die Voraussetzungen für **Elterngeld** oder **Elternzeit**?
+  utter_distinguish_period_elterngeld_elternzeit:
+    - buttons:
+      - payload: /choose_elterngeld_period
+        title: Elterngeld
+      - payload: /choose_elternzeit_period
+        title: Elternzeit
+      text: Entschuldige - meintest Du die Bezugsdauer von **Elterngeld** oder die Dauer von **Elternzeit**?
   utter_elterngeld_affirm_prerequisites:
   - text: Super, Du erfüllst die Voraussetzungen für das Elterngeld! 🎉
   utter_elterngeld_amount:
@@ -193,6 +217,8 @@ responses:
   utter_elternzeit_reply_outofscope:
   - text: "Du willst noch mehr dazu wissen? \n Schau gerne mal [\U0001F517 hier](https://familienportal.de/familienportal/familienleistungen/elternzeit/faq/wann-und-wie-muss-ich-elternzeit-beantragen-/124810)\
       \ vorbei."
+  utter_elternzeit_requirements:
+  - text: Die Voraussetzungen zu Elternzeit findest Du [🔗 hier](https://familienportal.de/familienportal/familienleistungen/elternzeit/faq/was-ist-elternzeit--/124702)
   utter_elternzeit_timepartner:
   - text: Ja, für Mütter beginnt die **Elternzeit** frühestens nach dem Ende der **Mutterschutzfrist**.
       Also hast Du noch genug Zeit bis zur Anmeldung 🐢
