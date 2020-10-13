@@ -149,6 +149,10 @@ responses:
   utter_ask_permission_familydescription:
   - text: Am besten kann ich Dich dazu beraten, wenn Du mir etwas über Dich erzählst.
       Einverstanden? 🤓
+  utter_confirm_happy:
+  - text: Ah super!
+  - text: Sehr gut.
+  - text: Top!
   utter_elterngeld_affirm_prerequisites:
   - text: Super, Du erfüllst die Voraussetzungen für das Elterngeld! 🎉
   utter_elterngeld_amount:
