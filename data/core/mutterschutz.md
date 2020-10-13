@@ -7,7 +7,8 @@
   - utter_mutterschutz_mutterschutzfrist
   - utter_ask_knowmore
 * affirm
-  - utter_mutterschutz_reply_outofscope
+  - utter_sorry
+  - utter_mutterschutz_reference
   - utter_whatsapp_offer
 * deny
   - utter_im_here_4_u
@@ -31,7 +32,8 @@
   - utter_mutterschutz_periodreply
   - utter_ask_knowmore
 * affirm
-  - utter_mutterschutz_reply_outofscope
+  - utter_sorry
+  - utter_mutterschutz_reference
   - utter_whatsapp_offer
 * deny
   - utter_im_here_4_u

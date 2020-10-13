@@ -7,7 +7,7 @@ actions:
 - utter_im_here_4_u
 - utter_more_info
 - utter_mutterschutz_periodreply
-- utter_mutterschutz_reply_outofscope
+- utter_mutterschutz_reference
 - utter_recommend_elterngeld
 - utter_welcomeback
 - utter_whatsapp_code
@@ -232,8 +232,7 @@ responses:
   - text: Der Zeitraum beginnt **6 Wochen vor** dem errechneten Geburtstermin und
       endet üblicherweise **8 Wochen nach** der Geburt 📅
   utter_mutterschutz_reference:
-  - text: "Schau gerne mal [\U0001F517 hier](https://familienportal.de/familienportal/familienleistungen/mutterschutz)\
-      \ vorbei."
+  - text: "Mehr Infos zu Mutterschutz findest Du [\U0001F517 hier](https://familienportal.de/familienportal/familienleistungen/mutterschutz)."
   utter_outofscope:
   - text: "Ich kenne mich bisher nur mit **Mutterschutz**, **Elterngeld** und **Elternzeit**\
       \ aus. \n Weitere Leistungen findest Du [\U0001F517 hier](https://familienportal.de/familienportal/familienleistungen/familienleistungen-ueberblick)\U0001F913\
