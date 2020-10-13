@@ -2,7 +2,7 @@ actions:
 - utter_ask_elterngeld_priorknowledge
 - utter_ask_knowmore
 - utter_ask_permission_familydescription
-- utter_elterngeld_reply_outofscope
+- utter_elterngeld_reference
 - utter_elternzeit_period
 - utter_im_here_4_u
 - utter_more_info
@@ -147,7 +147,7 @@ responses:
     text: "Es sieht aus, als hast Du Dich gerade mit dem Thema **Mutterschutz** beschäftigt.\
       \ \n Wähle eine Beispielfrage aus oder schreib' mir direkt Deine Frage."
   utter_ask_permission_familydescription:
-  - text: Am besten kann ich Dich dazu beraten, wenn Du mir etwas  über Dich erzählst.
+  - text: Am besten kann ich Dich dazu beraten, wenn Du mir etwas über Dich erzählst.
       Einverstanden? 🤓
   utter_elterngeld_affirm_prerequisites:
   - text: Super, Du erfüllst die Voraussetzungen für das Elterngeld! 🎉
@@ -178,9 +178,10 @@ responses:
       title: Allgemeine Infos
     text: Hast Du eine konkrete Frage zum **Elterngeld**? Oder soll ich Dir erstmal
       ein paar allgemeine Infos dazu geben?
-  utter_elterngeld_reply_outofscope:
-  - text: "Du willst noch mehr dazu wissen? \n Schau gerne mal [\U0001F517 hier](https://familienportal.de/familienportal/familienleistungen/elterngeld/faq)\
-      \ vorbei."
+  utter_elterngeld_reference:
+  - text: "Mehr Infos zu **Elterngeld** findest Du auf dem [Familienportal](https://familienportal.de/familienportal/familienleistungen/elterngeld/faq)."
+  - text: "In der Zwischenzeit findest Du mehr Infos zum **Elterngeld** auf dem [🔗
+      Familienportal](https://familienportal.de/familienportal/familienleistungen/elterngeld/faq)."
   utter_elternzeit_inform:
   - text: 'Elternzeit ist eine **unbezahlte Pause** vom Berufsleben, die Du zur Betreuung
       Deines Kindes nehmen kannst. Startzeitpunkt und Dauer musst Du bei Deinem Arbeitgeber
@@ -230,8 +231,8 @@ responses:
   utter_mutterschutz_periodreply:
   - text: Der Zeitraum beginnt **6 Wochen vor** dem errechneten Geburtstermin und
       endet üblicherweise **8 Wochen nach** der Geburt 📅
-  utter_mutterschutz_reply_outofscope:
-  - text: "Du willst noch mehr dazu wissen? \n Schau gerne mal [\U0001F517 hier](https://familienportal.de/familienportal/familienleistungen/mutterschutz)\
+  utter_mutterschutz_reference:
+  - text: "Schau gerne mal [\U0001F517 hier](https://familienportal.de/familienportal/familienleistungen/mutterschutz)\
       \ vorbei."
   utter_outofscope:
   - text: "Ich kenne mich bisher nur mit **Mutterschutz**, **Elterngeld** und **Elternzeit**\
@@ -240,6 +241,11 @@ responses:
   utter_recommend_elterngeld:
   - text: Super, danke! Als werdende(r) {familydescription_parent} könnte auch **Elterngeld**
       für Dich interessant sein.
+  utter_sorry:
+  - text: "Sorry, das kann ich Dir leider noch nicht beantworten. Ich habe auch noch
+      einiges zu lernen 🤓📚 "
+  - text: "Das kann ich Dir leider noch nicht beantworten."
+  - text: "Die Details dazu kenne ich leider noch nicht 🙈"
   utter_sorry_to_hear:
   - text: Das tut mir leid zu hören.
   utter_welcomeback:
