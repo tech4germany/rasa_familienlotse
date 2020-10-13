@@ -1,4 +1,3 @@
-<!-- Übergabe an Telegram -->
 ## telegram+familydescription+affirm+form_complete+affirm
 * enter_telegramcode OR start
   - utter_welcomeback

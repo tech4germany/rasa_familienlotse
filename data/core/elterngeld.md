@@ -17,7 +17,6 @@
   - utter_ask_elterngeld_subtopic
 > elterngeld_subtopics
 
-<!-- Subtopics: prerequisites, application, amount, timeframe -->
 ## elterngeld+prerequisites
 > elterngeld_subtopics
 * choose_elterngeld_requirements
