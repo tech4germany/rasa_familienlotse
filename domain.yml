@@ -221,14 +221,12 @@ responses:
   utter_more_info:
   - text: Du hast Dich zuletzt nach **Mutterschutz** erkundigt. Es gibt noch viele
       weitere Familienleistungen, die für Dich relevant sein könnten.
-  utter_mutterschutz_differencereply:
-  - text: "Der **Mutterschutz** ist ein besonderer Schutz für schwangere oder stillende\
-      \ Arbeitnehmerinnen. \n Die **Mutterschutzfrist** hingegen ist ein Zeitraum\
+  utter_mutterschutz_mutterschutzfrist:
+  - text: "Die **Mutterschutzfrist** hingegen ist ein Zeitraum\
       \ vor und nach der Geburt, in dem die Arbeitnehmerin nicht arbeiten darf \U0001F913"
   utter_mutterschutz_inform:
-  - text: "**Mutterschutz** ist ein besonderer Schutz für Arbeitnehmerinnen, die schwanger\
-      \ sind oder ein Kind stellen.\n Vor und nach der Geburt soll damit Mutter als\
-      \ auch Kind geschützt werden."
+  - text: "Der **Mutterschutz** ist ein besonderer Schutz für schwangere oder stillende\
+      \ Arbeitnehmerinnen. \n"
   utter_mutterschutz_periodreply:
   - text: Der Zeitraum beginnt **6 Wochen vor** dem errechneten Geburtstermin und
       endet üblicherweise **8 Wochen nach** der Geburt 📅
