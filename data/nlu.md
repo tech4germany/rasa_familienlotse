@@ -246,14 +246,26 @@
 
 ## intent:familydescription_parent
 - [Mutter](familydescription_parent)
-- [mutter]{"familydescription_parent":, "value": "Mutter"}
+- [mutter]{"entity": "familydescription_parent", "value": "Mutter"}
 - [muddi]{"entity": "familydescription_parent", "value": "Mutter"}
 - [Mama]{"entity": "familydescription_parent", "value": "Mutter"}
+- [Mam]{"entity": "familydescription_parent", "value": "Mutter"}
 - [Mum]{"entity": "familydescription_parent", "value": "Mutter"}
+- [mudda]{"entity": "familydescription_parent", "value": "Mutter"}
+- [mun]{"entity": "familydescription_parent", "value": "Mutter"}
+- [utter]{"entity": "familydescription_parent", "value": "Mutter"}
+- [Muter]{"entity": "familydescription_parent", "value": "Mutter"}
 - [Vater](familydescription_parent)
 - [vater]{"entity": "familydescription_parent", "value": "Vater"}
 - [dad]{"entity": "familydescription_parent", "value": "Vater"}
-- [muddi]{"entity": "familydescription_parent", "value": "Mutter"}
+- [Papa]{"entity": "familydescription_parent", "value": "Vater"}
+- [paps]{"entity": "familydescription_parent", "value": "Vater"}
+- [pop]{"entity": "familydescription_parent", "value": "Vater"}
+- [vadder]{"entity": "familydescription_parent", "value": "Vater"}
+- [vadda]{"entity": "familydescription_parent", "value": "Vater"}
+- [Vate]{"entity": "familydescription_parent", "value": "Vater"}
+- [ater]{"entity": "familydescription_parent", "value": "Vater"}
+
 
 ## intent:familydescription_pregnancy_month
 - ich bin im [3. Monat]{"entity": "familydescription_pregnancy_month", "value": "3"}. Monat schwanger
