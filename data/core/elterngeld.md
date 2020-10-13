@@ -75,9 +75,13 @@
   - utter_elterngeld_period
 
 ## elterngeld+application
-* choose_elterngeld_application
+* choose_elterngeld_application{"elterngeld_residence": null}
   - utter_elterngeld_application
 
 ## elterngeld+period
 * choose_elterngeld_amount
   - utter_elterngeld_amount
+
+## elterngeld+prerequisites+application+link
+* choose_elterngeld_application
+  - utter_elterngeld_application_link

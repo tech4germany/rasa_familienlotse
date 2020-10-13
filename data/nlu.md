@@ -31,14 +31,14 @@
 - Elterngeld Voraussetzung
 
 ## intent:choose_elterngeld_application
-- beantragung für Elterngeld in [BaWü](bundesland)
+- beantragung für Elterngeld in [BaWü](elterngeld_residence)
 - benatragung
 - Beantragungen
-- beantragen in [Hamburg](bundesland)
+- beantragen in [Hamburg](elterngeld_residence)
 - bearntragen
 - ich will Elterngeld beantragen
 - Elterngeld antrag
-- Elterngeld beantragen in [RLP](bundesland)
+- Elterngeld beantragen in [RLP](elterngeld_residence)
 
 ## intent:choose_elterngeld_amount
 - Höhe Elterngeld
@@ -66,23 +66,24 @@
 - wie viel Jahre Elterngeld
 
 ## intent:choose_elterngeld_residence
-- [Berlin](bundesland)
-- [Bremen](bundesland)
-- [Hamburg](bundesland)
-- [Rheinland-Pfalz](bundesland)
-- [Sachsen](bundesland)
-- [Thüringen](bundesland)
-- [Brandenburg](bundesland)
-- [Mecklenburg-Vorpommern](bundesland)
-- [Niedersachsen](bundesland)
-- [Nordrhein-Westfalen](bundesland)
-- [Sachsen-Anhalt](bundesland)
-- [Schleswig-Holstein](bundesland)
-- [Baden-Württemberg](bundesland)
-- [Bayern](bundesland)
-- [Hessen](bundesland)
-- [Saarland](bundesland)
-- [ausland](bundesland)
+- [Berlin](elterngeld_residence)
+- [Bremen](elterngeld_residence)
+- [Hamburg](elterngeld_residence)
+- [Rheinland-Pfalz](elterngeld_residence)
+- [Sachsen](elterngeld_residence)
+- [Thüringen](elterngeld_residence)
+- [Brandenburg](elterngeld_residence)
+- [Mecklenburg-Vorpommern](elterngeld_residence)
+- [Niedersachsen](elterngeld_residence)
+- [Nordrhein-Westfalen](elterngeld_residence)
+- [Sachsen-Anhalt](elterngeld_residence)
+- [Schleswig-Holstein](elterngeld_residence)
+- [Baden-Württemberg](elterngeld_residence)
+- [Bayern](elterngeld_residence)
+- [Hessen](elterngeld_residence)
+- [Saarland](elterngeld_residence)
+- [ausland](elterngeld_residence)
+
 
 ## intent:mutterschutz_topic
 - was ist Mutterschutz?

@@ -48,7 +48,7 @@ class ElterngeldRequirementsForm(FormAction):
                 self.from_intent(intent="deny", value=False),
             ],
             "elterngeld_residence": [
-                self.from_entity(entity="bundesland", intent=["choose_elterngeld_residence"]),
+                self.from_entity(entity="elterngeld_residence", intent=["choose_elterngeld_residence"]),
             ],
 
         }
@@ -60,7 +60,25 @@ class ElterngeldRequirementsForm(FormAction):
         domain: Dict[Text, Any],
     ) -> List[Dict]:
 
-        # dispatcher.utter_message("Thanks, great job!")
+        residence2link = {
+            "Berlin": "https://www.elterngeld-digital.de/ams/Elterngeld/wizardng/FFE7CD?v=1601979713870",
+            "Bremen": "https://www.elterngeld-digital.de/ams/Elterngeld/wizardng/FFE7CD?v=1601979713870",
+            "Hamburg": "https://www.elterngeld-digital.de/ams/Elterngeld/wizardng/FFE7CD?v=1601979713870",
+            "Rheinland-Pfalz": "https://www.elterngeld-digital.de/ams/Elterngeld/wizardng/FFE7CD?v=1601979713870",
+            "Thüringen": "https://www.elterngeld-digital.de/ams/Elterngeld/wizardng/FFE7CD?v=1601979713870",
+            "Sachsen": "https://www.elterngeld-digital.de/ams/Elterngeld/wizardng/FFE7CD?v=1601979713870",
+            "Bayern": "https://www.zbfs.bayern.de/familie/elterngeld/antraege/index.php",
+            "Baden-Württemberg": "https://www.l-bank.de/produkte/familienfoerderung/elterngeld.html",
+            "Brandenburg": "https://www.arbeitswelt-elternzeit.de/werdende-eltern/elterngeldantraege/",
+            "Hessen": "http://www.familienatlas.de/geld/finanzielle-hilfen/elterngeld",
+            "Mecklenburg-Vorpommern": "https://www.lagus.mv-regierung.de/Soziales/Elterngeld_ElterngeldPlus/",
+            "Niedersachsen": "https://www.ms.niedersachsen.de/startseite/jugend_amp_familie/familien_kinder_und_jugendliche/familien/elterngeld_elterngeld_plus/das-elterngeld-13791.html",
+            "Nordrhein-Westfalen": "https://www.mkffi.nrw/antragstellung-elterngeld",
+            "Saarland": "https://service.buergerdienste-saar.de/Elterngeld-Onlineantrag/",
+            "Sachsen-Anhalt": "https://ms.sachsen-anhalt.de/themen/familie/familienratgeber/familien-mit-kleinkindern/arbeit-und-finanzen/direkte-hilfen/",
+            "Schleswig-Holstein": "https://www.schleswig-holstein.de/DE/Landesregierung/LASD/Aufgaben/KinderUndEltern/Download/BereichElterngeld_ab_2015-07.html" 
+        }
+
         if tracker.get_slot("elterngeld_care") is False or tracker.get_slot("elterngeld_samehousehold") is False or tracker.get_slot("elterngeld_workparttime") is False or tracker.get_slot("elterngeld_residence") == "ausland":
             dispatcher.utter_message(template="utter_elterngeld_inform_prerequisites")
             return []
@@ -70,10 +88,9 @@ class ElterngeldRequirementsForm(FormAction):
                 residence_adapted = residence[0].upper()+residence[1:]
             else:
                 residence_adapted = residence
-            return [SlotSet("elterngeld_residence", residence_adapted)]
+            return [SlotSet("elterngeld_residence", residence_adapted), SlotSet("elterngeld_residence_link", residence2link[residence_adapted])]
         else:
             return []
-                    
 
 class FamilyDescriptionForm(FormAction):
 
