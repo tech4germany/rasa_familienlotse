@@ -25,6 +25,7 @@
   - elterngeldrequirements_form
   - form{"name": "elterngeldrequirements_form"}
   - form{"name": null}
+  - utter_elterngeld_affirm_prerequisites
   - utter_ask_elterngeld_furthertopic
 
 ## elterngeld+prerequisites+denied+nofurtherquestion
@@ -69,15 +70,22 @@
 * affirm
   - elterngeldrequirements_form
   - form{"name":null}
+  - utter_elterngeld_affirm_prerequisites
+  - utter_ask_elterngeld_furthertopic
+
 
 ## elterngeld+period
 * choose_elterngeld_period
   - utter_elterngeld_period
 
 ## elterngeld+application
-* choose_elterngeld_application
+* choose_elterngeld_application{"elterngeld_residence": null}
   - utter_elterngeld_application
 
 ## elterngeld+period
 * choose_elterngeld_amount
   - utter_elterngeld_amount
+
+## elterngeld+prerequisites+application+link
+* choose_elterngeld_application
+  - utter_elterngeld_application_link

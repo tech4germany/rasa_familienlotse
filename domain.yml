@@ -16,7 +16,8 @@ actions:
 - utter_whatsapp_code
 - utter_whatsapp_offer
 entities:
-- bundesland
+- elterngeld_residence
+- elterngeld_residence_link
 - elterngeld_care
 - elterngeld_samehousehold
 - elterngeld_workparttime
@@ -182,6 +183,11 @@ responses:
   - text: Du kannst Elterngeld erst nach der Geburt Deines Kindes beantragen. Am besten
       innerhalb der ersten 3 Lebensmonate. Mehr Informationen dazu findest Du \U0001F517
       hier](https://familienportal.de/familienportal/familienleistungen/elterngeld/faq/wie-kann-ich-elterngeld-beantragen-/124762)
+  utter_elterngeld_application_link:
+  - text: "Da Du in {elterngeld_residence} wohnst, kannst Du den Elterngeldantrag
+      [🔗 hier]({elterngeld_residence_link})
+      digital ausfüllen. Anschließend musst Du ihn ausdrucken und an Deine Elterngeldstelle
+      schicken. Deine Elterngeldstelle findest Du [🔗 hier](https://familienportal.de/action/familienportal/125008/action/suche)."
   utter_elterngeld_inform:
   - text: '**Elterngeld** ist eine Leistung, die Du vom Staat als Unterstützung erhalten
       kannst, wenn Du nach der Geburt Deines Kindes gar nicht oder weniger arbeitest
@@ -292,6 +298,8 @@ slots:
   elterngeld_care:
     type: unfeaturized
   elterngeld_residence:
+    type: text
+  elterngeld_residence_link:
     type: unfeaturized
   elterngeld_samehousehold:
     type: unfeaturized
