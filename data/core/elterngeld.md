@@ -5,7 +5,8 @@
 * choose_elterngeld_precise
   - utter_ask_elterngeld_precisequestion
 * out_of_scope
-  - utter_elterngeld_reply_outofscope
+  - utter_sorry
+  - utter_elterngeld_reference
 
 ## elterngeld+general
 * elterngeld_topic
@@ -75,17 +76,19 @@
 
 
 ## elterngeld+period
+> elterngeld_subtopics
 * choose_elterngeld_period
-  - utter_elterngeld_period
+  - utter_sorry
+  - utter_elterngeld_period_reference
 
 ## elterngeld+application
-* choose_elterngeld_application{"elterngeld_residence": null}
-  - utter_elterngeld_application
+> elterngeld_subtopics
+* choose_elterngeld_application
+  - utter_sorry
+  - utter_elterngeld_application_reference
 
 ## elterngeld+period
+> elterngeld_subtopics
 * choose_elterngeld_amount
-  - utter_elterngeld_amount
-
-## elterngeld+prerequisites+application+link
-* choose_elterngeld_application
-  - utter_elterngeld_application_link
+  - utter_sorry
+  - utter_elterngeld_amount_reference

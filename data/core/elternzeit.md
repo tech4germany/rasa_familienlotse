@@ -18,21 +18,7 @@
 * elternzeit_timepartner
   - utter_elternzeit_timepartner
   - utter_ask_knowmore
-* deny
-  - utter_im_here_4_u
-
-## elternzeit+notification
-* choose_elternzeit_notification
-  - utter_elternzeit_reply_outofscope
-
-## elternzeit+period
-* elternzeit_period
-  - utter_elternzeit_period
-
-## elternzeit+requirements
-* choose_elternzeit_requirements
-  - utter_elternzeit_requirements
-
+  
 ## elternzeit+priorknowledge
 * greet_elternzeit
   - utter_welcomeback_time
@@ -47,3 +33,17 @@
   - utter_elternzeit_inform
   - utter_ask_elternzeit_subtopic
     
+## elternzeit+notification
+* choose_elternzeit_notification
+  - utter_sorry
+  - utter_elternzeit_notification_reference
+
+## elternzeit+period
+* choose_elternzeit_period
+  - utter_sorry
+  - utter_elternzeit_period_reference
+
+## elternzeit+requirements
+* choose_elternzeit_requirements
+  - utter_sorry
+  - utter_elternzeit_requirements_reference
