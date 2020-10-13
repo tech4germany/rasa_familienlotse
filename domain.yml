@@ -6,7 +6,6 @@ actions:
 - utter_distinguish_period_elterngeld_elternzeit
 - utter_elterngeld_reference
 - utter_elterngeld_application_reference
-- utter_elterngeld_application_link
 - utter_elterngeld_period_reference
 - utter_elterngeld_amount_reference
 - utter_elternzeit_reference
@@ -153,6 +152,7 @@ responses:
   - text: Bist Du schwanger? Wenn ja, in welchem Monat?
   utter_ask_knowmore:
   - text: Willst Du mehr darüber wissen? Du kannst mich auch etwas anderes fragen.
+    buttons:
     - payload: /affirm
       title: Ja
     - payload: /deny

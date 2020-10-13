@@ -12,7 +12,7 @@
   - utter_elternzeit_timepartner
   - utter_ask_knowmore
 * affirm
-  - utter_elternzeit_reply_outofscope
+  - utter_elternzeit_reference
 
 ## elternzeit+timepartner+affirm
 * elternzeit_timepartner
