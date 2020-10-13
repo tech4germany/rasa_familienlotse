@@ -17,7 +17,7 @@ actions:
 - utter_more_info
 - utter_mutterschutz_inform
 - utter_mutterschutz_mutterschutzfrist
-- utter_mutterschutz_periodreply
+- utter_mutterschutzfrist_periodreply
 - utter_mutterschutz_reference
 - utter_recommend_elterngeld
 - utter_telegram_code
@@ -281,7 +281,7 @@ responses:
   utter_mutterschutz_mutterschutzfrist:
   - text: Die Mutterschutzfrist hingegen ist ein Zeitraum vor und nach der Geburt,
       in dem die Arbeitnehmerin nicht arbeiten darf 🤓
-  utter_mutterschutz_periodreply:
+  utter_mutterschutzfrist_periodreply:
   - text: Der Zeitraum beginnt 6 Wochen vor dem errechneten Geburtstermin und endet
       üblicherweise 8 Wochen nach der Geburt 📅
   utter_mutterschutz_reference:
