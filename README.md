@@ -1,3 +1,23 @@
+# Sonne - Dein Familienlotse
+Prototyp eines Chatbots, der zu Familienleistungen auf dem [Familienportal](https://familienportal.de/familienportal) des [Bundesfamilienministeriums für Familie, Senioren, Frauen und Jugend (BMFSFJ)](https://www.bmfsfj.de/) informiert und berät. 
+
+Der Familienlotse Sonne soll als erste Ausbaustufe der Vision des BMFSFJ für einen Familienassistenten angesehen werden. Hierfür wurde Sonne mit einer Lotsenfunktionalität ausgestattet, die die Navigation auf der Seite unterstützen und erste Fragen beantworten kann.
+
+Entstanden ist Sonne im Rahmen des [Tech4Germany Fellowships 2020](https://tech.4germany.org/fellowship-2020/) vom Team Chatbot ([Miriam Metz](https://www.linkedin.com/in/miriammetz/), [Benedikt Liebig](https://www.linkedin.com/in/beliebig/), [Johannes Heck](https://www.linkedin.com/in/johannescheck/) und [Anna Steinberg](https://www.linkedin.com/in/anna-steinberg-855329172/)) in Kooperation mit dem [Informationstechnikzentrum Bund(ITZBund)](https://www.itzbund.de/DE/Home/home_node.html) und dem [Bundesministerium des Inneren, für Bau und Heimat (BMI)](https://www.bmi.bund.de/DE/startseite/startseite-node.html).
+
+Der Familienlotse basiert auf [Rasa Open Source](https://rasa.com/).
+Dieses Repo umfasst Informationen zu
+- [Installation und Starten von Rasa Open Source](#rasa-open-source)
+- [Installation von Rasa X](#rasa-x)
+    - [Set-Up eines Custom Action Servers für Rasa X](#custom-action-server)
+    - [Nutzung von Rasa X](#manual-data-upload-to-rasa-x)
+    - [Debugging Tipps](#debugging)
+    - [Generelle Tipps](#tricks-for-using-rasa-x-container-installation-not-kubernetes)
+- [Set-Up des Sonne Prototypen](#sonne---setup-prototyp)
+    - [Anschluss an Telegram API](#rasa-telegram-api)
+    - [Einbindung in ChatWidget](#rasa-webchat-ui)
+- [Best Practices für NLU data](#11-best-practices-for-designing-nlu-training-data)
+
 # Rasa Open Source
 
 ## Installation
@@ -84,58 +104,6 @@ jobs:
         docker_image_tag: latest
         # docker_image_tag: ${{ env.BUILD_NUMBER }}
 ```
-
-## manually upload data to Rasa X
-👉 if git connection on Rasa X fails, you can manually upload all the necessary data
-
-### step 1 - upload nlu data
-👉 in the side menu under **Training **go to **NLU data** and upload the `nlu.md` from a local repo on your computer via the upload-box<br>
-
-### step 2 - upload stories
-👉 in the side menu under **Training **go to **Stories** and upload the `stories.md` from a local repo on your computer via the upload-box (if you have multiple stories spread across different files, **you need to paste them together into one file**)<br>
-
-### step 3 - upload domain
-👉 in the side menu under **Training **go to **domain** and upload the `domain.md` from a local repo on your computer via the upload-box (**along with domain come the responses, so no need to upload them specifically**)<br>
-
-## Debugging
-
-### access logs
-```
-cd /etc/rasa # go to rasa x container installation
-docker ps # get all names of running containers
-docker-compose logs -f rasa-x # get latest logs, -f for following
-docker-compose logs -f rasa-worker # latest logs of worker
-docker-compose logs -f app
-docker-compose logs -f rasa-production
-```
-
-### check git connection
-```
-sudo docker exec -it rasa_rasa-x_1 bash
-
-cd /app/git/1 ➡ make an ls -a in /git/ in order to determine current git-number
-git remote -v
-git status
-git fetch -a
-```
-
-### check rasa x-endpoint
-should return response as non-empty array
-```
-curl --request POST \
-  --url http://<ipaddress>/webhooks/rest/webhook \
-  --header 'content-type: application/json' \
-  --data '{
-  "sender": "Rasa",
-  "message": "hi"
-}'  
-```
-
-### extract current model in use of Rasa X
-```
-curl --request GET \
-  --url 'http://<ipaddress>/api/projects/default/models/tags/production?api_token=<token>' --output "model.tar.gz"
-```
 👉 Step 1 refers to a GitHub repository where GitHub Action logic is stored.<br>
 👉 Step 2 adds an ID to the new image.<br>
 👉 Step 3 builds the image as specified in current `actions.py` file located within `actions` directory.<br><br>
@@ -169,6 +137,17 @@ services:
 docker-compose down && docker-compose pull && docker-compose up -d
 ```
 
+## Manual data upload to Rasa X
+👉 if git connection on Rasa X fails, you can manually upload all the necessary data
+
+### step 1 - upload nlu data
+👉 in the side menu under **Training **go to **NLU data** and upload the `nlu.md` from a local repo on your computer via the upload-box<br>
+
+### step 2 - upload stories
+👉 in the side menu under **Training **go to **Stories** and upload the `stories.md` from a local repo on your computer via the upload-box (if you have multiple stories spread across different files, **you need to paste them together into one file**)<br>
+
+### step 3 - upload domain
+👉 in the side menu under **Training **go to **domain** and upload the `domain.md` from a local repo on your computer via the upload-box (**along with domain come the responses, so no need to upload them specifically**)<br>
 
 ## Debugging
 
@@ -186,7 +165,7 @@ docker-compose logs -f rasa-production
 ```
 sudo docker exec -it rasa_rasa-x_1 bash
 
-cd /app/git/<current_number>
+cd /app/git/1 ➡ make an ls -a in /git/ in order to determine current git-number
 git remote -v
 git status
 git fetch -a
@@ -194,6 +173,7 @@ git fetch -a
 👉 enter container, enter app/git/ and check current-git connection
 
 ### check rasa x-endpoint
+should return response as non-empty array
 ```
 curl --request POST \
   --url http://<ipaddress>/webhooks/rest/webhook \
@@ -229,7 +209,8 @@ tar -C <some_local_dir/> -xvzf model.tar.gz
 }
 ```
 👉 check fingerprint (above) for possible clash of versions<br>
-👉 out of compatibility rasa open source must have the same version as is used by rasa x in the container (`1.10.12` in the example above)
+👉 out of compatibility rasa open source must have the same version as is used by rasa x in the container (`1.10.12` in the example above
+
 
 ### check rasa open source version
 ```
@@ -262,7 +243,6 @@ rasa run -m models --enable-api --cors "*" debug
 rasa run actions
 ```
 
-
 ### Telegram
 for general installation advice, look at the [official rasa documentation](https://rasa.com/docs/rasa/connectors/telegram)
 
@@ -281,7 +261,6 @@ ngrok http 5005
 ```
 expose 5005 port
 extract ngrok's **current https**-URL (lowest line in ngrok-output) and plug it into credentials
-
 
 ### enter credentials
 in `credentials.yml`
@@ -303,12 +282,12 @@ rasa run actions
 ```
 
 ## Rasa Webchat UI
-👉 um die rasa-Nutzung auf der Website simulieren zu können, benötigen wir ein [Chat-Widget](https://github.com/botfront/rasa-webchat). Dieses muss in eine `index.html` eingebunden werden, Ports entsprechend geöffnet und ist dann über die Website erreichbar.
+👉 to simulate usage of rasa on a website, we need a [chat widget](https://github.com/botfront/rasa-webchat) which needs to be embedded in the `index.html` file, ports need to be set open and the website needs to be reachable. 
 
-WICHTIG: Das funktioniert nur mit **Rasa Open Source**.
+Important: This works only with **Rasa Open Source**.
 
-### credentials hinterlegen
-in `credentials.yml` zu hinterlegen
+### specify credentials
+Specify credentials in `credentials.yml`
 ```
 socketio:
   user_message_evt: user_uttered
@@ -316,19 +295,19 @@ socketio:
   session_persistence: false
 ```
 
-### rasa starten mit API enabled
+### start rasa with API enabled
 ```
 rasa run -m models --enable-api --cors "*" --debug
 ```
-`--cors` steht dabei für [Cross-Origin Resource Sharing](https://developer.mozilla.org/de/docs/Web/HTTP/CORS)
+`--cors` stands for [Cross-Origin Resource Sharing](https://developer.mozilla.org/de/docs/Web/HTTP/CORS)
 
-### rasa action server starten (wie gewohnt)
+### start rasa action server
 ```
 rasa run actions
 ```
 
-### index.html bzw. Website bestücken mit Webchat-Skript
-in `<body/>` folgendes Skript einfügen
+### add webchat script to index.html
+add the following snippet to `<body/>` of `index.html`
 
 ```
 <!DOCTYPE html>
@@ -357,18 +336,18 @@ in `<body/>` folgendes Skript einfügen
 </html>
 ```
 
-### Webserver starten
-Webserver startet unter `http://3.122.100.29:8000/`
+### start webserver
+Webserver starts at `http://3.122.100.29:8000/`
 ```
 start-html -> startet den server
 stop-html -> stopt den server
 restart-html -> restartet den server, nur wichtig wenn du was am server code änderts
 ```
-die `html`-Datei liegt in `~/html-server/index.html`
-Bitte nicht `start-html` bevor du `stop-html` gemacht hast, da das `alias command` sonst nicht die richtige id hat
+The `html`-file is located in `~/html-server/index.html`
+Do not `start-html` before having done `stop-html` since this `alias command` does not load the right ID.
 
-### Webserver einrichten
-👉 z.B. einen nodejs-Webserver aufsetzen, einen Auszug der genutzten Befehle findet sich untenstehend (keine Anleitung!)
+### setting up webserver
+👉 e.g. set up a nodejs webserver, here is an extract of the the commands (not an instruction!)
 ```
   962  sudo apt update
   963  sudo apt install nodejs
@@ -425,3 +404,88 @@ Bitte nicht `start-html` bevor du `stop-html` gemacht hast, da das `alias comman
  1014  restart-html
  1015  forever list
 ```
+# 11 Best practices for Designing NLU Training Data
+
+1. **autogenerated training data tends to overfitting**
+→ build data set over time using examples from real conversations
+→ things real users have said is the best predictor of what future users will say
+2. **keep training examples distinct across intents**
+→ provide_address, provide_email, provide_name are very similar in sorounding words (just other entities)
+→ better: single inform intent and group all information
+3. **Merge on intents, split on entities**
+→ new and returning customer are similar (2.), so it's better to group them under a single intent; but how to continue from there?
+→ save the extracted entity to a categorical slot, story depends on slot value ⇒ entity called `status`, 2 possible values `new` and `returning` → save info to slot `status`
+
+```
+## returning user
+* greet
+    - utter_ask_if_new
+* inform
+    - slot{"status": "returning"}
+    - utter_welcome_back
+```
+
+and add to the training data: I'm `[new](status)` and `[Returning](status)`
+
+4. **use synonyms wisely**
+→ more entity mapping then entity extraction; 
+→ hospital is mapped to `rbry-mqwu` 
+→ map `truck`, `automobile`, `sedan` to `auto`
+⇒ use synonyms when one consistent key is needed for the backend
+
+5. **understand lookup tables and regexes**
+
+→ methods for improving entity extraction
+→ but work different from what you would think: lookup tables/regexes get featurized, are used to train NLU model
+→ include a few values from lookup tables/regexes in training data
+
+**6. leverage pre-trained entity extractors**
+
+→ names, dates, places, email addresses (`SpaceEntityExtractor`)
+→ amount of money, dates, email addresses, times, distances (`DucklingEntityExtractor`)
+→ for spaCy or Duckling still add a few examples of sentences in training data, but no need to anotate them
+
+**7. always include an out-of-scope intent**
+
+→ catch-all for anything the user might say that is outside of the assistant's domain
+→ "That sounds interesting, but that's not a skill I've learned yet. Here's what you can ask me..."
+→ takes the pressure of the fallback policy to decide which user messages are in the scope (as addition; an out-of-scope intent allows you to better recover the conversation)
+
+**8. handle misspelled words**
+
+→ first line of defense against spelling erros should be your training data
+→ don't just misspell any word, look into your training data
+→ custom spell checker is also an option 
+
+```
+language: "en"
+
+pipeline:
+  - name: ConveRTTokenizer
+  - name: ConveRTFeaturizer
+  - name: RegexFeaturizer
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+  - name: CountVectorsFeaturizer
+    analyzer: "char_wb"
+    min_ngram: 1
+    max_ngram: 4
+  - name: DIETClassifier
+    epochs: 100
+  - name: EntitySynonymMapper
+  - name: ResponseSelector
+    epochs: 100
+```
+
+**9. treat your data like code**
+
+→ version control system and include data!
+
+**10. Test your updates
+→** Automated testing: ****[https://blog.rasa.com/rasa-automated-tests/](https://blog.rasa.com/rasa-automated-tests/)
+
+[https://blog.rasa.com/10-best-practices-for-designing-nlu-training-data/](https://blog.rasa.com/10-best-practices-for-designing-nlu-training-data/)
+
+**11. Class imbalance**
+→ try to keep your intents balanced in your training data
+→ `supervised_embeddings` pipeline uses balanced batching strategy
