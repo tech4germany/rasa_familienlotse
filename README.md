@@ -260,7 +260,8 @@ If you want to use your bot in a group setting, it's advisable to turn on group 
 ngrok http 5005
 ```
 expose 5005 port
-extract ngrok's **current https**-URL (lowest line in ngrok-output) and plug it into credentials
+extract ngrok's **current https**-URL (lowest line in ngrok-output) and plug it into `credentials.yml`
+Do not quit the ngrok window as with every restart a new URL is generated!
 
 ### enter credentials
 in `credentials.yml`
