@@ -133,3 +133,4 @@ models/
 __pycache__/
 story_graph.dot
 graph.html
+credentials.yml
