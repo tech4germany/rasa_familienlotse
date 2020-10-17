@@ -82,7 +82,7 @@
 
 ## elterngeld+application
 > elterngeld_subtopics
-* choose_elterngeld_application{"elterngeld_residence": null}
+* choose_elterngeld_application{"elterngeld_residence_link": null}
   - utter_sorry
   - utter_elterngeld_application_reference
 
@@ -93,5 +93,6 @@
   - utter_elterngeld_amount_reference
 
 ## elterngeld+prerequisites+application+link
+> elterngeld_subtopics
 * choose_elterngeld_application
   - utter_elterngeld_application_link

@@ -5,6 +5,7 @@
 - Geld für Eltern
 - Elterngeld Hilfe
 - hilf mir bitte bei Elterngeld
+- elterngeld
 
 ## intent:choose_elterngeld_precise
 - ich habe eine konkrete Frage
@@ -116,6 +117,7 @@
 - Wann beginnt die Mutterschutzfrist?
 - Wann endet die Mutterschutzfrist?
 - wie lange ist Mutterschutzfrist
+- wie lange dauert Mutterschutzfrist
 
 ## intent:get_started
 - start mutterschutz
@@ -266,7 +268,6 @@
 - [Vate]{"entity": "familydescription_parent", "value": "Vater"}
 - [ater]{"entity": "familydescription_parent", "value": "Vater"}
 
-
 ## intent:familydescription_pregnancy_month
 - ich bin im [3. Monat]{"entity": "familydescription_pregnancy_month", "value": "3"}. Monat schwanger
 - ich bin [nicht schwanger]{"entity": "familydescription_pregnancy_month", "value": "False"}
@@ -336,6 +337,7 @@
 
 ## synonym:7
 - 7. Monat
+- siebten Monat
 - siebter Monat
 
 ## synonym:8
@@ -380,7 +382,12 @@
 - mutter
 - muddi
 - Mama
+- Mam
 - Mum
+- mudda
+- mun
+- utter
+- Muter
 - Mudder
 - Muddah
 - mama
@@ -402,9 +409,14 @@
 - vater
 - dad
 - Papa
+- paps
+- pop
+- vadder
+- vadda
+- Vate
+- ater
 - Dad
 - Vaddi
 - Daddy
 - Paps
 - papa
-- vadda
