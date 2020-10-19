@@ -1,4 +1,4 @@
-# Sonne - Dein Familienlotse
+# Sonne - Dein Familienlotse <img src="https://github.com/tech4germany/rasa_familienlotse/blob/master/Sonne2.png" width="50" height="50">
 Prototyp eines Chatbots, der zu Familienleistungen auf dem [Familienportal](https://familienportal.de/familienportal) des [Bundesfamilienministeriums für Familie, Senioren, Frauen und Jugend (BMFSFJ)](https://www.bmfsfj.de/) informiert und berät. 
 
 Der Familienlotse Sonne soll als erste Ausbaustufe der Vision des BMFSFJ für einen Familienassistenten angesehen werden. Hierfür wurde Sonne mit einer Lotsenfunktionalität ausgestattet, die die Navigation auf der Seite unterstützen und erste Fragen beantworten kann.
